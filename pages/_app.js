@@ -6,18 +6,12 @@ function MyApp ({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta property="og:url" content={Data.link} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content={Data.judul}
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta
-          property="og:description"
-          content={Data.deskripsi}
-        />
-        <meta property="og:image" content={Data.thumbnail} />
+        <meta property='og:url' content={Data.link} />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={Data.judul} />
+        <meta name='twitter:card' content='summary' />
+        <meta property='og:description' content={Data.deskripsi} />
+        <meta property='og:image' content={Data.thumbnail} />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link

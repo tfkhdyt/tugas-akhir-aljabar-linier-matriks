@@ -44,7 +44,8 @@ export const Navbar = () => {
             />
           </svg>
         </button>
-        <div className={`${
+        <div
+          className={`${
             active ? '' : 'hidden'
           } w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
