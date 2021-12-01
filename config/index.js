@@ -7,8 +7,11 @@ export default {
       nama: 'Taufik Hidayat',
       nim: '301200032',
       prodi: 'Teknik Informatika',
-      foto: '/images/taufik.jpg',
+      foto: '/images/member/taufik.jpg',
       ig: '_tfkhdyt_'
     }
-  ]
+  ],
+  link: 'https://tugas-akhir-aljabar-linier-matriks.vercel.app',
+  deskripsi: 'Tugas Akhir Aljabar Linier & Matriks menggunakan framework Next.js dan Tailwind CSS',
+  thumbnail: '/images/thumbnail.png'
 }
