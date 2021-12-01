@@ -16,6 +16,13 @@ export default {
       prodi: 'Teknik Informatika',
       foto: '/images/member/dadan.jpg',
       ig: 'dadanha_'
+    },
+    {
+      nama: 'Tuhfah Taj Nabilah',
+      nim: '302200005',
+      prodi: 'Sistem Informasi',
+      foto: '/images/member/tuhfah.jpg',
+      ig: 'tuhfahtn00'
     }
   ],
   link: 'https://tugas-akhir-aljabar-linier-matriks.vercel.app',
