@@ -3,20 +3,22 @@ import Image from 'next/image'
 
 export const MemberCard = (props) => {
   return (
-    <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-16 flex flex-col justify-center items-center transition duration-500 ease-in-out'>
+    <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg px-20 py-8 flex flex-col justify-center items-center transition duration-500 ease-in-out'>
       <div className='mb-4'>
         <Image
           className='object-center object-cover rounded-full'
-          width={120}
-          height={120}
+          width={100}
+          height={100}
           src={props.foto}
+          blurDataURL={props.foto}
+          placeholder='blur'
           alt={`Foto ${props.nama}`}
         />
       </div>
       <div className='text-center'>
-        <p className='text-xl text-blue-400 font-semibold mb-1'>{props.nama}</p>
-        <p className='text-base text-gray-500 font-light mb-1'>{props.nim}</p>
-        <p className='text-base text-gray-500 font-light mb-4'>{props.prodi}</p>
+        <p className='text-lg text-blue-400 font-semibold mb-1'>{props.nama}</p>
+        <p className='text-sm text-gray-500 font-light mb-1'>{props.nim}</p>
+        <p className='text-sm text-gray-500 font-light mb-4'>{props.prodi}</p>
         <Link href={`https://instagram.com/${props.ig}`}>
           <a>
             <button className='px-4 py-2 rounded bg-gradient-to-b bg-blue-300 hover:bg-blue-400 text-white font-medium'>
