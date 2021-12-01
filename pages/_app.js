@@ -1,10 +1,11 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 import Data from '../config'
+import { Layout } from '../components/Layout'
 
 function MyApp ({ Component, pageProps }) {
   return (
-    <>
+    <Layout>
       <Head>
         <meta property='og:url' content={Data.link} />
         <meta property='og:type' content='website' />
@@ -20,7 +21,7 @@ function MyApp ({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-    </>
+    </Layout>
   )
 }
 

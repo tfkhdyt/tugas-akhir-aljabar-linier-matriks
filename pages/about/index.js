@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Data from '../../config'
-import { Navbar } from '../../components/Navbar'
 import { MemberCard } from '../../components/MemberCard'
 
 export default function Home () {
@@ -12,8 +11,7 @@ export default function Home () {
         </title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar />
-      <main className='container mx-auto p-6 lg:pl-12'>
+      <main className='container mx-auto p-6 lg:pl-12 relative'>
         <span className='text-2xl font-bold'>{Data.menu[1]}</span>
         <div className='mt-3 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
           {Data.member.map((e) => {

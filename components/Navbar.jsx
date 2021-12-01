@@ -15,11 +15,11 @@ export const Navbar = () => {
       <nav
         className='
           flex items-center flex-wrap bg-blue-400
-          p-3'
+          p-3 sticky w-100 z-50 top-0'
       >
         <Link href='/'>
-          <a className='inline-flex items-center p-2 mr-4 '>
-            <Image src={Data.logo} height='35' width='35' />
+          <a className='inline-flex items-center p-2 mr-4 h-4'>
+            <Image src='/images/kbmfti.png' height={25} width={53} />
             <span className='text-xl text-white font-bold uppercase tracking-wide ml-2'>
               Kelompok 2
             </span>

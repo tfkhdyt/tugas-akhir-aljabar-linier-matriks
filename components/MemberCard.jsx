@@ -6,11 +6,13 @@ export const MemberCard = (props) => {
     <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg px-20 py-8 flex flex-col justify-center items-center transition duration-500 ease-in-out'>
       <div className='mb-4'>
         <Image
-          className='object-center object-cover rounded-full'
+          className='rounded-full'
           width={100}
           height={100}
           src={props.foto}
           blurDataURL={props.foto}
+          objectPosition='center'
+          objectFit='cover'
           placeholder='blur'
           alt={`Foto ${props.nama}`}
         />
@@ -20,7 +22,7 @@ export const MemberCard = (props) => {
         <p className='text-sm text-gray-500 font-light mb-1'>{props.nim}</p>
         <p className='text-sm text-gray-500 font-light mb-4'>{props.prodi}</p>
         <Link href={`https://instagram.com/${props.ig}`}>
-          <a>
+          <a target='_blank'>
             <button className='px-4 py-2 rounded bg-gradient-to-b bg-blue-300 hover:bg-blue-400 text-white font-medium'>
               <svg
                 className='inline mr-1'

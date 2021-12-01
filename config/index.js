@@ -23,6 +23,20 @@ export default {
       prodi: 'Sistem Informasi',
       foto: '/images/member/tuhfah.jpg',
       ig: 'tuhfahtn00'
+    },
+    {
+      nama: 'Wira Restu Wibawa',
+      nim: '301200008',
+      prodi: 'Teknik Informatika',
+      foto: '/images/member/wira.jpg',
+      ig: 'wirarw33'
+    },
+    {
+      nama: 'Nur Muhamad Faisal',
+      nim: '301200004',
+      prodi: 'Teknik Informatika',
+      foto: '/images/member/faisal.jpg',
+      ig: 'nmf23_'
     }
   ],
   link: 'https://tugas-akhir-aljabar-linier-matriks.vercel.app',
