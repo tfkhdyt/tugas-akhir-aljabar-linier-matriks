@@ -13,7 +13,6 @@ export const MemberCard = (props) => {
           blurDataURL={props.foto}
           objectPosition='center'
           objectFit='cover'
-          placeholder='blur'
           alt={`Foto ${props.nama}`}
         />
       </div>
