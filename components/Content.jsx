@@ -3,7 +3,7 @@
 
 export const Content = (props) => {
   return (
-    <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-4 flex flex-col justify-center items-center transition duration-500 ease-in-out text-gray-600 text-justify md:w-8/12'>
+    <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col justify-center items-center transition duration-500 ease-in-out text-gray-600 text-justify md:w-8/12'>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
