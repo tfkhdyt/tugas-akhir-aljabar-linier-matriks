@@ -3,7 +3,7 @@ import Data from '../../config'
 import { MemberCard } from '../../components/MemberCard'
 
 export async function getStaticProps (context) {
-  const res = await fetch(`${Data.link}/member.json`)
+  const res = await fetch(`${Data.link}/member.json`) // eslint-disable-line
   const data = await res.json()
   // console.log(data.member)
   return {
