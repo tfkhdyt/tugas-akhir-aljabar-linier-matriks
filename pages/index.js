@@ -11,7 +11,7 @@ export default function Home () {
         </title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='container mx-auto p-6 lg:pl-12'>
+      <main className='container mx-auto p-6 lg:px-12'>
         <span className='text-2xl font-semibold'>{Data.menu[0]}</span>
         <div className='mt-6'>
           <Content />
