@@ -13,7 +13,7 @@ function MyApp ({ Component, pageProps }) {
         <meta name='twitter:card' content='summary' />
         <meta property='og:description' content={Data.deskripsi} />
         <meta property='og:image' content={Data.thumbnail} />
-        <link rel="image_src" href={Data.thumbnail} />
+        <link rel='image_src' href={Data.thumbnail} />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
