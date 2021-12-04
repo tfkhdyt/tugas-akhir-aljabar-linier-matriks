@@ -25,9 +25,10 @@ const Hasil = () => {
     <div>
       <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 transition duration-500 ease-in-out'>
         <p className='text-xl font-semibold mb-4 text-gray-800'>Hasil</p>
-        <p className='text-justify text-gray-600'>
+        <p className='text-center text-gray-600'>
           <Provider options={{
-            showMathMenu: false
+            showMathMenu: false,
+            messageStyle: "none"
           }}>
             <Node>{tex}</Node>
           </Provider>
