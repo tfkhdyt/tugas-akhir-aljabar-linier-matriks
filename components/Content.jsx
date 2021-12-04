@@ -196,7 +196,7 @@ const Table = (props) => {
           </tbody>
         </table>
       </div>
-      <div className='flex flex-row items-center'>
+      <div className='flex flex-row items-center mb-2'>
         <button
           type='submit'
           className='bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
@@ -279,15 +279,6 @@ const Hasil = ({ result }) => {
             }}
           >
             <Node>{result.original}</Node>
-          </Provider>
-        </p>
-        <p className='text-left text-gray-600'>
-          <Provider
-            options={{
-              showMathMenu: false,
-              messageStyle: 'none'
-            }}
-          >
             <Node>{result.inverse}</Node>
           </Provider>
         </p>

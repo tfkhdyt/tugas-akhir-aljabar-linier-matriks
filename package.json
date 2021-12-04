@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "TAILWIND_MODE=watch next dev",
     "build": "next build",
     "start": "next start",
     "lint": "prettier -w --no-semi --single-quote --jsx-single-quote --trailing-comma none components config pages && standard --fix components config pages"
