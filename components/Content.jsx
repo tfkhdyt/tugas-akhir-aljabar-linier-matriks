@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Provider, Node } from '@nteract/mathjax'
 import { inv, matrix, round } from 'mathjs'
 
-const Table = () => {
+const Table = (props) => {
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
   const handleSubmit = async (e) => {
@@ -24,14 +24,14 @@ const Table = () => {
       isInitialMount.current = false
     else {
       const original = String.raw`
-        A = \begin{bmatrix}
+        \ \ \ \ A = \begin{bmatrix}
           ${_matrix[0][0]} & ${_matrix[0][1]} & ${_matrix[0][2]} \\
           ${_matrix[1][0]} & ${_matrix[1][1]} & ${_matrix[1][2]} \\
           ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
         \end{bmatrix}
       `.trim()
       let invMat = round(inv(matrix(_matrix)).valueOf())
-      console.log(invMat)
+      // console.log(invMat)
       const inverse = String.raw`
         A^{-1} = \begin{bmatrix}
           ${invMat[0][0]} & ${invMat[0][1]} & ${invMat[0][2]} \\
@@ -50,7 +50,8 @@ const Table = () => {
     if (isInitialMount.current)
       isInitialMount.current = false
     else {
-      console.log(result)
+      // console.log(result)
+      props.onResultChange(result)
     }
   }, [result])
   
@@ -162,7 +163,21 @@ const Table = () => {
   )
 }
 
-const Form = () => {
+const Form = (props) => {
+  const [matrix, setMatrix] = useState()
+  const handleResult = (result) => {
+    setMatrix(result)
+  }
+  
+  const i = useRef(true)
+  useEffect(() => {
+    if (i.current)
+      i.current = false;
+    else {
+      // console.log(`Matrixnya adalah:`, matrix)
+      props.onMatrixChange(matrix)
+    }
+  }, [matrix])
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col transition duration-500 ease-in-out'>
       <div>
@@ -170,25 +185,35 @@ const Form = () => {
           Masukkan matriks 3x3:
         </p>
       </div>
-      <Table />
+      <Table onResultChange={handleResult}/>
     </div>
   )
 }
 
-const Hasil = () => {
+const Hasil = ({ result }) => {
   const tex = String.raw`\begin{bmatrix}6 & 9 \\4 & 2 \end{bmatrix} + \begin{bmatrix}1 & 2 \\2 & 3 \end{bmatrix} = \ ?`
   return (
-    <div>
-      <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 transition duration-500 ease-in-out'>
-        <p className='text-xl font-semibold mb-4 text-gray-800'>Hasil</p>
-        <p className='text-center text-gray-600'>
+    <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 transition duration-500 ease-in-out flex flex-col'>
+      <p className='text-xl font-semibold mb-4 text-gray-800'>Hasil</p>
+      <div>
+        <p className='text-left text-gray-600'>
           <Provider
             options={{
               showMathMenu: false,
               messageStyle: 'none'
             }}
           >
-            <Node>{tex}</Node>
+            <Node>{result.original}</Node>
+          </Provider>
+        </p>
+        <p className='text-left text-gray-600'>
+          <Provider
+            options={{
+              showMathMenu: false,
+              messageStyle: 'none'
+            }}
+          >
+            <Node>{result.inverse}</Node>
           </Provider>
         </p>
       </div>
@@ -197,10 +222,14 @@ const Hasil = () => {
 }
 
 export const Content = (props) => {
+  const [matrix, setMatrix] = useState()
+  const handleMatrix = (matrix) => {
+    setMatrix(matrix)
+  }
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-stretch w-full'>
-      <Form />
-      <Hasil />
+      <Form onMatrixChange={handleMatrix}/>
+      {(matrix) ? <Hasil result={matrix}/> : null}
     </div>
   )
 }
