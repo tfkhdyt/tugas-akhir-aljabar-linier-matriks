@@ -2,7 +2,7 @@ export default {
   judul: 'Tugas Akhir Aljabar Linier & Matriks',
   logo: 'https://fti.unibba.ac.id/wp-content/uploads/2016/07/cropped-Logo-FTI-UNIBBA.png',
   menu: ['Invers Matriks 3x3', 'About Us'],
-  link: 'https://tugas-akhir-aljabar-linier-matriks.vercel.app',
+  link: 'https://inverse-matriks-3x3.vercel.app',
   deskripsi:
     'Kalkulator Invers Matriks 3x3 menggunakan framework Next.js, Tailwind CSS, Math.js, dan MathJax',
   thumbnail: '/images/thumbnail.png',

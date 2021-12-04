@@ -12,7 +12,7 @@ const MySwal = withReactContent(Swal)
 const Table = (props) => {
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const data = e.target
     // console.log(e.target._11.value)
@@ -21,6 +21,10 @@ const Table = (props) => {
       [data._21.value, data._22.value, data._23.value],
       [data._31.value, data._32.value, data._33.value]
     ])
+  }
+
+  const handleReset = () => {
+    setResult()
   }
 
   const isInitialMount = useRef(true)
@@ -99,7 +103,7 @@ const Table = (props) => {
   }, [result])
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} onReset={handleReset}>
       <div className='hover:shadow w-full transition duration-500 ease-in-out'>
         <table className='w-full table-fixed text-center'>
           <tbody className='bg-white divide-y divide-gray-200'>
@@ -268,7 +272,7 @@ const Form = (props) => {
 
 const Hasil = ({ result }) => {
   return (
-    <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 transition duration-500 ease-in-out flex flex-col'>
+    <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col'>
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
       <div>
         <p className='text-left text-gray-600'>
@@ -293,7 +297,7 @@ export const Content = (props) => {
     setMatrix(matrix)
   }
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-stretch w-full'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-stretch w-full transition-all duration-500 ease-in-out'>
       <Form onMatrixChange={handleMatrix} />
       {matrix ? <Hasil result={matrix} /> : null}
     </div>
