@@ -8,20 +8,19 @@ const Table = (props) => {
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const data = e.target
     // console.log(e.target._11.value)
     setMatrix([
-      [data._11.value, data._12.value, data._13.value ],
-      [data._21.value, data._22.value, data._23.value ],
-      [data._31.value, data._32.value, data._33.value ]
+      [data._11.value, data._12.value, data._13.value],
+      [data._21.value, data._22.value, data._23.value],
+      [data._31.value, data._32.value, data._33.value]
     ])
   }
-  
+
   const isInitialMount = useRef(true)
   useEffect(() => {
-    if (isInitialMount.current)
-      isInitialMount.current = false
+    if (isInitialMount.current) isInitialMount.current = false
     else {
       const original = String.raw`
         \ \ \ \ A = \begin{bmatrix}
@@ -30,7 +29,7 @@ const Table = (props) => {
           ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
         \end{bmatrix}
       `.trim()
-      let invMat = round(inv(matrix(_matrix)).valueOf())
+      const invMat = round(inv(matrix(_matrix)).valueOf())
       // console.log(invMat)
       const inverse = String.raw`
         A^{-1} = \begin{bmatrix}
@@ -45,16 +44,15 @@ const Table = (props) => {
       })
     }
   }, [_matrix])
-  
+
   useEffect(() => {
-    if (isInitialMount.current)
-      isInitialMount.current = false
+    if (isInitialMount.current) isInitialMount.current = false
     else {
       // console.log(result)
       props.onResultChange(result)
     }
   }, [result])
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <div className='hover:shadow w-full transition duration-500 ease-in-out'>
@@ -168,11 +166,10 @@ const Form = (props) => {
   const handleResult = (result) => {
     setMatrix(result)
   }
-  
+
   const i = useRef(true)
   useEffect(() => {
-    if (i.current)
-      i.current = false;
+    if (i.current) i.current = false
     else {
       // console.log(`Matrixnya adalah:`, matrix)
       props.onMatrixChange(matrix)
@@ -185,13 +182,12 @@ const Form = (props) => {
           Masukkan matriks 3x3:
         </p>
       </div>
-      <Table onResultChange={handleResult}/>
+      <Table onResultChange={handleResult} />
     </div>
   )
 }
 
 const Hasil = ({ result }) => {
-  const tex = String.raw`\begin{bmatrix}6 & 9 \\4 & 2 \end{bmatrix} + \begin{bmatrix}1 & 2 \\2 & 3 \end{bmatrix} = \ ?`
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 transition duration-500 ease-in-out flex flex-col'>
       <p className='text-xl font-semibold mb-4 text-gray-800'>Hasil</p>
@@ -228,8 +224,8 @@ export const Content = (props) => {
   }
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-stretch w-full'>
-      <Form onMatrixChange={handleMatrix}/>
-      {(matrix) ? <Hasil result={matrix}/> : null}
+      <Form onMatrixChange={handleMatrix} />
+      {matrix ? <Hasil result={matrix} /> : null}
     </div>
   )
 }
