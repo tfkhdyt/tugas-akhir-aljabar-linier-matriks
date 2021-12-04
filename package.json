@@ -7,6 +7,7 @@
     "lint": "prettier -w --no-semi --single-quote --jsx-single-quote --trailing-comma none components config pages && standard --fix components config pages"
   },
   "dependencies": {
+    "@nteract/mathjax": "^4.0.16",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -14,7 +15,6 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4",
-    "sharp": "^0.29.3"
+    "tailwindcss": "^2.2.4"
   }
 }
