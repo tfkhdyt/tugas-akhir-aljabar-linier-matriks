@@ -19,7 +19,7 @@ export default {
     'Aljabar linier dan matriks unibba next js',
     'kalkulator invers matriks 3x3',
     'kalkulator invers matriks 3x3 unibba',
-    'kalkulator invers matriks 3x3 next.js',
+    'kalkulator invers matriks 3x3 next.js'
   ]
   /**/
 }

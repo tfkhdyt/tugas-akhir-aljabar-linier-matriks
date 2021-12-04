@@ -2,8 +2,12 @@
 // import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { Provider, Node } from '@nteract/mathjax'
-import { inv, matrix, round, det, fraction, map } from 'mathjs'
+import { inv, matrix, round, det, map } from 'mathjs'
 import Fraction from 'fraction.js'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 const Table = (props) => {
   const [_matrix, setMatrix] = useState()
@@ -30,27 +34,47 @@ const Table = (props) => {
           ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
         \end{bmatrix}
       `.trim()
-      let invMat, inverse;
+      let invMat
       console.log(det(_matrix))
-      if (round(det(_matrix) == 0))
-        return alert('Matriks tidak valid!')
-      else if ([-1, 1].includes(round(det(_matrix)))) {
+      if (round(det(_matrix) === 0)) {
+        return MySwal.fire({
+          icon: 'error',
+          title: 'Matriks tidak valid!',
+          text: 'Dikarenakan matriks tersebut menghasilkan determinan 0',
+          confirmButtonText: (
+            <span className='flex flex-row'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-5 w-5 mr-1'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+              >
+                <path d='M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z' />
+              </svg>
+              <span>Okesiap bang</span>
+            </span>
+          ),
+          confirmButtonColor: '#60A5FA'
+        })
+      } else if ([-1, 1].includes(round(det(_matrix)))) {
         invMat = round(inv(matrix(_matrix)).valueOf())
       } else {
-        invMat = map(inv(matrix(_matrix)).valueOf(), (x) => Fraction(x).toFraction(true))
+        invMat = map(inv(matrix(_matrix)).valueOf(), (x) =>
+          Fraction(x).toFraction(true)
+        )
       }
       const pecahan = map(invMat, (e) => {
         console.log(e)
-        if (e == -0) return 0
+        if (e == -0) return 0 // eslint-disable-line
         if (!e.toString().includes('/')) return e
         if (e.toString().includes('/') && e.toString().includes('-')) {
-          e = e.slice(1).split('/');
+          e = e.slice(1).split('/')
           return String.raw`-\frac{${e[0]}}{${e[1]}}`
         }
         e = e.split('/')
         return String.raw`\frac{${e[0]}}{${e[1]}}`
       })
-       inverse = String.raw`
+      const inverse = String.raw`
           A^{-1} = \begin{bmatrix}
             ${pecahan[0][0]} & ${pecahan[0][1]} & ${pecahan[0][2]} \\
             ${pecahan[1][0]} & ${pecahan[1][1]} & ${pecahan[1][2]} \\
@@ -172,18 +196,46 @@ const Table = (props) => {
           </tbody>
         </table>
       </div>
-      <button
-        type='submit'
-        className='bg-blue-400 px-4 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2'
-      >
-        Hitung
-      </button>
-      <button
-        type='reset'
-        className='bg-red-400 px-5 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold'
-      >
-        Reset
-      </button>
+      <div className='flex flex-row items-center'>
+        <button
+          type='submit'
+          className='bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            className='h-5 w-5'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z'
+            />
+          </svg>
+          <span className='mx-0.5'>Hitung</span>
+        </button>
+        <button
+          type='reset'
+          className='bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold flex flex-row items-center justify-between'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            className='h-5 w-5'
+            viewBox='0 0 20 20'
+            fill='currentColor'
+          >
+            <path
+              fillRule='evenodd'
+              d='M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z'
+              clipRule='evenodd'
+            />
+          </svg>
+          <span className='mx-1'>Reset</span>
+        </button>
+      </div>
     </form>
   )
 }
@@ -217,7 +269,7 @@ const Form = (props) => {
 const Hasil = ({ result }) => {
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 transition duration-500 ease-in-out flex flex-col'>
-      <p className='text-xl font-semibold mb-4 text-gray-800'>Hasil</p>
+      <p className='text-xl font-semibold text-gray-800'>Hasil</p>
       <div>
         <p className='text-left text-gray-600'>
           <Provider
