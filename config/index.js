@@ -4,7 +4,7 @@ export default {
   menu: ['Invers Matriks 3x3', 'About Us'],
   link: 'https://tugas-akhir-aljabar-linier-matriks.vercel.app',
   deskripsi:
-    'Tugas Akhir Aljabar Linier & Matriks menggunakan framework Next.js dan Tailwind CSS',
+    'Kalkulator Invers Matriks 3x3 menggunakan framework Next.js, Tailwind CSS, Math.js, dan MathJax',
   thumbnail: '/images/thumbnail.png',
   keywords: [
     'Tugas akhir aljabar linier dan matriks',
@@ -16,7 +16,10 @@ export default {
     'Aljabar linier dan matriks',
     'Aljabar linier dan matriks next js',
     'Aljabar linier dan matriks unibba',
-    'Aljabar linier dan matriks unibba next js'
+    'Aljabar linier dan matriks unibba next js',
+    'kalkulator invers matriks 3x3',
+    'kalkulator invers matriks 3x3 unibba',
+    'kalkulator invers matriks 3x3 next.js',
   ]
   /**/
 }
