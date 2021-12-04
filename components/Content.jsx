@@ -2,7 +2,8 @@
 // import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { Provider, Node } from '@nteract/mathjax'
-import { inv, matrix, round } from 'mathjs'
+import { inv, matrix, round, det, fraction, map } from 'mathjs'
+import Fraction from 'fraction.js'
 
 const Table = (props) => {
   const [_matrix, setMatrix] = useState()
@@ -23,21 +24,41 @@ const Table = (props) => {
     if (isInitialMount.current) isInitialMount.current = false
     else {
       const original = String.raw`
-        \ \ \ \ A = \begin{bmatrix}
+        A = \begin{bmatrix}
           ${_matrix[0][0]} & ${_matrix[0][1]} & ${_matrix[0][2]} \\
           ${_matrix[1][0]} & ${_matrix[1][1]} & ${_matrix[1][2]} \\
           ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
         \end{bmatrix}
       `.trim()
-      const invMat = round(inv(matrix(_matrix)).valueOf())
+      let invMat, inverse;
+      console.log(det(_matrix))
+      if (round(det(_matrix) == 0))
+        return alert('Matriks tidak valid!')
+      else if ([-1, 1].includes(round(det(_matrix)))) {
+        invMat = round(inv(matrix(_matrix)).valueOf())
+      } else {
+        invMat = map(inv(matrix(_matrix)).valueOf(), (x) => Fraction(x).toFraction(true))
+      }
+      const pecahan = map(invMat, (e) => {
+        console.log(e)
+        if (e == -0) return 0
+        if (!e.toString().includes('/')) return e
+        if (e.toString().includes('/') && e.toString().includes('-')) {
+          e = e.slice(1).split('/');
+          return String.raw`-\frac{${e[0]}}{${e[1]}}`
+        }
+        e = e.split('/')
+        return String.raw`\frac{${e[0]}}{${e[1]}}`
+      })
+       inverse = String.raw`
+          A^{-1} = \begin{bmatrix}
+            ${pecahan[0][0]} & ${pecahan[0][1]} & ${pecahan[0][2]} \\
+            ${pecahan[1][0]} & ${pecahan[1][1]} & ${pecahan[1][2]} \\
+            ${pecahan[2][0]} & ${pecahan[2][1]} & ${pecahan[2][2]}
+          \end{bmatrix}
+        `.trim()
       // console.log(invMat)
-      const inverse = String.raw`
-        A^{-1} = \begin{bmatrix}
-          ${invMat[0][0]} & ${invMat[0][1]} & ${invMat[0][2]} \\
-          ${invMat[1][0]} & ${invMat[1][1]} & ${invMat[1][2]} \\
-          ${invMat[2][0]} & ${invMat[2][1]} & ${invMat[2][2]}
-        \end{bmatrix}
-      `.trim()
+      console.log(invMat)
       setResult({
         original,
         inverse
@@ -153,9 +174,15 @@ const Table = (props) => {
       </div>
       <button
         type='submit'
-        className='bg-blue-400 px-4 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold'
+        className='bg-blue-400 px-4 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2'
       >
         Hitung
+      </button>
+      <button
+        type='reset'
+        className='bg-red-400 px-5 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold'
+      >
+        Reset
       </button>
     </form>
   )
