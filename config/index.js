@@ -5,6 +5,18 @@ export default {
   link: 'https://tugas-akhir-aljabar-linier-matriks.vercel.app',
   deskripsi:
     'Tugas Akhir Aljabar Linier & Matriks menggunakan framework Next.js dan Tailwind CSS',
-  thumbnail: '/images/thumbnail.png'
+  thumbnail: '/images/thumbnail.png',
+  keywords: [
+    'Tugas akhir aljabar linier dan matriks',
+    'Tugas akhir aljabar linier dan matriks next js',
+    'Tugas besar aljabar linier dan matriks',
+    'Tugas besar aljabar linier dan matriks next js',
+    'Tugas akhir aljabar linier dan matriks unibba',
+    'Tugas besar aljabar linier dan matriks unibba',
+    'Aljabar linier dan matriks',
+    'Aljabar linier dan matriks next js',
+    'Aljabar linier dan matriks unibba',
+    'Aljabar linier dan matriks unibba next js'
+  ]
   /**/
 }

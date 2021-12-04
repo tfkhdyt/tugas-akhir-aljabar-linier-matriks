@@ -2,18 +2,9 @@ import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 import Data from '../config'
 import { Layout } from '../components/Layout'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 function MyApp ({ Component, pageProps }) {
-  const [keywords] = useState([
-    'Tugas akhir aljabar linier dan matriks',
-    'Tugas besar aljabar linier dan matriks',
-    'Tugas akhir aljabar linier dan matriks unibba',
-    'Tugas besar aljabar linier dan matriks unibba',
-    'Aljabar linier dan matriks',
-    'Aljabar linier dan matriks unibba'
-  ])
-
   return (
     <Layout>
       <Head>
@@ -22,7 +13,7 @@ function MyApp ({ Component, pageProps }) {
           name='google-site-verification'
           content='JCu7ig2hkiijnjnq8doWrgNg9HPCpWwo2WrTQWko8Cs'
         />
-        <meta name='keywords' content={keywords.join(', ')} />
+        <meta name='keywords' content={Data.keywords.join(', ')} />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:description' content={Data.deskripsi} />
         <meta name='twitter:image' content={Data.thumbnail} />
