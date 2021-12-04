@@ -1,11 +1,11 @@
 // import Link from 'next/link'
 // import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Provider, Node } from '@nteract/mathjax'
-import math from 'mathjs'
+import { inv, matrix, round } from 'mathjs'
 
 const Table = () => {
-  const [matrix, setMatrix] = useState()
+  const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,10 +18,41 @@ const Table = () => {
     ])
   }
   
+  const isInitialMount = useRef(true)
   useEffect(() => {
-    const invMat = math.inv(matrix)
-    console.log(invMat)
-  })
+    if (isInitialMount.current)
+      isInitialMount.current = false
+    else {
+      const original = String.raw`
+        A = \begin{bmatrix}
+          ${_matrix[0][0]} & ${_matrix[0][1]} & ${_matrix[0][2]} \\
+          ${_matrix[1][0]} & ${_matrix[1][1]} & ${_matrix[1][2]} \\
+          ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
+        \end{bmatrix}
+      `.trim()
+      let invMat = round(inv(matrix(_matrix)).valueOf())
+      console.log(invMat)
+      const inverse = String.raw`
+        A^{-1} = \begin{bmatrix}
+          ${invMat[0][0]} & ${invMat[0][1]} & ${invMat[0][2]} \\
+          ${invMat[1][0]} & ${invMat[1][1]} & ${invMat[1][2]} \\
+          ${invMat[2][0]} & ${invMat[2][1]} & ${invMat[2][2]}
+        \end{bmatrix}
+      `.trim()
+      setResult({
+        original,
+        inverse
+      })
+    }
+  }, [_matrix])
+  
+  useEffect(() => {
+    if (isInitialMount.current)
+      isInitialMount.current = false
+    else {
+      console.log(result)
+    }
+  }, [result])
   
   return (
     <form onSubmit={handleSubmit}>
