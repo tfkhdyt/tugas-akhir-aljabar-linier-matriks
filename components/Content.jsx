@@ -1,7 +1,7 @@
 // import Link from 'next/link'
 // import Image from 'next/image'
 // import { useState } from 'react'
-import { Node } from '@nteract/mathjax'
+import { Provider, Node } from '@nteract/mathjax'
 
 const Form = () => {
   return (
@@ -26,7 +26,11 @@ const Hasil = () => {
       <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 transition duration-500 ease-in-out'>
         <p className='text-xl font-semibold mb-4 text-gray-800'>Hasil</p>
         <p className='text-justify text-gray-600'>
-          <Node>{tex}</Node>
+          <Provider options={{
+            showMathMenu: false
+          }}>
+            <Node>{tex}</Node>
+          </Provider>
         </p>
       </div>
     </div>
