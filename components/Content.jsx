@@ -1,11 +1,30 @@
 // import Link from 'next/link'
 // import Image from 'next/image'
-// import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Provider, Node } from '@nteract/mathjax'
+import math from 'mathjs'
 
 const Table = () => {
+  const [matrix, setMatrix] = useState()
+  const [result, setResult] = useState()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = e.target
+    // console.log(e.target._11.value)
+    setMatrix([
+      [data._11.value, data._12.value, data._13.value ],
+      [data._21.value, data._22.value, data._23.value ],
+      [data._31.value, data._32.value, data._33.value ]
+    ])
+  }
+  
+  useEffect(() => {
+    const invMat = math.inv(matrix)
+    console.log(invMat)
+  })
+  
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className='hover:shadow w-full transition duration-500 ease-in-out'>
         <table className='w-full table-fixed text-center'>
           <tbody className='bg-white divide-y divide-gray-200'>

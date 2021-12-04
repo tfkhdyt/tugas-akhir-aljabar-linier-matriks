@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@nteract/mathjax": "^4.0.16",
+    "mathjs": "^10.0.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
