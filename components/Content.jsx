@@ -1,17 +1,20 @@
 // import Link from 'next/link'
 // import Image from 'next/image'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 import { Provider, Node } from '@nteract/mathjax'
 import { inv, matrix, round, det, map } from 'mathjs'
 import Fraction from 'fraction.js'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { MatrixContext } from './MatrixContext' // eslint-disable-line
 
 const MySwal = withReactContent(Swal)
 
-const Table = (props) => {
+const Table = () => {
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
+  const { setGlobalMatrix } = useContext(MatrixContext)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = e.target
@@ -71,7 +74,22 @@ const Table = (props) => {
         console.log(e)
         if (e == -0) return 0 // eslint-disable-line
         if (!e.toString().includes('/')) return e
-        if (e.toString().includes('/') && e.toString().includes('-')) {
+        if (['/', ' ', '-'].every((el) => e.includes(el))) {
+          // e = e.slice(1).split('/')
+          e = e.slice(1).split('/').join(' ').split(' ')
+          console.log(e)
+          return String.raw`
+            -${e[0]}\frac{${e[1]}}{${e[2]}}
+          `
+        }
+        if (['/', ' '].every((el) => e.includes(el))) {
+          // e = e.slice(1).split('/')
+          e = e.split('/').join(' ').split(' ')
+          return String.raw`
+            ${e[0]}\frac{${e[1]}}{${e[2]}}
+          `
+        }
+        if (['/', '-'].every((el) => e.includes(el))) {
           e = e.slice(1).split('/')
           return String.raw`-\frac{${e[0]}}{${e[1]}}`
         }
@@ -98,7 +116,7 @@ const Table = (props) => {
     if (isInitialMount.current) isInitialMount.current = false
     else {
       // console.log(result)
-      props.onResultChange(result)
+      setGlobalMatrix(result)
     }
   }, [result])
 
@@ -205,8 +223,17 @@ const Table = (props) => {
           type='submit'
           className='bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z" clipRule="evenodd" />
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            className='h-5 w-5'
+            viewBox='0 0 20 20'
+            fill='currentColor'
+          >
+            <path
+              fillRule='evenodd'
+              d='M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z'
+              clipRule='evenodd'
+            />
           </svg>
           <span className='mx-0.5'>Hitung</span>
         </button>
@@ -234,19 +261,6 @@ const Table = (props) => {
 }
 
 const Form = (props) => {
-  const [matrix, setMatrix] = useState()
-  const handleResult = (result) => {
-    setMatrix(result)
-  }
-
-  const i = useRef(true)
-  useEffect(() => {
-    if (i.current) i.current = false
-    else {
-      // console.log(`Matrixnya adalah:`, matrix)
-      props.onMatrixChange(matrix)
-    }
-  }, [matrix])
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col transition duration-500 ease-in-out'>
       <div>
@@ -254,12 +268,13 @@ const Form = (props) => {
           Masukkan matriks 3x3:
         </p>
       </div>
-      <Table onResultChange={handleResult} />
+      <Table />
     </div>
   )
 }
 
-const Hasil = ({ result }) => {
+const Hasil = () => {
+  const { matrix } = useContext(MatrixContext)
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col'>
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
@@ -271,8 +286,8 @@ const Hasil = ({ result }) => {
               messageStyle: 'none'
             }}
           >
-            <Node>{result.original}</Node>
-            <Node>{result.inverse}</Node>
+            <Node>{matrix.original}</Node>
+            <Node>{matrix.inverse}</Node>
           </Provider>
         </p>
       </div>
@@ -281,14 +296,14 @@ const Hasil = ({ result }) => {
 }
 
 export const Content = (props) => {
-  const [matrix, setMatrix] = useState()
-  const handleMatrix = (matrix) => {
-    setMatrix(matrix)
-  }
+  const [matrix, setGlobalMatrix] = useState()
+
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-stretch w-full transition-all duration-500 ease-in-out'>
-      <Form onMatrixChange={handleMatrix} />
-      {matrix ? <Hasil result={matrix} /> : null}
+      <MatrixContext.Provider value={{ matrix, setGlobalMatrix }}>
+        <Form />
+        {matrix ? <Hasil /> : null}
+      </MatrixContext.Provider>
     </div>
   )
 }
