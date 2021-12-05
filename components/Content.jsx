@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 
 import { MatrixContext } from './MatrixContext' // eslint-disable-line
 import { Form } from './Form'
