@@ -1,6 +1,6 @@
-import { Table } from './Table'
+import Table from './Table'
 
-export const Form = (props) => {
+export default function Form (props) {
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col transition duration-500 ease-in-out'>
       <div>

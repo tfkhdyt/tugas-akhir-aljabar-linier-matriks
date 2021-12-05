@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-import { MatrixContext } from './MatrixContext' // eslint-disable-line
-import { Form } from './Form'
-import { Hasil } from './Hasil'
+import MatrixContext from './MatrixContext' // eslint-disable-line
+import Form from './Form'
+import Hasil from './Hasil'
 
-export const Content = (props) => {
+export default function Content (props) {
   const [matrix, setGlobalMatrix] = useState()
 
   return (

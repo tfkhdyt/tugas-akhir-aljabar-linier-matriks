@@ -22,8 +22,7 @@ export const getServerSideProps = ({ res }) => {
       ].includes(staticPage)
     })
     .map((staticPagePath) => {
-      if (staticPagePath == 'index.js')
-        staticPagePath = ''
+      if (staticPagePath === 'index.js') staticPagePath = ''
       return `${baseUrl}/${staticPagePath}`
     })
 

@@ -2,9 +2,9 @@ import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 
 import Data from '../config'
-import { Layout } from '../components/Layout'
+import Layout from '../components/Layout'
 
-function MyApp ({ Component, pageProps }) {
+export default function MyApp ({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
@@ -23,6 +23,7 @@ function MyApp ({ Component, pageProps }) {
         <meta property='og:title' content={Data.judul} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={Data.link} />
+        <link rel='icon' href='/favicon.ico' />
         <link rel='image_src' href={Data.thumbnail} />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
@@ -39,5 +40,3 @@ function MyApp ({ Component, pageProps }) {
     </Layout>
   )
 }
-
-export default MyApp

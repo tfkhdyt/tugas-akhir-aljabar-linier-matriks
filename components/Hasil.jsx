@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { Provider, Node } from '@nteract/mathjax'
 
-import { MatrixContext } from './MatrixContext'
+import MatrixContext from './MatrixContext'
 
-export const Hasil = () => {
+export default function Hasil () {
   const { matrix } = useContext(MatrixContext)
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col'>

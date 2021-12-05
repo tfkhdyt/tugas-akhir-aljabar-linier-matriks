@@ -1,3 +1,5 @@
 import { createContext } from 'react'
 
-export const MatrixContext = createContext()
+const MatrixContext = createContext()
+
+export default MatrixContext
