@@ -14,9 +14,12 @@ const Table = () => {
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
   const { setGlobalMatrix } = useContext(MatrixContext)
+  const form = useRef()
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    // console.log(form)
+    // form.blur()
     const data = e.target
     // console.log(e.target._11.value)
     setMatrix([
@@ -26,8 +29,32 @@ const Table = () => {
     ])
   }
 
-  const handleReset = () => {
-    setResult()
+  const handleReset = (e) => {
+    e.preventDefault()
+    // form.blur()
+    MySwal.fire({
+      title: 'Apakah kamu yakin ingin me-reset matriks?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#60A5FA',
+      confirmButtonText: (
+        <span className='flex flex-row'>
+          <span>Yakin dong</span>
+        </span>
+      ),
+      cancelButtonColor: '#F87171',
+      cancelButtonText: (
+        <span className='flex flex-row'>
+          <span>Gak jadi deh</span>
+        </span>
+      )
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setResult()
+        form.current.reset()
+        MySwal.fire('Matriks berhasil di-reset!', '', 'success')
+      }
+    })
   }
 
   const isInitialMount = useRef(true)
@@ -42,7 +69,7 @@ const Table = () => {
         \end{bmatrix}
       `.trim()
       let invMat
-      console.log(det(_matrix))
+      // console.log(det(_matrix))
       if (round(det(_matrix) === 0)) {
         return MySwal.fire({
           icon: 'error',
@@ -62,7 +89,7 @@ const Table = () => {
             </span>
           ),
           confirmButtonColor: '#60A5FA'
-        })
+        }).then(() => form.current.reset())
       } else if ([-1, 1].includes(round(det(_matrix)))) {
         invMat = round(inv(matrix(_matrix)).valueOf())
       } else {
@@ -71,13 +98,13 @@ const Table = () => {
         )
       }
       const pecahan = map(invMat, (e) => {
-        console.log(e)
+        // console.log(e)
         if (e == -0) return 0 // eslint-disable-line
         if (!e.toString().includes('/')) return e
         if (['/', ' ', '-'].every((el) => e.includes(el))) {
           // e = e.slice(1).split('/')
           e = e.slice(1).split('/').join(' ').split(' ')
-          console.log(e)
+          // console.log(e)
           return String.raw`
             -${e[0]}\frac{${e[1]}}{${e[2]}}
           `
@@ -104,7 +131,6 @@ const Table = () => {
           \end{bmatrix}
         `.trim()
       // console.log(invMat)
-      console.log(invMat)
       setResult({
         original,
         inverse
@@ -121,7 +147,7 @@ const Table = () => {
   }, [result])
 
   return (
-    <form onSubmit={handleSubmit} onReset={handleReset}>
+    <form onSubmit={handleSubmit} ref={form}>
       <div className='hover:shadow w-full transition duration-500 ease-in-out'>
         <table className='w-full table-fixed text-center'>
           <tbody className='bg-white divide-y divide-gray-200'>
@@ -238,8 +264,8 @@ const Table = () => {
           <span className='mx-0.5'>Hitung</span>
         </button>
         <button
-          type='reset'
           className='bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold flex flex-row items-center justify-between'
+          onClick={handleReset}
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -249,7 +275,7 @@ const Table = () => {
           >
             <path
               fillRule='evenodd'
-              d='M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z'
+              d='M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z'
               clipRule='evenodd'
             />
           </svg>
