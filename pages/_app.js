@@ -1,8 +1,8 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
+
 import Data from '../config'
 import { Layout } from '../components/Layout'
-// import { useState } from 'react'
 
 function MyApp ({ Component, pageProps }) {
   return (

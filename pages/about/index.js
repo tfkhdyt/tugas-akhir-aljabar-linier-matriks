@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 import Data from '../../config'
 import { MemberCard } from '../../components/MemberCard'
 
