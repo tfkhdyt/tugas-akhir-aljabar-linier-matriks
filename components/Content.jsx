@@ -5,7 +5,7 @@ import Form from './Form'
 import Hasil from './Hasil'
 import { Context } from '../config'
 
-export default function Content (props) {
+export default (props) => {
   const [matrix, setGlobalMatrix] = useState()
 
   return (

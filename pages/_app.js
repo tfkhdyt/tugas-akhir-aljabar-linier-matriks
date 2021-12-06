@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Data from '../config'
 import Layout from '../components/Layout'
 
-export default function MyApp ({ Component, pageProps }) {
+export default ({ Component, pageProps }) => {
   return (
     <Layout>
       <Head>

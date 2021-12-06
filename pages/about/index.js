@@ -4,7 +4,7 @@ import Data from '../../config'
 import MemberCard from '../../components/MemberCard'
 import Member from '../../public/member'
 
-export async function getStaticProps (context) {
+export const getStaticProps = async (context) => {
   return {
     props: {
       member: Member
@@ -12,7 +12,7 @@ export async function getStaticProps (context) {
   }
 }
 
-export default function Home ({ member }) {
+export default ({ member }) => {
   return (
     <div>
       <Head>

@@ -4,7 +4,7 @@ import Data from '../config'
 
 const SiteMap = () => {}
 
-export const getServerSideProps = ({ res }) => {
+export const getServerSideProps = async ({ res }) => {
   const baseUrl = {
     development: 'http://localhost:3000',
     production: Data.link

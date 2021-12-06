@@ -3,7 +3,7 @@ import { Provider, Node } from '@nteract/mathjax'
 
 import { Context } from '../config'
 
-export default function Hasil () {
+export default () => {
   const { matrix } = useContext(Context)
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-sm hover:shadow-lg p-6 flex flex-col transition duration-500'>
