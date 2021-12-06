@@ -24,9 +24,9 @@ export default function Home ({ member }) {
       <main className='container mx-auto p-6 lg:pl-12 relative'>
         <span className='text-2xl font-semibold'>{Data.menu[1]}</span>
         <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
-          {member.map((e) => {
+          {member.map((e, i) => {
             return (
-              <div key={e.id}>
+              <div key={i}>
                 <MemberCard
                   nama={e.nama}
                   nim={e.nim}

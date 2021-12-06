@@ -249,7 +249,7 @@ export default function Table () {
       <div className='flex flex-row items-center mb-2'>
         <button
           type='submit'
-          className='transition duration-500 transform-gpu active:scale-75 bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
+          className='transition duration-500 transform-gpu active:scale-95 bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -266,7 +266,7 @@ export default function Table () {
           <span className='mx-0.5'>Hitung</span>
         </button>
         <button
-          className='transition duration-500 transform-gpu active:scale-75 bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold flex flex-row items-center justify-between'
+          className='transition duration-500 transform-gpu active:scale-95 bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold flex flex-row items-center justify-between'
           onClick={handleReset}
         >
           <svg
