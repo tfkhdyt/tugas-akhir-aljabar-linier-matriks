@@ -1,8 +1,6 @@
 import { createContext } from 'react'
 
-const Context = createContext()
-
-export { Context }
+export const Context = createContext()
 
 export default {
   judul: 'Tugas Akhir Aljabar Linier & Matriks',
