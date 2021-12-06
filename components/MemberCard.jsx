@@ -10,7 +10,6 @@ export default function MemberCard (props) {
           width={100}
           height={100}
           src={props.foto}
-          blurDataURL={props.foto}
           objectPosition='center'
           objectFit='cover'
           alt={`Foto ${props.nama}`}

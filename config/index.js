@@ -1,3 +1,9 @@
+import { createContext } from 'react'
+
+const Context = createContext()
+
+export { Context }
+
 export default {
   judul: 'Tugas Akhir Aljabar Linier & Matriks',
   logo: 'https://fti.unibba.ac.id/wp-content/uploads/2016/07/cropped-Logo-FTI-UNIBBA.png',
@@ -21,5 +27,4 @@ export default {
     'kalkulator invers matriks 3x3 unibba',
     'kalkulator invers matriks 3x3 next.js'
   ]
-  /**/
 }

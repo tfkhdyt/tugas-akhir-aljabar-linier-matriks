@@ -4,14 +4,14 @@ import withReactContent from 'sweetalert2-react-content'
 import { inv, matrix, round, det, map } from 'mathjs'
 import Fraction from 'fraction.js'
 
-import MatrixContext from './MatrixContext'
+import { Context } from '../config'
 
 const MySwal = withReactContent(Swal)
 
 export default function Table () {
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
-  const { setGlobalMatrix } = useContext(MatrixContext)
+  const { setGlobalMatrix } = useContext(Context)
   const form = useRef()
 
   const handleSubmit = (e) => {
