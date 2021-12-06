@@ -12,7 +12,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active', 'group-focus']
+    },
   },
   plugins: [],
 }

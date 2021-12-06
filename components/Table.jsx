@@ -50,7 +50,11 @@ export default function Table () {
       if (result.isConfirmed) {
         setResult()
         form.current.reset()
-        MySwal.fire('Matriks berhasil di-reset!', '', 'success')
+        MySwal.fire({
+          title: 'Matriks berhasil di-reset!',
+          icon: 'success',
+          confirmButtonColor: '#60A5FA'
+        })
       }
     })
   }
@@ -146,8 +150,8 @@ export default function Table () {
 
   return (
     <form onSubmit={handleSubmit} ref={form}>
-      <div className='hover:shadow w-full transition duration-500 ease-in-out'>
-        <table className='w-full table-fixed text-center'>
+      <div className='w-full transition duration-500 ease-in-out'>
+        <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
           <tbody className='bg-white divide-y divide-gray-200'>
             {/* baris satu */}
             <tr className='divide-x divide-gray-200'>
@@ -245,7 +249,7 @@ export default function Table () {
       <div className='flex flex-row items-center mb-2'>
         <button
           type='submit'
-          className='bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
+          className='transition duration-500 transform-gpu active:scale-75 bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -262,7 +266,7 @@ export default function Table () {
           <span className='mx-0.5'>Hitung</span>
         </button>
         <button
-          className='bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold flex flex-row items-center justify-between'
+          className='transition duration-500 transform-gpu active:scale-75 bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold flex flex-row items-center justify-between'
           onClick={handleReset}
         >
           <svg
