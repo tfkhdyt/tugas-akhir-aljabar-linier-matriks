@@ -5,10 +5,10 @@ import Data from '../config'
 const SiteMap = () => {}
 
 export const getServerSideProps = async ({ res }) => {
-  const baseUrl = {
-    development: 'http://localhost:3000',
-    production: Data.link
-  }[process.env.NODE_ENV]
+  const baseUrl = 
+    (process.env.NODE_ENV == 'development') 
+      ? 'http://localhost:3000' 
+      : Data.link
 
   const staticPages = fs
     .readdirSync('pages')
