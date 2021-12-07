@@ -11,7 +11,7 @@ export default function Index () {
           {Data.menu[0]} | {Data.judul}
         </title>
       </Head>
-      <main className='container mx-auto p-6 lg:px-12'>
+      <main className='container mx-auto p-6 lg:px-24'>
         <span className='text-2xl font-semibold'>{Data.menu[0]}</span>
         <div className='mt-6'>
           <Content />
