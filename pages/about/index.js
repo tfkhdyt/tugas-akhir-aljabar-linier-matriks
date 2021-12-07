@@ -12,14 +12,13 @@ export const getStaticProps = async (context) => {
   }
 }
 
-export default ({ member }) => {
+export default function About ({ member }) {
   return (
     <div>
       <Head>
         <title>
           {Data.menu[1]} | {Data.judul}
         </title>
-        <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className='container mx-auto p-6 lg:pl-12 relative'>
         <span className='text-2xl font-semibold'>{Data.menu[1]}</span>

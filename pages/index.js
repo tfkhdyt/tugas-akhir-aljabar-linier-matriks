@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Data from '../config'
 import Content from '../components/Content'
 
-export default () => {
+export default function Index () {
   return (
     <div>
       <Head>
