@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-      domains: ['fti.unibba.ac.id']
+    domains: ['fti.unibba.ac.id']
   }
 }

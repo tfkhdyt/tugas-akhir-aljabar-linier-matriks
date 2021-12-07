@@ -9,12 +9,12 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans]
       }
-    },
+    }
   },
   variants: {
     extend: {
       backgroundColor: ['active', 'group-focus']
-    },
+    }
   },
-  plugins: [],
+  plugins: []
 }
