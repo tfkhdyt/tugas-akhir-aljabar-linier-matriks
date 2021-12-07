@@ -8,7 +8,7 @@ import { Context } from '../config'
 
 const MySwal = withReactContent(Swal)
 
-export default () => {
+export default function Table () {
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
   const { setGlobalMatrix } = useContext(Context)

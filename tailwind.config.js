@@ -1,20 +1,20 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans]
-      }
-    }
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {
     extend: {
-      backgroundColor: ['active', 'group-focus']
-    }
+      backgroundColor: ["active", "group-focus"],
+    },
   },
-  plugins: []
+  plugins: [],
 }

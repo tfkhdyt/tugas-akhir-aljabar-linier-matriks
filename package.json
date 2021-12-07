@@ -4,7 +4,7 @@
     "dev": "TAILWIND_MODE=watch next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier -w --no-semi --single-quote --jsx-single-quote --trailing-comma none components config pages && standard --fix components config pages"
+    "lint": "prettier -cw ./{pages,components,config}/**/*.{js,jsx} && standard --fix ./{pages,components,config}/**/*.{js,jsx}"
   },
   "dependencies": {
     "@nteract/mathjax": "^4.0.16",
@@ -28,5 +28,10 @@
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
   },
-  "version": "1.1.4"
+  "version": "1.1.4",
+  "prettier": {
+    "singleQuote": false,
+    "jsxSingleQuote": false,
+    "semi": false
+  }
 }

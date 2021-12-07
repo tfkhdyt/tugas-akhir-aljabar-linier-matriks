@@ -1,7 +1,7 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-export default ({ children }) => {
+export default function Layout ({ children }) {
   return (
     <div>
       <Navbar />
