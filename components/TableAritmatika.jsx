@@ -1,145 +1,191 @@
 export default function TableAritmatika ({ setMatrix }) {
   return (
-    <div className='flex flex-col'>
-      <p className='font-semibold text-gray-600 text-left mb-3'>
-        Masukkan matriks A:
-      </p>
-      <form onSubmit={handleSubmit} ref={form}>
-        <div className='w-full transition duration-500 ease-in-out'>
-          <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
-            <tbody className='bg-white divide-y divide-gray-200'>
-              {/* baris satu */}
-              <tr className='divide-x divide-gray-200'>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[1,1]'
-                    name='_11'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[1,2]'
-                    name='_12'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[1,3]'
-                    name='_13'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-              </tr>
-              {/* baris dua */}
-              <tr className='divide-x divide-gray-200'>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[2,1]'
-                    name='_21'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[2,2]'
-                    name='_22'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[2,3]'
-                    name='_23'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-              </tr>
-              {/* baris tiga */}
-              <tr className='divide-x divide-gray-200'>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[3,1]'
-                    name='_31'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[3,2]'
-                    name='_32'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-                <td className='p-2'>
-                  <input
-                    type='number'
-                    placeholder='[3,3]'
-                    name='_33'
-                    className='w-full text-center font-semibold outline-none p-2 tracking-widest'
-                    required
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <form>
+      <div className='grid grid-cols-1 gap-6'>
+        {/* matriks a */}
+        <div>
+          <p className='font-semibold text-gray-600 text-left mb-3'>
+            Masukkan matriks A:
+          </p>
+          <div className='w-full transition duration-500 ease-in-out'>
+            <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
+              <tbody className='bg-white divide-y divide-gray-200'>
+                {/* baris satu */}
+                <tr className='divide-x divide-gray-200'>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[1,1]'
+                      name='A11'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[1,2]'
+                      name='A12'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                </tr>
+                {/* baris dua */}
+                <tr className='divide-x divide-gray-200'>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[2,1]'
+                      name='A21'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[2,2]'
+                      name='A22'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div className='flex flex-row items-center mb-2'>
-          <button
-            type='submit'
-            className='transition duration-500 transform-gpu active:scale-95 bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-md font-semibold mr-2 flex flex-row items-center justify-between'
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-5 w-5'
-              viewBox='0 0 20 20'
-              fill='currentColor'
-            >
-              <path
-                fillRule='evenodd'
-                d='M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z'
-                clipRule='evenodd'
-              />
-            </svg>
-            <span className='mx-0.5'>Hitung</span>
-          </button>
-          <button
-            className='transition duration-500 transform-gpu active:scale-95 bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-md font-semibold flex flex-row items-center justify-between'
-            onClick={handleReset}
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-5 w-5'
-              viewBox='0 0 20 20'
-              fill='currentColor'
-            >
-              <path
-                fillRule='evenodd'
-                d='M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z'
-                clipRule='evenodd'
-              />
-            </svg>
-            <span className='mx-1'>Reset</span>
-          </button>
+        {/* matriks b */}
+        <div>
+          <p className='font-semibold text-gray-600 text-left mb-3'>
+            Masukkan matriks B:
+          </p>
+          <div className='w-full transition duration-500 ease-in-out'>
+            <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
+              <tbody className='bg-white divide-y divide-gray-200'>
+                {/* baris satu */}
+                <tr className='divide-x divide-gray-200'>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[1,1]'
+                      name='B11'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[1,2]'
+                      name='B12'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                </tr>
+                {/* baris dua */}
+                <tr className='divide-x divide-gray-200'>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[2,1]'
+                      name='B21'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[2,2]'
+                      name='B22'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </form>
-    </div>
+        {/* matriks c */}
+        <div>
+          <p className='font-semibold text-gray-600 text-left mb-3'>
+            Masukkan matriks C:
+          </p>
+          <div className='w-full transition duration-500 ease-in-out'>
+            <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
+              <tbody className='bg-white divide-y divide-gray-200'>
+                {/* baris satu */}
+                <tr className='divide-x divide-gray-200'>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[1,1]'
+                      name='C11'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[1,2]'
+                      name='C12'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                </tr>
+                {/* baris dua */}
+                <tr className='divide-x divide-gray-200'>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[2,1]'
+                      name='C21'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[2,2]'
+                      name='C22'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                </tr>
+                {/* baris tiga */}
+                <tr className='divide-x divide-gray-200'>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[3,1]'
+                      name='C31'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                  <td className='p-2'>
+                    <input
+                      type='number'
+                      placeholder='[3,2]'
+                      name='C32'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      required
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </form>
   )
 }
