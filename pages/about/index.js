@@ -1,18 +1,18 @@
-import Head from "next/head"
+import Head from 'next/head'
 
-import Data from "../../config"
-import MemberCard from "../../components/MemberCard"
-import Member from "../../public/member"
+import Data from '../../config'
+import MemberCard from '../../components/MemberCard'
+import Member from '../../public/member'
 
 export const getStaticProps = async (context) => {
   return {
     props: {
-      member: Member,
-    },
+      member: Member
+    }
   }
 }
 
-export default function About({ member }) {
+export default function About ({ member }) {
   return (
     <div>
       <Head>
@@ -20,9 +20,9 @@ export default function About({ member }) {
           {Data.menu[1]} | {Data.judul}
         </title>
       </Head>
-      <main className="container mx-auto p-6 lg:px-24 relative">
-        <span className="text-2xl font-semibold">{Data.menu[1]}</span>
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6">
+      <main className='container mx-auto p-6 lg:px-24 relative'>
+        <span className='text-2xl font-semibold'>{Data.menu[1]}</span>
+        <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
           {member.map((e, i) => {
             return (
               <div key={i}>

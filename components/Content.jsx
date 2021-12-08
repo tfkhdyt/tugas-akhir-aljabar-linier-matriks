@@ -1,15 +1,15 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 // import MatrixContext from './MatrixContext' // eslint-disable-line
-import Form from "./Form"
-import Hasil from "./Hasil"
-import { Context } from "../config"
+import Form from './Form'
+import Hasil from './Hasil'
+import { Context } from '../config'
 
-export default function Content(props) {
+export default function Content (props) {
   const [matrix, setGlobalMatrix] = useState()
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-stretch w-full transition-all duration-500 ease-in-out">
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-stretch w-full transition-all duration-500 ease-in-out'>
       <Context.Provider value={{ matrix, setGlobalMatrix }}>
         <Form />
         {matrix ? <Hasil /> : null}
