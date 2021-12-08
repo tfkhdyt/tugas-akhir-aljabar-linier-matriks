@@ -1,9 +1,39 @@
 import Head from 'next/head'
+import { useState } from 'react'
 
-import Data from '../config'
 import Content from '../components/Content'
+import Data, { AritmatikaContext } from '../config'
+import Form from '../components/Form'
+import Hasil from '../components/Hasil'
+import TableAritmatika from '../components/TableAritmatika'
+// import Table from '../components/Table'
 
-export default function Index () {
+export default function Aritmatika () {
+  const [matrixA, setMatrixA] = useState()
+  const [matrixB, setMatrixB] = useState()
+  const [matrixC, setMatrixC] = useState()
+
+  const form = (
+    <>
+      <TableAritmatika />
+    </>
+  )
+
+  const content = (
+    <AritmatikaContext.Provider
+      value={{
+        matrixA,
+        setMatrixA,
+        matrixB,
+        setMatrixB,
+        matrixC,
+        setMatrixC
+      }}
+    >
+      <Form content={form} />
+      {matrixA && matrixB && matrixC ? <Hasil /> : null}
+    </AritmatikaContext.Provider>
+  )
   return (
     <div>
       <Head>
@@ -14,7 +44,7 @@ export default function Index () {
       <main className='container mx-auto p-6 lg:px-24'>
         <span className='text-2xl font-semibold'>{Data.menu[0]}</span>
         <div className='mt-6'>
-          <Content />
+          <Content content={content} />
         </div>
       </main>
     </div>

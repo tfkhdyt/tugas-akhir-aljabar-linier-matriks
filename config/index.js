@@ -1,11 +1,17 @@
 import { createContext } from 'react'
 
-export const Context = createContext()
+export const MatrixContext = createContext()
+export const AritmatikaContext = createContext()
 
 export default {
   judul: 'Tugas Akhir Aljabar Linier & Matriks',
   logo: 'https://fti.unibba.ac.id/wp-content/uploads/2016/07/cropped-Logo-FTI-UNIBBA.png',
-  menu: ['Invers Matriks 3x3', 'About Us'],
+  menu: [
+    'Operasi Aritmatika Matriks',
+    'Invers Matriks 3x3',
+    'Aturan Cramer',
+    'About Us'
+  ],
   link: 'https://invers-matriks-3x3.vercel.app',
   deskripsi:
     'Kalkulator Invers Matriks 3x3 menggunakan framework Next.js, Tailwind CSS, Math.js, dan MathJax',

@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify'
 
 import 'react-toastify/dist/ReactToastify.min.css'
 
-export default function Custom404(props) {
+export default function Custom404 (props) {
   const [countDown, setCountDown] = useState(5)
   const router = useRouter()
 
@@ -17,7 +17,7 @@ export default function Custom404(props) {
       closeOnClick: false,
       pauseOnHover: false,
       draggable: false,
-      progress: undefined,
+      progress: undefined
     })
     const timer = setInterval(() => {
       setCountDown((countDown) => countDown - 1)

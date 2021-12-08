@@ -17,11 +17,11 @@ export default function About ({ member }) {
     <div>
       <Head>
         <title>
-          {Data.menu[1]} | {Data.judul}
+          {Data.menu[3]} | {Data.judul}
         </title>
       </Head>
       <main className='container mx-auto p-6 lg:px-24 relative'>
-        <span className='text-2xl font-semibold'>{Data.menu[1]}</span>
+        <span className='text-2xl font-semibold'>{Data.menu[3]}</span>
         <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
           {member.map((e, i) => {
             return (
