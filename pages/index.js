@@ -1,9 +1,9 @@
-import Head from 'next/head'
+import Head from "next/head"
 
-import Data from '../config'
-import Content from '../components/Content'
+import Data from "../config"
+import Content from "../components/Content"
 
-export default function Index () {
+export default function Index() {
   return (
     <div>
       <Head>
@@ -11,9 +11,9 @@ export default function Index () {
           {Data.menu[0]} | {Data.judul}
         </title>
       </Head>
-      <main className='container mx-auto p-6 lg:px-24'>
-        <span className='text-2xl font-semibold'>{Data.menu[0]}</span>
-        <div className='mt-6'>
+      <main className="container mx-auto p-6 lg:px-24">
+        <span className="text-2xl font-semibold">{Data.menu[0]}</span>
+        <div className="mt-6">
           <Content />
         </div>
       </main>
