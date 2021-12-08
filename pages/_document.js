@@ -34,7 +34,7 @@ export default function Document () {
           rel='stylesheet'
         />
       </Head>
-      <body className='bg-gray-50 dark:bg-black'>
+      <body className='bg-gray-50'>
         <Main />
         <NextScript />
       </body>
