@@ -1,5 +1,5 @@
-import { useContext, useEffect, useRef, useState } from 'react'
-import { matrix, round, map, multiply, transpose, add } from 'mathjs'
+import { useContext, useEffect, useRef } from 'react'
+import { matrix, multiply, transpose, add } from 'mathjs'
 
 import Button from './Button'
 import { AritmatikaContext } from '../config'
@@ -7,23 +7,26 @@ import ResetDialog from './ResetDialog'
 
 export default function TableAritmatika () {
   const {
-    matrixA, setMatrixA,
-    matrixB, setMatrixB,
-    matrixC, setMatrixC,
+    matrixA,
+    setMatrixA,
+    matrixB,
+    setMatrixB,
+    matrixC,
+    setMatrixC,
     setResult
   } = useContext(AritmatikaContext)
   const form = useRef()
-  
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = e.target
     setMatrixA([
       [data.A11.value, data.A12.value],
-      [data.A21.value, data.A22.value],
+      [data.A21.value, data.A22.value]
     ])
     setMatrixB([
       [data.B11.value, data.B12.value],
-      [data.B21.value, data.B22.value],
+      [data.B21.value, data.B22.value]
     ])
     setMatrixC([
       [data.C11.value, data.C12.value],
@@ -37,7 +40,7 @@ export default function TableAritmatika () {
     // form.blur()
     ResetDialog(setResult, form)
   }
-  
+
   const isInitialMount = useRef(true)
   useEffect(() => {
     if (isInitialMount.current) {
@@ -79,7 +82,7 @@ export default function TableAritmatika () {
       setResult(tex)
     }
   }, [matrixA, matrixB, matrixC])
-  
+
   return (
     <form onSubmit={handleSubmit} ref={form}>
       <div className='grid grid-cols-1 gap-6'>
@@ -267,7 +270,7 @@ export default function TableAritmatika () {
           </div>
         </div>
       </div>
-      <Button handleReset={handleReset}/>
+      <Button handleReset={handleReset} />
     </form>
   )
 }

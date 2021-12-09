@@ -1,5 +1,8 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { ToastContainer, toast } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.min.css'
 
 const MySwal = withReactContent(Swal)
 
@@ -24,11 +27,7 @@ export default function ResetDialog (setResult, form) {
     if (result.isConfirmed) {
       setResult()
       form.current.reset()
-      MySwal.fire({
-        title: 'Matriks berhasil di-reset!',
-        icon: 'success',
-        confirmButtonColor: '#60A5FA'
-      })
+      
     }
   })
 }

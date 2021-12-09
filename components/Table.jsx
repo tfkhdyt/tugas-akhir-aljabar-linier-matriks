@@ -222,7 +222,7 @@ export default function Table () {
           </tbody>
         </table>
       </div>
-      <Button handleSubmit={handleSubmit} handleReset={handleReset}/>
+      <Button handleReset={handleReset} />
     </form>
   )
 }
