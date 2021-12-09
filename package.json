@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "TAILWIND_MODE=watch next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "prettier -cw ./{pages,components,config}/**/*.{js,jsx} && standard --fix ./{pages,components,config}/**/*.{js,jsx}"
