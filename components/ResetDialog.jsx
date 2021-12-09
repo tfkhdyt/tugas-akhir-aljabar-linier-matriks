@@ -1,8 +1,6 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { ToastContainer, toast } from 'react-toastify'
-
-import 'react-toastify/dist/ReactToastify.min.css'
+import { toast } from 'react-toastify'
 
 const MySwal = withReactContent(Swal)
 
@@ -27,7 +25,16 @@ export default function ResetDialog (setResult, form) {
     if (result.isConfirmed) {
       setResult()
       form.current.reset()
-      
+      toast.success('Matriks telah berhasil di-reset!', {
+        theme: 'colored',
+        position: 'top-right',
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined
+      })
     }
   })
 }

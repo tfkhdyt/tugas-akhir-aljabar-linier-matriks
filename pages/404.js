@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
-
-import 'react-toastify/dist/ReactToastify.min.css'
+import { toast } from 'react-toastify'
 
 export default function Custom404 (props) {
   const [countDown, setCountDown] = useState(5)
@@ -34,17 +32,6 @@ export default function Custom404 (props) {
 
   return (
     <>
-      <ToastContainer
-        position='top-right'
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss={false}
-        draggable={false}
-        pauseOnHover={false}
-      />
       <div className='bg-gray-50 flex items-center grid place-items-center'>
         <div className='container flex flex-col md:flex-row items-center justify-center px-6 py-44 text-gray-700'>
           <div className='max-w-md'>

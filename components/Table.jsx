@@ -39,12 +39,12 @@ export default function Table () {
   useEffect(() => {
     if (isInitialMount.current) isInitialMount.current = false
     else {
-      const original = String.raw`
-        A = \begin{bmatrix}
+      const original = String.raw`\begin{align}
+        A & = \begin{bmatrix}
           ${_matrix[0][0]} & ${_matrix[0][1]} & ${_matrix[0][2]} \\
           ${_matrix[1][0]} & ${_matrix[1][1]} & ${_matrix[1][2]} \\
           ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
-        \end{bmatrix}
+        \end{bmatrix} \\
       `.trim()
       let invMat
       // console.log(det(_matrix))
@@ -102,11 +102,12 @@ export default function Table () {
         return String.raw`\frac{${e[0]}}{${e[1]}}`
       })
       const inverse = String.raw`
-          A^{-1} = \begin{bmatrix}
+          A^{-1} & = \begin{bmatrix}
             ${pecahan[0][0]} & ${pecahan[0][1]} & ${pecahan[0][2]} \\
             ${pecahan[1][0]} & ${pecahan[1][1]} & ${pecahan[1][2]} \\
             ${pecahan[2][0]} & ${pecahan[2][1]} & ${pecahan[2][2]}
           \end{bmatrix}
+          \end{align}
         `.trim()
       // console.log(invMat)
       setResult({

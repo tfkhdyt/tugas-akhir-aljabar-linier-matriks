@@ -12,7 +12,7 @@ export default {
     'Aturan Cramer',
     'About Us'
   ],
-  link: 'https://invers-matriks-3x3.vercel.app',
+  link: 'https://aljabar-linier-matriks-kelompok-2.vercel.app',
   deskripsi:
     'Kalkulator Invers Matriks 3x3 menggunakan framework Next.js, Tailwind CSS, Math.js, dan MathJax',
   thumbnail: '/images/thumbnail.png',

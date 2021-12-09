@@ -60,24 +60,25 @@ export default function TableAritmatika () {
       console.log(b)
       const c = transpose(multiply(matrixC, matrixB)).valueOf()
       console.log(c)
-      tex.a = String.raw`
-        CA = \begin{bmatrix}
+      tex.a = String.raw`\begin{align}
+        CA & = \begin{bmatrix}
           ${a[0][0]} && ${a[0][1]} \\
           ${a[1][0]} && ${a[1][1]} \\
           ${a[2][0]} && ${a[2][1]} 
-        \end{bmatrix}
+        \end{bmatrix} \\
       `
       tex.b = String.raw`
-        A^{T} (A + B) = \begin{bmatrix}
+        A^{T} (A + B) & = \begin{bmatrix}
           ${b[0][0]} && ${b[0][1]} \\
           ${b[1][0]} && ${b[1][1]} 
-        \end{bmatrix}
+        \end{bmatrix} \\
       `
       tex.c = String.raw`
-        (CB)^{T} = \begin{bmatrix}
+        (CB)^{T} & = \begin{bmatrix}
           ${c[0][0]} && ${c[0][1]} && ${c[0][2]}\\
           ${c[1][0]} && ${c[1][1]} && ${c[1][2]}
         \end{bmatrix}
+        \end{align}
       `
       setResult(tex)
     }
