@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Content from '../components/Content'
 import Data, { AritmatikaContext } from '../config'
 import Form from '../components/Form'
-import Hasil from '../components/Hasil'
+import HasilAritmatika from '../components/HasilAritmatika'
 import TableAritmatika from '../components/TableAritmatika'
 // import Table from '../components/Table'
 
@@ -12,6 +12,7 @@ export default function Aritmatika () {
   const [matrixA, setMatrixA] = useState()
   const [matrixB, setMatrixB] = useState()
   const [matrixC, setMatrixC] = useState()
+  const [result, setResult] = useState()
 
   const form = (
     <>
@@ -27,11 +28,13 @@ export default function Aritmatika () {
         matrixB,
         setMatrixB,
         matrixC,
-        setMatrixC
+        setMatrixC,
+        result,
+        setResult
       }}
     >
       <Form content={form} />
-      {matrixA && matrixB && matrixC ? <Hasil /> : null}
+      {result ? <HasilAritmatika /> : null}
     </AritmatikaContext.Provider>
   )
   return (

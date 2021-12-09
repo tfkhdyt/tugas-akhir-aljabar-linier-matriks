@@ -1,6 +1,87 @@
-export default function TableAritmatika ({ setMatrix }) {
+import { useContext, useEffect, useRef, useState } from 'react'
+import { matrix, round, map, multiply, transpose, add } from 'mathjs'
+
+import Button from './Button'
+import { AritmatikaContext } from '../config'
+import ResetDialog from './ResetDialog'
+
+export default function TableAritmatika () {
+  const {
+    matrixA, setMatrixA,
+    matrixB, setMatrixB,
+    matrixC, setMatrixC,
+    setResult
+  } = useContext(AritmatikaContext)
+  const form = useRef()
+  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const data = e.target
+    setMatrixA([
+      [data.A11.value, data.A12.value],
+      [data.A21.value, data.A22.value],
+    ])
+    setMatrixB([
+      [data.B11.value, data.B12.value],
+      [data.B21.value, data.B22.value],
+    ])
+    setMatrixC([
+      [data.C11.value, data.C12.value],
+      [data.C21.value, data.C22.value],
+      [data.C31.value, data.C32.value]
+    ])
+  }
+
+  const handleReset = (e) => {
+    e.preventDefault()
+    // form.blur()
+    ResetDialog(setResult, form)
+  }
+  
+  const isInitialMount = useRef(true)
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false
+    } else {
+      console.log(matrixA)
+      console.log(matrixB)
+      console.log(matrixC)
+      const tex = {
+        a: null,
+        b: null,
+        c: null
+      }
+      const a = multiply(matrix(matrixC), matrix(matrixA)).valueOf()
+      console.log(a)
+      const b = multiply(transpose(matrixA), add(matrixA, matrixB)).valueOf()
+      console.log(b)
+      const c = transpose(multiply(matrixC, matrixB)).valueOf()
+      console.log(c)
+      tex.a = String.raw`
+        CA = \begin{bmatrix}
+          ${a[0][0]} && ${a[0][1]} \\
+          ${a[1][0]} && ${a[1][1]} \\
+          ${a[2][0]} && ${a[2][1]} 
+        \end{bmatrix}
+      `
+      tex.b = String.raw`
+        A^{T} (A + B) = \begin{bmatrix}
+          ${b[0][0]} && ${b[0][1]} \\
+          ${b[1][0]} && ${b[1][1]} 
+        \end{bmatrix}
+      `
+      tex.c = String.raw`
+        (CB)^{T} = \begin{bmatrix}
+          ${c[0][0]} && ${c[0][1]} && ${c[0][2]}\\
+          ${c[1][0]} && ${c[1][1]} && ${c[1][2]}
+        \end{bmatrix}
+      `
+      setResult(tex)
+    }
+  }, [matrixA, matrixB, matrixC])
+  
   return (
-    <form>
+    <form onSubmit={handleSubmit} ref={form}>
       <div className='grid grid-cols-1 gap-6'>
         {/* matriks a */}
         <div>
@@ -186,6 +267,7 @@ export default function TableAritmatika ({ setMatrix }) {
           </div>
         </div>
       </div>
+      <Button handleReset={handleReset}/>
     </form>
   )
 }

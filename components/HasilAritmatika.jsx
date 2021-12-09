@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 
-import { MatrixContext } from '../config'
+import { AritmatikaContext } from '../config'
 import { Provider, Node } from '@nteract/mathjax'
 
 export default function Hasil () {
-  const { matrix } = useContext(MatrixContext)
+  const { result } = useContext(AritmatikaContext)
   return (
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col transition duration-500'>
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
@@ -17,8 +17,9 @@ export default function Hasil () {
               displayAlign: 'left'
             }}
           >
-            <Node>{matrix.original}</Node>
-            <Node>{matrix.inverse}</Node>
+            <Node>{result.a}</Node>
+            <Node>{result.b}</Node>
+            <Node>{result.c}</Node>
           </Provider>
         </p>
       </div>
