@@ -65,13 +65,13 @@ export default function TableAritmatika () {
           ${a[0][0]} && ${a[0][1]} \\
           ${a[1][0]} && ${a[1][1]} \\
           ${a[2][0]} && ${a[2][1]} 
-        \end{bmatrix} \\
+        \end{bmatrix} \\ \\
       `
       tex.b = String.raw`
         A^{T} (A + B) & = \begin{bmatrix}
           ${b[0][0]} && ${b[0][1]} \\
           ${b[1][0]} && ${b[1][1]} 
-        \end{bmatrix} \\
+        \end{bmatrix} \\ \\
       `
       tex.c = String.raw`
         (CB)^{T} & = \begin{bmatrix}
@@ -86,7 +86,7 @@ export default function TableAritmatika () {
 
   return (
     <form onSubmit={handleSubmit} ref={form}>
-      <div className='grid grid-cols-1 gap-6'>
+      <div className='grid grid-cols-2 gap-6'>
         {/* matriks a */}
         <div>
           <p className='font-semibold text-gray-600 text-left mb-3'>
@@ -102,7 +102,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[1,1]'
                       name='A11'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -111,7 +111,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[1,2]'
                       name='A12'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -123,7 +123,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[2,1]'
                       name='A21'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -132,7 +132,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[2,2]'
                       name='A22'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -156,7 +156,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[1,1]'
                       name='B11'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -165,7 +165,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[1,2]'
                       name='B12'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -177,7 +177,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[2,1]'
                       name='B21'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -186,7 +186,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[2,2]'
                       name='B22'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
                     />
                   </td>
@@ -196,7 +196,7 @@ export default function TableAritmatika () {
           </div>
         </div>
         {/* matriks c */}
-        <div>
+        <div className='col-span-2'>
           <p className='font-semibold text-gray-600 text-left mb-3'>
             Masukkan matriks C:
           </p>
@@ -210,7 +210,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[1,1]'
                       name='C11'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
                     />
                   </td>
@@ -219,7 +219,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[1,2]'
                       name='C12'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
                     />
                   </td>
@@ -231,7 +231,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[2,1]'
                       name='C21'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
                     />
                   </td>
@@ -240,7 +240,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[2,2]'
                       name='C22'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
                     />
                   </td>
@@ -252,7 +252,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[3,1]'
                       name='C31'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
                     />
                   </td>
@@ -261,7 +261,7 @@ export default function TableAritmatika () {
                       type='number'
                       placeholder='[3,2]'
                       name='C32'
-                      className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                      className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
                     />
                   </td>

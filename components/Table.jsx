@@ -44,7 +44,7 @@ export default function Table () {
           ${_matrix[0][0]} & ${_matrix[0][1]} & ${_matrix[0][2]} \\
           ${_matrix[1][0]} & ${_matrix[1][1]} & ${_matrix[1][2]} \\
           ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
-        \end{bmatrix} \\
+        \end{bmatrix} \\ \\
       `.trim()
       let invMat
       // console.log(det(_matrix))
@@ -137,7 +137,7 @@ export default function Table () {
                   type='number'
                   placeholder='[1,1]'
                   name='_11'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -146,7 +146,7 @@ export default function Table () {
                   type='number'
                   placeholder='[1,2]'
                   name='_12'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -155,7 +155,7 @@ export default function Table () {
                   type='number'
                   placeholder='[1,3]'
                   name='_13'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -167,7 +167,7 @@ export default function Table () {
                   type='number'
                   placeholder='[2,1]'
                   name='_21'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -176,7 +176,7 @@ export default function Table () {
                   type='number'
                   placeholder='[2,2]'
                   name='_22'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -185,7 +185,7 @@ export default function Table () {
                   type='number'
                   placeholder='[2,3]'
                   name='_23'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -197,7 +197,7 @@ export default function Table () {
                   type='number'
                   placeholder='[3,1]'
                   name='_31'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -206,7 +206,7 @@ export default function Table () {
                   type='number'
                   placeholder='[3,2]'
                   name='_32'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
@@ -215,7 +215,7 @@ export default function Table () {
                   type='number'
                   placeholder='[3,3]'
                   name='_33'
-                  className='w-full text-center font-semibold outline-none p-2 tracking-widest'
+                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
                 />
               </td>
