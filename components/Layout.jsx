@@ -27,7 +27,7 @@ export default function Layout ({ children }) {
         <meta property='og:title' content={Data.judul} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={Data.link} />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='shortcut icon' href='/favicon.ico' />
         <link rel='image_src' href={Data.thumbnail} />
       </Head>
       <div>
