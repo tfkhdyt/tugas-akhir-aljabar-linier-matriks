@@ -15,7 +15,7 @@ export default function Navbar () {
       <nav
         className='
           flex items-center flex-wrap bg-blue-400
-          p-3 sticky w-100 z-50 top-0'
+          px-3 py-2 sticky w-100 z-50 top-0'
       >
         <Link href='/'>
           <a className='transition duration-500 inline-flex items-center p-2 mr-4 h-4'>
@@ -92,10 +92,16 @@ export default function Navbar () {
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     className='h-5 w-5 mr-1'
-                    viewBox='0 0 20 20'
-                    fill='currentColor'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
                   >
-                    <path d='M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8'
+                    />
                   </svg>
                   {Data.menu[2]}
                 </span>
