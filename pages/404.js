@@ -37,23 +37,35 @@ export default function Custom404 (props) {
   }
 
   return (
-    <>
-      <div className='bg-gray-50 flex items-center grid place-items-center'>
-        <div className='container flex flex-col md:flex-row items-center justify-center px-6 py-44 text-gray-700'>
-          <div className='max-w-md'>
-            <div className='text-5xl font-dark font-bold'>404</div>
-            <p className='text-2xl md:text-3xl font-light leading-normal mb-3'>
-              Maaf, halaman yang Anda kunjungi tidak ditemukan
-            </p>
-            <button
-              onClick={handleClick}
-              className='px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-400 active:bg-blue-600 hover:bg-blue-500'
+    <div className='min-h-screen min-w-screen p-12 grid place-items-center'>
+      <div className='flex flex-col mb-24 lg:mb-0 max-w-md'>
+        <div className='text-5xl text-gray-600 font-bold'>404</div>
+        <p className='text-xl md:text-3xl text-gray-600 font-light leading-normal mb-3'>
+          Maaf, halaman yang Anda kunjungi tidak ditemukan
+        </p>
+        <div className='w-auto'>
+          <button
+            onClick={handleClick}
+            className='space-x-2 text-sm transition duration-500 transform-gpu active:scale-95 bg-blue-400 px-3 py-2 text-white rounded-md hover:bg-blue-500 hover:shadow-md font-semibold flex items-center w-auto'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              className='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
             >
-              Kembali ke halaman utama
-            </button>
-          </div>
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M10 19l-7-7m0 0l7-7m-7 7h18'
+              />
+            </svg>
+            <span>Kembali ke halaman utama</span>
+          </button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
