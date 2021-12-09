@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function MemberCard (props) {
   return (
-    <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg px-16 py-8 flex flex-col justify-center items-center transition duration-500 ease-in-out'>
+    <div className='w-full bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-8 md:py-10 flex flex-col justify-center items-center transition duration-500 ease-in-out'>
       <div className='mb-4'>
         <Image
           className='rounded-full'
@@ -16,7 +16,9 @@ export default function MemberCard (props) {
         />
       </div>
       <div className='text-center'>
-        <p className='text-lg text-blue-400 font-semibold mb-1'>{props.nama}</p>
+        <p className='text-lg text-blue-400 font-semibold mb-1 whitespace-nowrap'>
+          {props.nama}
+        </p>
         <p className='text-sm text-gray-500 font-light mb-1'>{props.nim}</p>
         <p className='text-sm text-gray-500 font-light mb-4'>{props.prodi}</p>
         <Link href={`https://instagram.com/${props.ig}`}>

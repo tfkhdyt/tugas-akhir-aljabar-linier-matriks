@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
@@ -46,7 +45,10 @@ export default function Custom404 (props) {
             <p className='text-2xl md:text-3xl font-light leading-normal mb-3'>
               Maaf, halaman yang Anda kunjungi tidak ditemukan
             </p>
-            <button onClick={handleClick} className='px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-400 active:bg-blue-600 hover:bg-blue-500'>
+            <button
+              onClick={handleClick}
+              className='px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-400 active:bg-blue-600 hover:bg-blue-500'
+            >
               Kembali ke halaman utama
             </button>
           </div>
