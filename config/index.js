@@ -7,9 +7,9 @@ export default {
   judul: 'Tugas Akhir Aljabar Linier & Matriks',
   logo: 'https://fti.unibba.ac.id/wp-content/uploads/2016/07/cropped-Logo-FTI-UNIBBA.png',
   menu: [
-    'Operasi Aritmetika Matriks',
-    'Invers Matriks 3x3',
-    'SPL dengan Aturan Cramer',
+    'Operasi Aritmetika',
+    'Invers Matriks',
+    'SPL Aturan Cramer',
     'About Us'
   ],
   link: 'https://aljabar-linier-matriks-kelompok-2.vercel.app',
