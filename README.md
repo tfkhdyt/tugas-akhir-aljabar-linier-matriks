@@ -1,10 +1,10 @@
 <div id="top"></div>
-[![Contributors][contributors-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/graphs/contributors]
-[![Forks][forks-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/network/members]
-[![Stargazers][stars-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/stargazers]
-[![Issues][issues-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues]
-[![MIT License][license-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/main/LICENSE]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/taufik-hidayat-6793aa200]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GPLv3 License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -100,10 +100,10 @@ Ini adalah sebuah aplikasi berbasis web yang berfungsi untuk menyelesaikan soal 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [-] Fitur Utama
+- [ ] Fitur Utama
   - [x] Operasi Aritmetika Matriks
   - [x] Invers Matriks 3x3
-  - [] SPL dengan Aturan Cramer
+  - [ ] SPL dengan Aturan Cramer
 - [x] Fitur Sampingan
   - [x] Halaman About Us
   - [x] Halaman 404
