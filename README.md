@@ -44,6 +44,7 @@ Ini adalah sebuah aplikasi berbasis web yang berfungsi untuk menyelesaikan soal 
 * [MathJax](https://www.mathjax.org/)
 * [Fraction.js](https://github.com/infusion/Fraction.js/)
 * [sweetalert2](https://sweetalert2.github.io/)
+* [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 
 <p align="right">(<a href="#top">kembali ke atas</a>)</p>
 
