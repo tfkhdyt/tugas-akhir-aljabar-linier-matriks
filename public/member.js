@@ -34,4 +34,11 @@ export default [
     foto: "/images/member/faisal.jpg",
     ig: "nmf23_",
   },
+  {
+    nama: "Yasin Mujadi",
+    nim: "302200013",
+    prodi: "Sistem Informasi",
+    foto: "/images/member/foto-default.jpg",
+    ig: "",
+  }
 ]
