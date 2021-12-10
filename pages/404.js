@@ -46,7 +46,7 @@ export default function Custom404 (props) {
         <div className='w-auto'>
           <button
             onClick={handleClick}
-            className='space-x-2 text-sm transition duration-500 transform-gpu active:scale-95 bg-blue-400 px-3 py-2 text-white rounded-md hover:bg-blue-500 hover:shadow-md font-semibold flex items-center w-auto'
+            className='space-x-2 text-sm transition duration-500 transform-gpu active:scale-95 bg-blue-400 px-3 py-2 text-white rounded-md hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/25 font-semibold flex items-center w-auto'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
