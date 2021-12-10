@@ -1,29 +1,177 @@
-# Next.js + Tailwind CSS Example
+<div id="top"></div>
+[![Contributors][contributors-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/graphs/contributors]
+[![Forks][forks-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/network/members]
+[![Stargazers][stars-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/stargazers]
+[![Issues][issues-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues]
+[![MIT License][license-shield]][https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/main/LICENSE]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/taufik-hidayat-6793aa200]
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  
+  <h3 align="center">Tugas Akhir Aljabar Linier dan Matriks</h3>
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+  <p align="center">
+    Tugas Akhir Aljabar Linier dan Matriks dengan framework Next.js dan Tailwind CSS
+    <br />
+    <br />
+    <br />
+    <a href="https://aljabar-linier-matriks-kelompok-2.vercel.app">View Demo</a>
+    ·
+    <a href="https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues">Request Feature</a>
+  </p>
+</div>
 
-## Preview
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Ini adalah sebuah aplikasi berbasis web yang berfungsi untuk menyelesaikan soal mengenai `Aljabar Linier dan Matriks`, seperti:
+- Operasi Aritmetika Matriks
+- Invers Matriks 3x3
+- Sistem Persamaan Linier dengan Aturan Cramer
 
-## Deploy your own
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+### Built With
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+* [React.js](https://reactjs.org/)
+* [Next.js](https://nextjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Math.js](https://mathjs.org/)
+* [MathJax](https://www.mathjax.org/)
+* [Fraction.js](https://github.com/infusion/Fraction.js/)
+* [sweetalert2](https://sweetalert2.github.io/)
 
-## How to use
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+<!-- GETTING STARTED -->
+## Getting Started
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+### Prerequisites
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/en/)
+* NPM
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone repo
+   ```sh
+   git clone https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks.git
+   ```
+2. Buka direktori repo 
+   ```sh
+   cd tugas-akhir-aljabar-linier-matriks
+   ```
+3. Instal paket NPM yang dibutuhkan
+   ```sh
+   npm install
+   ```
+4. Jalankan aplikasi dalam mode development 
+   ```sh
+   npm run dev
+   ```
+
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+* Jalankan aplikasi dalam mode development 
+   ```sh
+   npm run dev
+   ```
+* Build aplikasi
+   ```sh
+   npm run build
+   ```
+* Jalankan aplikasi dalam mode production 
+   ```sh
+   npm run start
+   ```
+
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [-] Fitur Utama
+  - [x] Operasi Aritmetika Matriks
+  - [x] Invers Matriks 3x3
+  - [] SPL dengan Aturan Cramer
+- [x] Fitur Sampingan
+  - [x] Halaman About Us
+  - [x] Halaman 404
+
+Buka halaman [open issues](https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues) untuk melihat daftar penuh dari fitur proposal (dan masalah yang diketahui).
+
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Kontribusi adalah hal yang membuat komunitas open source menjadi tempat yang luar biasa untuk belajar, menginspirasi, dan menciptakan hal menarik. Semua kontribusi yang Anda buat sangat saya **apresiasi**.
+
+Jika Anda punya sebuah saran yang dapat membuat aplikasi ini menjadi lebih baik, mohon fork repo ini dan buat sebuah pull request. Kamu juga dapat membuka sebuah issue dengan tag "enhancement".
+Jangan lupa untuk memberi project ini bintang! Terima kasih!
+
+1. Fork project ini
+2. Buat Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan mu (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke Branch (`git push origin feature/AmazingFeature`)
+5. Buka sebuah Pull Request
+
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Aplikasi ini didistribusikan di bawah lisensi GPLv3. Lihat berkas `LICENSE` untuk informasi lebih lanjut.
+
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
+
+
+<!-- CONTACT -->
+## Contact
+
+<p align=center>
+  <a href="https://facebook.com/tfkhdyt142"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"></a>&nbsp;
+  <a href="https://twitter.com/tfkhdyt"><img height="28" src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg"></a>&nbsp;
+  <a href="https://instagram.com/_tfkhdyt_"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"></a>&nbsp;
+  <a href="https://youtube.com/tfkhdyt"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/YouTube_social_red_circle_%282017%29.svg"></a>&nbsp;
+  <a href="https://t.me/tfkhdyt"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg"></a>&nbsp;
+  <a href="https://www.linkedin.com/mwlite/in/taufik-hidayat-6793aa200"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"></a>
+  <a href="https://pddikti.kemdikbud.go.id/data_mahasiswa/QUUyNzdEMjktNDk0Ri00RTlDLUE4NzgtNkUwRDBDRjIxOUNB"><img height="30" src="https://i.postimg.cc/YSB2c3DG/1619598282440.png"></a>
+  <a href="https://tfkhdyt.my.id/"><img height="31" src="https://www.svgrepo.com/show/295345/internet.svg"></a>&nbsp; <br>
+  <a href="https://www.npmjs.com/package/bayarcoek"><img src="https://badge.fury.io/js/bayarcoek.svg" alt="NPM Version"/><a>
+</p>
+
+Email: tfkhdyt@pm.me
+
+Project Link: [https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks](https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks)
+
+<p align="right">(<a href="#top">kembali ke atas</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
+[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/graphs/contributors]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
+[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/network/members]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/network/members
+[stars-shield]: https://img.shields.io/github/stars/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
+[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/stargazers]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
+[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues
+[license-shield]: https://img.shields.io/github/license/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
+[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/main/LICENSE]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[https://www.linkedin.com/in/taufik-hidayat-6793aa200]: https://linkedin.com/in/taufik-hidayat-6793aa200
+[product-screenshot]: images/screenshot.png
