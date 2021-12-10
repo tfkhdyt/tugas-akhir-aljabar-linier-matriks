@@ -16,7 +16,6 @@
     Tugas Akhir Aljabar Linier dan Matriks dengan framework Next.js dan Tailwind CSS
     <br />
     <br />
-    <br />
     <a href="https://aljabar-linier-matriks-kelompok-2.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues">Report Bug</a>
@@ -27,8 +26,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Ini adalah sebuah aplikasi berbasis web yang berfungsi untuk menyelesaikan soal mengenai `Aljabar Linier dan Matriks`, seperti:
 - Operasi Aritmetika Matriks
@@ -150,8 +147,7 @@ Aplikasi ini didistribusikan di bawah lisensi GPLv3. Lihat berkas `LICENSE` untu
   <a href="https://t.me/tfkhdyt"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg"></a>&nbsp;
   <a href="https://www.linkedin.com/mwlite/in/taufik-hidayat-6793aa200"><img height="30" src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"></a>
   <a href="https://pddikti.kemdikbud.go.id/data_mahasiswa/QUUyNzdEMjktNDk0Ri00RTlDLUE4NzgtNkUwRDBDRjIxOUNB"><img height="30" src="https://i.postimg.cc/YSB2c3DG/1619598282440.png"></a>
-  <a href="https://tfkhdyt.my.id/"><img height="31" src="https://www.svgrepo.com/show/295345/internet.svg"></a>&nbsp; <br>
-  <a href="https://www.npmjs.com/package/bayarcoek"><img src="https://badge.fury.io/js/bayarcoek.svg" alt="NPM Version"/><a>
+  <a href="https://tfkhdyt.my.id/"><img height="31" src="https://www.svgrepo.com/show/295345/internet.svg"></a>
 </p>
 
 Email: tfkhdyt@pm.me
@@ -171,7 +167,6 @@ Project Link: [https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks](ht
 [issues-shield]: https://img.shields.io/github/issues/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
 [https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues
 [license-shield]: https://img.shields.io/github/license/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
-[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/main/LICENSE]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/master/LICENSE.txt
+[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/main/LICENSE]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [https://www.linkedin.com/in/taufik-hidayat-6793aa200]: https://linkedin.com/in/taufik-hidayat-6793aa200
-[product-screenshot]: images/screenshot.png
