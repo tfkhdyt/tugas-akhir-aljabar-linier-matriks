@@ -159,14 +159,14 @@ Project Link: [https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks](ht
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
-[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/graphs/contributors]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/graphs/contributors
+[contributors-url]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
-[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/network/members]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/network/members
+[forks-url]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/network/members
 [stars-shield]: https://img.shields.io/github/stars/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
-[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/stargazers]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/stargazers
+[stars-url]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/stargazers
 [issues-shield]: https://img.shields.io/github/issues/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
-[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues
+[issues-url]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/issues
 [license-shield]: https://img.shields.io/github/license/tfkhdyt/tugas-akhir-aljabar-linier-matriks.svg?style=for-the-badge
-[https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/main/LICENSE]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/master/LICENSE
+[license-url]: https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[https://www.linkedin.com/in/taufik-hidayat-6793aa200]: https://linkedin.com/in/taufik-hidayat-6793aa200
+[linkedin-url]: https://linkedin.com/in/taufik-hidayat-6793aa200
