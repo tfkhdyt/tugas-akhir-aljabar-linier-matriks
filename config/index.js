@@ -9,7 +9,7 @@ export default {
   menu: [
     'Operasi Aritmetika Matriks',
     'Invers Matriks 3x3',
-    'Aturan Cramer',
+    'SPL dengan Aturan Cramer',
     'About Us'
   ],
   link: 'https://aljabar-linier-matriks-kelompok-2.vercel.app',

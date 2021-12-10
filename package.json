@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier -cw ./{pages,components,config}/**/*.{js,jsx} && standard --fix ./{pages,components,config}/**/*.{js,jsx}"
+    "lint": "prettier -w ./{pages,components,config}/**/*.{js,jsx} && standard --fix ./{pages,components,config}/**/*.{js,jsx}"
   },
   "dependencies": {
     "@nteract/mathjax": "^4.0.16",
