@@ -9,7 +9,7 @@ export default function Hasil () {
     <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col transition duration-500'>
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
       <div>
-        <p className='text-sm text-gray-600'>
+        <p className='text-sm md:text-base text-gray-600'>
           <Provider
             options={{
               showMathMenu: false,

@@ -6,10 +6,10 @@ import { Provider, Node } from '@nteract/mathjax'
 export default function Hasil () {
   const { result } = useContext(AritmatikaContext)
   return (
-    <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col transition duration-500'>
+    <div className='w-auto h-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col transition duration-500'>
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
-      <div>
-        <p className='text-gray-600 text-sm'>
+      <div className='md:mt-16'>
+        <div className='text-gray-600 text-sm md:text-base'>
           <Provider
             options={{
               showMathMenu: false,
@@ -18,7 +18,7 @@ export default function Hasil () {
           >
             <Node>{result.a + result.b + result.c}</Node>
           </Provider>
-        </p>
+        </div>
       </div>
     </div>
   )
