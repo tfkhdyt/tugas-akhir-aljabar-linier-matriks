@@ -10,11 +10,9 @@ export default function Offline (props) {
   return (
     <div className='min-h-screen min-w-screen p-12 grid place-items-center'>
       <div className='flex flex-col mb-24 lg:mb-0 max-w-md'>
-        <div className='text-5xl text-gray-600 font-bold'>Whoopsie...</div>
+        <div className='text-4xl text-gray-600 font-bold'>No Internet</div>
         <p className='text-lg md:text-2xl text-gray-600 font-light leading-normal mb-3'>
-          Nampaknya saat ini Anda sedang tidak terhubung ke Internet. Untuk
-          melanjutkan, mohon untuk menghubungkan perangkat Anda ke Internet
-          terlebih dahulu.
+          Untuk melanjutkan, hubungkan perangkat Anda ke Internet terlebih dahulu.
         </p>
         <div className='w-auto'>
           <button

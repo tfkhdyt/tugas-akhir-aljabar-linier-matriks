@@ -43,9 +43,9 @@ export default function Layout ({ children }) {
           draggable={router.pathname !== '/404'}
           pauseOnHover={router.pathname !== '/404'}
         />
-        {router.pathname !== '/404' ? <Navbar /> : null}
+        {!['/404', '/_offline'].includes(router.pathname) ? <Navbar /> : null}
         {children}
-        {router.pathname !== '/404' ? <Footer /> : null}
+        {!['/404', '/_offline'].includes(router.pathname) ? <Footer /> : null}
       </div>
     </>
   )
