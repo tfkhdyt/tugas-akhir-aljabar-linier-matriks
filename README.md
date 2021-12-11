@@ -8,7 +8,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
-<br />
+
 <div align="center">
   
   <h3 align="center">Tugas Akhir Aljabar Linier dan Matriks</h3>
@@ -45,6 +45,7 @@ Ini adalah sebuah aplikasi berbasis web yang berfungsi untuk menyelesaikan soal 
 * [Fraction.js](https://github.com/infusion/Fraction.js/)
 * [sweetalert2](https://sweetalert2.github.io/)
 * [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+* [Next PWA](https://github.com/shadowwalker/next-pwa)
 
 <p align="right">(<a href="#top">kembali ke atas</a>)</p>
 
