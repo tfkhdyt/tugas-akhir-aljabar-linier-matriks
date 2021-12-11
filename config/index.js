@@ -1,9 +1,11 @@
+import Data from '../package.json'
 import { createContext } from 'react'
 
 export const MatrixContext = createContext()
 export const AritmatikaContext = createContext()
 
 export default {
+  versi: Data.version,
   judul: 'Tugas Akhir Aljabar Linier & Matriks',
   logo: 'https://fti.unibba.ac.id/wp-content/uploads/2016/07/cropped-Logo-FTI-UNIBBA.png',
   menu: [
