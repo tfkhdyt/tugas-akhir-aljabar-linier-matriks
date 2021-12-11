@@ -3,11 +3,37 @@ import { useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
 
 export default function Custom404 (props) {
-  const [countDown, setCountDown] = useState(5)
   const router = useRouter()
 
+  const Msg = ({ closeToast, toastProps }) => {
+    const [countDown, setCountDown] = useState(5)
+
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCountDown((countDown) => countDown - 1)
+        console.log(countDown)
+      }, 1000)
+      return () => {
+        clearInterval(timer)
+      }
+    })
+
+    useEffect(() => {
+      if (countDown === 0) {
+        router.back()
+      }
+    }, [countDown])
+
+    return (
+      <span>
+        Anda akan kembali ke halaman sebelumnya dalam waktu <b>{countDown}</b>{' '}
+        detik...
+      </span>
+    )
+  }
+
   useEffect(() => {
-    toast.info('Anda akan kembali ke halaman utama dalam waktu 5 detik...', {
+    toast.info(<Msg />, {
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -16,24 +42,11 @@ export default function Custom404 (props) {
       draggable: false,
       progress: undefined
     })
-    const timer = setInterval(() => {
-      setCountDown((countDown) => countDown - 1)
-      console.log(countDown)
-    }, 1000)
-    return () => {
-      clearInterval(timer)
-    }
   }, [])
-
-  useEffect(() => {
-    if (countDown === 0) {
-      router.push('/')
-    }
-  }, [countDown])
 
   const handleClick = () => {
     toast.dismiss()
-    router.push('/')
+    router.back()
   }
 
   return (
@@ -62,7 +75,7 @@ export default function Custom404 (props) {
                 d='M10 19l-7-7m0 0l7-7m-7 7h18'
               />
             </svg>
-            <span>Kembali ke halaman utama</span>
+            <span>Kembali</span>
           </button>
         </div>
       </div>

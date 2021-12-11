@@ -4,7 +4,7 @@ export default function Offline (props) {
   const router = useRouter()
 
   const handleClick = () => {
-    router.reload(window.location.pathname)
+    router.reload()
   }
 
   return (
