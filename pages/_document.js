@@ -4,9 +4,9 @@ export default function Document () {
   return (
     <Html>
       <Head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icon-512x512.png"></link>
-        <meta name="theme-color" content="#60A5FA" />
+        <link rel='manifest' href='/manifest.json' />
+        <link rel='apple-touch-icon' href='/icon-512x512.png' />
+        <meta name='theme-color' content='#60A5FA' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
