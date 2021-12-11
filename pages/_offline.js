@@ -12,7 +12,8 @@ export default function Offline (props) {
       <div className='flex flex-col mb-24 lg:mb-0 max-w-md'>
         <div className='text-4xl text-gray-600 font-bold'>No Internet</div>
         <p className='text-lg md:text-2xl text-gray-600 font-light leading-normal mb-3'>
-          Untuk melanjutkan, hubungkan perangkat Anda ke Internet terlebih dahulu.
+          Untuk melanjutkan, hubungkan perangkat Anda ke Internet terlebih
+          dahulu.
         </p>
         <div className='w-auto'>
           <button
