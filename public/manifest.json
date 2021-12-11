@@ -1,0 +1,32 @@
+{
+    "theme_color": "#60A5FA",
+    "background_color": "#F9FAFB",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Tugas Akhir Aljabar Linier dan Matriks",
+    "short_name": "Tugas Akhir Aljabar Linier dan Matriks",
+    "description": "Tugas Akhir Aljabar Linier dan Matriks dengan framework Next.js dan Tailwind CSS",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
