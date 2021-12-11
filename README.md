@@ -14,7 +14,7 @@
   <h3 align="center">Tugas Akhir Aljabar Linier dan Matriks</h3>
 
   <p align="center">
-    Tugas Akhir Aljabar Linier dan Matriks dengan framework Next.js dan Tailwind CSS
+    Tugas Akhir Aljabar Linier dan Matriks dengan framework Next.js dan Tailwind CSS.
     <br />
     <br />
     <a href="https://aljabar-linier-matriks-kelompok-2.vercel.app">View Demo</a>
@@ -32,6 +32,8 @@ Ini adalah sebuah aplikasi berbasis web yang berfungsi untuk menyelesaikan soal 
 - Operasi Aritmetika Matriks
 - Invers Matriks 3x3
 - Sistem Persamaan Linier dengan Aturan Cramer
+
+Berkat PWA (Progressive Web Apps), aplikasi ini pun tersedia dalam bentuk [native android application](https://drive.google.com/file/d/1Cy2oHkH4Fux_aTxO2LmOYLKrJlcxM7B8/view?usp=drivesdk).
 
 <p align="right">(<a href="#top">kembali ke atas</a>)</p>
 
