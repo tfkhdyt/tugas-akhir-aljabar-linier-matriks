@@ -1,13 +1,41 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { useCallback, useState, useEffect } from 'react'
 
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 import Data from '../config'
 
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true)
+    } else {
+      setTargetReached(false)
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget)
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true)
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, [])
+
+  return targetReached
+}
+
 export default function Layout ({ children }) {
   const router = useRouter()
+  const isBreakpoint = useMediaQuery(1024)
 
   const Mobile = () => {
     if (!['/404', '/_offline'].includes(router.pathname)) {
@@ -51,12 +79,17 @@ export default function Layout ({ children }) {
         <link rel='image_src' href={Data.thumbnail} />
       </Head>
       <div>
-        <div className='lg:hidden'>
+        {/*<div className='lg:hidden'>
           <Mobile />
         </div>
         <div className='hidden lg:block'>
           <Desktop />
-        </div>
+        </div>*/}
+        { isBreakpoint ? (
+          <Mobile />
+        ) : (
+          <Desktop />
+        ) }
       </div>
     </>
   )
