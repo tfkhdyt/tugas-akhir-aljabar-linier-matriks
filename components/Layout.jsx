@@ -51,12 +51,15 @@ export default function Layout ({ children }) {
         <link rel='image_src' href={Data.thumbnail} />
       </Head>
       <div>
-        <div className='lg:hidden'>
+        {/*<div className='lg:hidden'>
           <Mobile />
         </div>
         <div className='hidden lg:block'>
           <Desktop />
-        </div>
+        </div>*/}
+        {
+          
+        }
       </div>
     </>
   )

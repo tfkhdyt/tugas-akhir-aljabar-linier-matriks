@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@nteract/mathjax": "^4.0.16",
+    "@react-hook/window-size": "^3.0.7",
     "fraction.js": "^4.1.2",
     "mathjs": "^10.0.0",
     "next": "latest",
@@ -15,7 +16,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-toastify": "^8.1.0",
-    "sharp": "^0.29.3",
     "standard": "^16.0.4",
     "sweetalert2": "^11.2.2",
     "sweetalert2-react-content": "^4.2.0"
