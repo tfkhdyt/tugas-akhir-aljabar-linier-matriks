@@ -3,9 +3,7 @@ import Image from 'next/image'
 
 export default function MemberCard (props) {
   return (
-    <div
-      className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-12 flex flex-col justify-center items-center transition duration-500 ease-in-out'
-    >
+    <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-12 flex flex-col justify-center items-center transition duration-500 ease-in-out'>
       <div className='mb-4'>
         <Image
           className='rounded-full'

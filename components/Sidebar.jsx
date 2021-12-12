@@ -167,12 +167,10 @@ export default function Sidebar ({ content }) {
               </span>
             </a>
           </Link>
+          <Footer config='text-gray-100 text-sm mb-0' versi='text-xs' />
         </nav>
       </div>
-      <div className='flex-1 lg:hidden'>
-        {content}
-        <Footer />
-      </div>
+      <div className='flex-1 lg:hidden'>{content}</div>
     </div>
   )
 }
