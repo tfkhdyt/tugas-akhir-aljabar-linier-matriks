@@ -171,12 +171,10 @@ export default function Sidebar ({ content }) {
           </nav>
         </div>
         <div>
-          <Footer config={'text-gray-100 text-sm mb-0'} versi={'text-xs'}/>
+          <Footer config='text-gray-100 text-sm mb-0' versi='text-xs' />
         </div>
       </div>
-      <div className='flex-1 lg:hidden'>
-        {content}
-      </div>
+      <div className='flex-1 lg:hidden'>{content}</div>
     </div>
   )
 }
