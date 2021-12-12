@@ -25,7 +25,9 @@ export default function Layout ({ children }) {
   })
 
   const Mobile = () => {
-    if (!['/404', '/_offline'].includes(router.pathname)) { return <Sidebar content={children} /> }
+    if (!['/404', '/_offline'].includes(router.pathname)) {
+      return <Sidebar content={children} />
+    }
     return children
   }
 
@@ -41,10 +43,9 @@ export default function Layout ({ children }) {
     }
     return children
   }
-  
+
   const ResponsiveLayout = () => {
-    if (windowWidth < 1024)
-      return <Mobile />
+    if (windowWidth < 1024) return <Mobile />
     return <Desktop />
   }
 
