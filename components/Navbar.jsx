@@ -1,15 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Data from '../config'
-import { useState } from 'react'
 
 export default function Navbar () {
-  const [active, setActive] = useState(false)
-
-  const handleClick = () => {
-    setActive(!active)
-  }
-
   return (
     <>
       <nav
@@ -25,33 +18,10 @@ export default function Navbar () {
             </span>
           </a>
         </Link>
-        <button
-          className='transition duration-500 transform-gpu active:scale-75 inline-flex p-3 hover:bg-blue-500 rounded lg:hidden text-white ml-auto hover:text-white outline-none rounded-lg'
-          onClick={handleClick}
-        >
-          <svg
-            className='w-6 h-6'
-            fill='none'
-            stroke='currentColor'
-            viewBox='0 0 24 24'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth={2}
-              d='M4 6h16M4 12h16M4 18h16'
-            />
-          </svg>
-        </button>
-        <div
-          className={`${
-            active ? '' : 'hidden'
-          } w-full lg:inline-flex lg:flex-grow lg:w-auto`}
-        >
-          <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto'>
+        <div className='lg:inline-flex lg:flex-grow lg:w-auto'>
+          <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto'>
             <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -72,7 +42,7 @@ export default function Navbar () {
               </a>
             </Link>
             <Link href='/invers'>
-              <a className='lg:inline-flex lg:w-auto w-full p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -87,7 +57,7 @@ export default function Navbar () {
               </a>
             </Link>
             <Link href='/cramer'>
-              <a className='lg:inline-flex lg:w-auto w-full p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -108,7 +78,7 @@ export default function Navbar () {
               </a>
             </Link>
             <Link href='/about'>
-              <a className='lg:inline-flex lg:w-auto w-full p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -124,7 +94,7 @@ export default function Navbar () {
             </Link>
             <Link href='https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks'>
               <a
-                className='lg:inline-flex lg:w-auto w-full p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'
+                className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'
                 target='_blank'
               >
                 <span className='flex flex-row items-center'>

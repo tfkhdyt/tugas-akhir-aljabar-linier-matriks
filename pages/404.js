@@ -40,7 +40,8 @@ export default function Custom404 (props) {
       closeOnClick: false,
       pauseOnHover: false,
       draggable: false,
-      progress: undefined
+      progress: undefined,
+      toastId: 'bruh'
     })
   }, [])
 

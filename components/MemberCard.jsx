@@ -4,9 +4,7 @@ import Image from 'next/image'
 export default function MemberCard (props) {
   return (
     <div
-      className={`w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-12 flex flex-col justify-${
-        props.ig === '' ? 'start pt-[2.875rem]' : 'center'
-      } items-center transition duration-500 ease-in-out`}
+      className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-12 flex flex-col justify-center items-center transition duration-500 ease-in-out'
     >
       <div className='mb-4'>
         <Image
@@ -27,12 +25,7 @@ export default function MemberCard (props) {
         <p className='text-sm text-gray-500 font-light mb-4'>{props.prodi}</p>
         <Link href={`https://instagram.com/${props.ig}`}>
           <a target='_blank'>
-            <buttonnpm
-              run
-              className={`px-4 py-2 rounded bg-blue-300 hover:bg-blue-400 active:bg-blue-500 text-white font-medium transition duration-500 transform-gpu active:scale-95 hover:shadow-lg hover:shadow-blue-600/25 ${
-                props.ig === '' ? 'hidden' : null
-              }`}
-            >
+            <button className='px-4 py-2 rounded bg-blue-300 hover:bg-blue-400 active:bg-blue-500 text-white font-medium transition duration-500 transform-gpu active:scale-95 hover:shadow-lg hover:shadow-blue-600/25'>
               <svg
                 className='inline mr-1'
                 xmlns='http://www.w3.org/2000/svg'
@@ -46,7 +39,7 @@ export default function MemberCard (props) {
                 />
               </svg>
               <span className='inline'>{props.ig}</span>
-            </buttonnpm>
+            </button>
           </a>
         </Link>
       </div>

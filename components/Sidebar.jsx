@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -12,9 +12,17 @@ export default function Sidebar ({ content }) {
     setActive(!active)
   }
 
+  useEffect(() => {
+    if (active) return (document.body.style.overflow = 'hidden')
+    else return (document.body.style.overflow = '')
+
+    return () => {
+      document.body.style.overflow = 'hidden'
+    }
+  })
   return (
-    <div className='relative min-h-screen md:flex'>
-      <div className='bg-blue-400 flex justify-between items-center md:hidden px-3 py-2 sticky z-40 top-0'>
+    <div className='relative min-h-screen lg:flex'>
+      <div className='bg-blue-400 flex justify-between items-center lg:hidden px-3 py-2 sticky w-screen z-40 top-0'>
         <Link href='/'>
           <a className='transition duration-500 inline-flex items-center p-2 mr-4 h-4'>
             <Image src='/images/kbmfti.png' height={25} width={53} />
@@ -44,9 +52,9 @@ export default function Sidebar ({ content }) {
         </button>
       </div>
       <div
-        className={`sidebar bg-blue-500 text-gray-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${
+        className={`sidebar bg-blue-500 text-gray-100 w-64 space-y-6 py-7 px-2 inset-y-0 left-0 transform ${
           active ? '' : '-translate-x-full'
-        } md:relative md:translate-x-0 transition duration-200 ease-in-out z-50`}
+        } lg:hidden transition duration-200 ease-in-out z-50 fixed`}
       >
         <p className='text-white flex items-center space-x-2 px-4'>
           <span className='text-2xl font-extrabold'>
@@ -142,6 +150,7 @@ export default function Sidebar ({ content }) {
             <a
               className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
               onClick={handleClick}
+              target='_blank'
             >
               <span className='flex flex-row items-center'>
                 <svg
@@ -160,7 +169,7 @@ export default function Sidebar ({ content }) {
           </Link>
         </nav>
       </div>
-      <div className='flex-1'>
+      <div className='flex-1 lg:hidden'>
         {content}
         <Footer />
       </div>

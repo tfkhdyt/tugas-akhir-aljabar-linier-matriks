@@ -1,28 +1,13 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { ToastContainer, Slide } from 'react-toastify'
-import { useState, useEffect } from 'react'
 
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 import Data from '../config'
-import 'react-toastify/dist/ReactToastify.min.css'
 
 export default function Layout ({ children }) {
   const router = useRouter()
-  const [windowWidth, setWindowWidth] = useState(global.innerWidth)
-
-  const handleResize = () => {
-    setWindowWidth(global.innerWidth)
-  }
-
-  useEffect(() => {
-    global.addEventListener('resize', handleResize)
-    return () => {
-      global.addEventListener('resize', handleResize)
-    }
-  })
 
   const Mobile = () => {
     if (!['/404', '/_offline'].includes(router.pathname)) {
@@ -42,11 +27,6 @@ export default function Layout ({ children }) {
       )
     }
     return children
-  }
-
-  const ResponsiveLayout = () => {
-    if (windowWidth < 1024) return <Mobile />
-    return <Desktop />
   }
 
   return (
@@ -71,19 +51,12 @@ export default function Layout ({ children }) {
         <link rel='image_src' href={Data.thumbnail} />
       </Head>
       <div>
-        <ToastContainer
-          position='top-right'
-          transition={Slide}
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick={router.pathname !== '/404'}
-          rtl={false}
-          pauseOnFocusLoss={router.pathname !== '/404'}
-          draggable={router.pathname !== '/404'}
-          pauseOnHover={router.pathname !== '/404'}
-        />
-        <ResponsiveLayout />
+        <div className='lg:hidden'>
+          <Mobile />
+        </div>
+        <div className='hidden lg:block'>
+          <Desktop />
+        </div>
       </div>
     </>
   )
