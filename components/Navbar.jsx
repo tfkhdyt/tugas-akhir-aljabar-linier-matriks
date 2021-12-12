@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Data from '../config'
 import { useState } from 'react'
 
-export default function Navbar() {
+export default function Navbar () {
   const [active, setActive] = useState(false)
 
   const handleClick = () => {
