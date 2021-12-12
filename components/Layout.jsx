@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { useMediaQuery } from '@react-hook/media-query'
 
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
@@ -9,7 +8,6 @@ import Data from '../config'
 
 export default function Layout ({ children }) {
   const router = useRouter()
-  const matches = useMediaQuery('only screen and (min-width: 1024px)')
 
   const Mobile = () => {
     if (!['/404', '/_offline'].includes(router.pathname)) {
@@ -53,13 +51,12 @@ export default function Layout ({ children }) {
         <link rel='image_src' href={Data.thumbnail} />
       </Head>
       <div>
-        {/* <div className='lg:hidden'>
+        <div className='lg:hidden'>
           <Mobile />
         </div>
         <div className='hidden lg:block'>
           <Desktop />
-        </div> */}
-        {!matches ? <Mobile /> : <Desktop />}
+        </div>
       </div>
     </>
   )
