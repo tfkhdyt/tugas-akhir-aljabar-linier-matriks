@@ -8,7 +8,7 @@ import Footer from './Footer'
 import Data from '../config'
 
 const useMediaQuery = (width) => {
-  const [targetReached, setTargetReached] = useState(false);
+  const [targetReached, setTargetReached] = useState(false)
 
   const updateTarget = useCallback((e) => {
     if (e.matches) {
@@ -16,10 +16,10 @@ const useMediaQuery = (width) => {
     } else {
       setTargetReached(false)
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
-    const media = window.matchMedia(`(max-width: ${width}px)`);
+    const media = window.matchMedia(`(max-width: ${width}px)`)
     media.addListener(updateTarget)
 
     // Check on mount (callback is not called until a change occurs)
@@ -27,7 +27,7 @@ const useMediaQuery = (width) => {
       setTargetReached(true)
     }
 
-    return () => media.removeListener(updateTarget);
+    return () => media.removeListener(updateTarget)
   }, [])
 
   return targetReached
@@ -79,17 +79,13 @@ export default function Layout ({ children }) {
         <link rel='image_src' href={Data.thumbnail} />
       </Head>
       <div>
-        {/*<div className='lg:hidden'>
+        {/* <div className='lg:hidden'>
           <Mobile />
         </div>
         <div className='hidden lg:block'>
           <Desktop />
-        </div>*/}
-        { isBreakpoint ? (
-          <Mobile />
-        ) : (
-          <Desktop />
-        ) }
+        </div> */}
+        {isBreakpoint ? <Mobile /> : <Desktop />}
       </div>
     </>
   )
