@@ -20,13 +20,13 @@ export default function Custom404 (props) {
 
     useEffect(() => {
       if (countDown === 0) {
-        router.back()
+        router.push('/')
       }
     }, [countDown])
 
     return (
       <span>
-        Anda akan kembali ke halaman sebelumnya dalam waktu <b>{countDown}</b>{' '}
+        Anda akan kembali ke halaman utama dalam waktu <b>{countDown}</b>{' '}
         detik...
       </span>
     )
@@ -47,7 +47,7 @@ export default function Custom404 (props) {
 
   const handleClick = () => {
     toast.dismiss()
-    router.back()
+    router.push('/')
   }
 
   return (
@@ -76,7 +76,7 @@ export default function Custom404 (props) {
                 d='M10 19l-7-7m0 0l7-7m-7 7h18'
               />
             </svg>
-            <span>Kembali</span>
+            <span>Kembali ke halaman utama</span>
           </button>
         </div>
       </div>
