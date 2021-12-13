@@ -47,7 +47,7 @@ export default function Layout ({ children }) {
   const Desktop = () => {
     if (!['/404', '/_offline'].includes(router.pathname)) {
       return (
-        <div>
+        <div className='hidden lg:block'>
           <Navbar />
           {children}
           <Footer />
