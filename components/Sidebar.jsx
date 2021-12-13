@@ -58,7 +58,7 @@ export default function Sidebar ({ content }) {
       <div
         className={`${
           active ? '' : '-translate-x-full'
-        } flex transition duration-500 ease-in-out sidebar bg-gradient-to-b from-blue-400 to-blue-600 text-gray-100 w-64 pt-7 px-2 inset-y-0 left-0 transform-gpu lg:hidden z-50 fixed flex flex-col justify-between`}
+        } flex transition duration-200 ease-in-out sidebar bg-gradient-to-b from-blue-400 to-blue-600 text-gray-100 w-64 pt-7 px-2 inset-y-0 left-0 transform-gpu lg:hidden z-50 fixed flex flex-col justify-between`}
       >
         <div className='space-y-6 '>
           <p className='text-white flex items-center space-x-2 px-4'>
@@ -141,7 +141,7 @@ export default function Sidebar ({ content }) {
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1 mb-0.5'
+                    className='h-4 w-4 ml-0.5 mr-1.5 mb-0.5'
                     viewBox='0 0 20 20'
                     fill='currentColor'
                   >
@@ -160,7 +160,7 @@ export default function Sidebar ({ content }) {
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='h-4 w-4 ml-0.5 mr-1.5'
                     viewBox='0 0 24 24'
                   >
                     <path
