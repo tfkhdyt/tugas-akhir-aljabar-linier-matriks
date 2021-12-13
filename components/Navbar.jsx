@@ -7,8 +7,8 @@ export default function Navbar () {
     <>
       <nav
         className='
-          flex items-center flex-wrap bg-gradient-to-br from-blue-400 to-blue-500
-          px-3 py-2 sticky w-100 z-50 top-0'
+          lg:flex lg:items-center lg:flex-wrap lg:bg-gradient-to-br lg:from-blue-400 lg:to-blue-500
+          lg:px-3 lg:py-2 lg:sticky lg:w-full lg:z-50 lg:top-0'
       >
         <Link href='/'>
           <a className='transition duration-500 inline-flex items-center p-2 mr-4 h-4'>
