@@ -7,7 +7,7 @@ export default function Navbar () {
     <>
       <nav
         className='
-          flex items-center flex-wrap bg-blue-400
+          flex items-center flex-wrap bg-gradient-to-br from-blue-400 to-blue-500
           px-3 py-2 sticky w-100 z-50 top-0'
       >
         <Link href='/'>

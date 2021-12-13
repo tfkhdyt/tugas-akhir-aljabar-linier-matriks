@@ -24,8 +24,8 @@ export default function Sidebar ({ content }) {
     <div className='relative min-h-screen lg:flex'>
       {/* header */}
       <div
-        className={`bg-blue-400 flex justify-between items-center lg:hidden px-3 py-2 sticky w-screen z-40 top-0 ${
-          active ? 'blur-sm grayscale' : null
+        className={`bg-gradient-to-br from-blue-400 to-blue-500 flex justify-between items-center lg:hidden px-3 py-2 sticky w-screen z-40 top-0 ${
+          active ? 'blur-sm grayscale ' : null
         }`}
       >
         <Link href='/'>
@@ -60,7 +60,7 @@ export default function Sidebar ({ content }) {
       <div
         className={`${
           active ? '' : '-translate-x-full'
-        } flex transition duration-200 ease-in-out sidebar bg-blue-500 text-gray-100 w-64 pt-7 px-2 inset-y-0 left-0 transform lg:hidden z-50 fixed flex flex-col justify-between`}
+        } flex transition duration-200 ease-in-out sidebar bg-gradient-to-b from-blue-400 to-blue-600 text-gray-100 w-64 pt-7 px-2 inset-y-0 left-0 transform lg:hidden z-50 fixed flex flex-col justify-between`}
       >
         <div className='space-y-6 '>
           <p className='text-white flex items-center space-x-2 px-4'>
@@ -182,12 +182,12 @@ export default function Sidebar ({ content }) {
       </div>
       {/* content */}
       <div
-        className={`flex-1 lg:hidden ${active ? 'blur-sm grayscale' : null}`}
+        className={`flex-1 lg:hidden ${active ? 'blur-sm grayscale ' : null}`}
       >
         {content}
       </div>
       <div
-        className={`min-h-screen min-w-screen inset-0 transition duration-100 ease-in-out z-40 absolute ${
+        className={`bg-black/50 min-h-screen min-w-screen inset-0 transition duration-100 ease-in-out z-40 absolute ${
           active ? '' : 'hidden'
         }`}
         onClick={handleClick}
