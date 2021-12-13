@@ -7,7 +7,7 @@ export default function Navbar () {
     <>
       <nav
         className='
-          lg:flex lg:items-center lg:flex-wrap lg:bg-gradient-to-br lg:from-blue-400 lg:to-blue-500
+          hidden lg:flex lg:items-center lg:flex-wrap lg:bg-gradient-to-br lg:from-blue-400 lg:to-blue-500
           lg:px-3 lg:py-2 lg:sticky lg:w-full lg:z-50 lg:top-0'
       >
         <Link href='/'>
