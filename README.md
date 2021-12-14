@@ -105,10 +105,10 @@ Berkat PWA (Progressive Web Apps), aplikasi ini pun tersedia dalam bentuk [nativ
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Fitur Utama
+- [x] Fitur Utama
   - [x] Operasi Aritmetika Matriks
   - [x] Invers Matriks 3x3
-  - [ ] SPL dengan Aturan Cramer
+  - [x] SPL dengan Aturan Cramer
 - [x] Fitur Sampingan
   - [x] Halaman About Us
   - [x] Halaman 404

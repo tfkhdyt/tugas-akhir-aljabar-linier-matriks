@@ -86,14 +86,14 @@ export default function TableAritmatika () {
 
   return (
     <form onSubmit={handleSubmit} ref={form}>
-      <div className='grid grid-cols-2 gap-6'>
+      <div className='group grid grid-cols-2 gap-6'>
         {/* matriks a */}
         <div>
           <p className='font-semibold text-gray-600 text-left mb-3'>
             Masukkan matriks A:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
+            <table className='w-full table-fixed text-center transition duration-500 ease-in-out group-hover:ring-2 group-hover:ring-blue-500 group-hover:shadow-lg group-hover:shadow-blue-500/25'>
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -147,7 +147,7 @@ export default function TableAritmatika () {
             Masukkan matriks B:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
+            <table className='w-full table-fixed text-center transition duration-500 group-hover:ring-2 group-hover:ring-blue-500 group-hover:shadow-lg group-hover:shadow-blue-500/25'>
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -201,7 +201,7 @@ export default function TableAritmatika () {
             Masukkan matriks C:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
+            <table className='w-full table-fixed text-center transition duration-500 group-hover:ring-2 group-hover:ring-blue-500 group-hover:shadow-lg group-hover:shadow-blue-500/25'>
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>

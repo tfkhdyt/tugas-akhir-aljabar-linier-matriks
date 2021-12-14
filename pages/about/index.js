@@ -37,6 +37,9 @@ export default function About ({ member }) {
             )
           })}
         </div>
+        <div className='flex justify-center w-full font-light text-gray-500 mt-6'>
+          * Tidak ikut kerja kelompok
+        </div>
       </main>
     </div>
   )

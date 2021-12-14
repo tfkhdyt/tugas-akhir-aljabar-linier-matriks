@@ -9,34 +9,35 @@ const InputForm = () => {
   const input = []
   for (let i = 0; i < 3; i++) {
     input.push(
-      <div className='inline text-gray-600 font-semibold text-xs lg:text-base'>
+      <div className='text-gray-600 font-semibold text-xs lg:text-base w-full flex justify-arounx items-center'>
         <input
           type='number'
-          className='text-center font-semibold outline-none w-8 lg:w-16 mx-2 px-1 lg:px-2 py-1 hover:ring-2 hover:ring-blue-500 transition duration-500 ease-in-out rounded-sm hover:shadow-lg hover:shadow-blue-500/50'
+          className='text-center font-semibold outline-none w-10 lg:w-16 mr-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
           name={`_${i + 1}x`}
         />
         x +
         <input
           type='number'
-          className='text-center font-semibold outline-none w-8 lg:w-16 mx-2 px-1 lg:px-2 py-1 hover:ring-2 hover:ring-blue-500 transition duration-500 ease-in-out rounded-sm hover:shadow-lg hover:shadow-blue-500/50'
+          className='text-center font-semibold outline-none w-10 lg:w-16 mx-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
           name={`_${i + 1}y`}
         />
         y +
         <input
           type='number'
-          className='text-center font-semibold outline-none w-8 lg:w-16 mx-2 px-1 lg:px-2 py-1 hover:ring-2 hover:ring-blue-500 transition duration-500 ease-in-out rounded-sm hover:shadow-lg hover:shadow-blue-500/50'
+          className='text-center font-semibold outline-none w-10 lg:w-16 mx-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
           name={`_${i + 1}z`}
         />
         z =
         <input
           type='number'
-          className='text-center font-semibold outline-none w-8 lg:w-16 mx-2 px-1 lg:px-2 py-1 hover:ring-2 hover:ring-blue-500 transition duration-500 ease-in-out rounded-sm hover:shadow-lg hover:shadow-blue-500/50'
+          className='text-center font-semibold outline-none w-10 lg:w-16 ml-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
           name={`_${i + 1}h`}
+          required
         />
       </div>
     )
   }
-  return <div className='flex flex-col space-y-4'>{input}</div>
+  return <div className='flex flex-col space-y-6'>{input}</div>
 }
 
 export default function TableAritmatika () {
@@ -140,32 +141,32 @@ export default function TableAritmatika () {
         hasil: null
       }
       tex.matrix = String.raw`\begin{align}
-        Det A & = \begin{bmatrix}
+        D & = \begin{bmatrix}
           ${persamaan1.x} && ${persamaan1.y} && ${persamaan1.z} \\
           ${persamaan2.x} && ${persamaan2.y} && ${persamaan2.z} \\
           ${persamaan3.x} && ${persamaan3.y} && ${persamaan3.z}
       \end{bmatrix} = ${detMatrix} \\ \\ `
       tex.matrix1 = String.raw`
-        Det A_{1} & = \begin{bmatrix}
+        D_{x} & = \begin{bmatrix}
           ${persamaan1.hasil} && ${persamaan1.y} && ${persamaan1.z} \\
           ${persamaan2.hasil} && ${persamaan2.y} && ${persamaan2.z} \\
           ${persamaan3.hasil} && ${persamaan3.y} && ${persamaan3.z}
       \end{bmatrix} = ${detMatrix1} \\ \\`
       tex.matrix2 = String.raw`
-        Det A_{2} & = \begin{bmatrix}
+        D_{y} & = \begin{bmatrix}
           ${persamaan1.x} && ${persamaan1.hasil} && ${persamaan1.z} \\
           ${persamaan2.x} && ${persamaan2.hasil} && ${persamaan2.z} \\
           ${persamaan3.x} && ${persamaan3.hasil} && ${persamaan3.z}
       \end{bmatrix} = ${detMatrix2} \\ \\`
       tex.matrix3 = String.raw`
-        Det A_{3} & = \begin{bmatrix}
+        D_{z} & = \begin{bmatrix}
           ${persamaan1.x} && ${persamaan1.y} && ${persamaan1.hasil} \\
           ${persamaan2.x} && ${persamaan2.y} && ${persamaan2.hasil} \\
           ${persamaan3.x} && ${persamaan3.y} && ${persamaan3.hasil}
       \end{bmatrix} = ${detMatrix3}
       \end{align}\\ \\`
       tex.hasil = String.raw`
-        X = ${x},\ Y = ${y},\  Z = ${z}
+        x = ${x},\ y = ${y},\  z = ${z}
       `
       setResult(tex)
     }

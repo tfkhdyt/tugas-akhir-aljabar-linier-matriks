@@ -28,17 +28,17 @@ export default [
     ig: "wirarw33",
   },
   {
-    nama: "Nur Muhamad Faisal",
+    nama: "Nur Muhamad Faisal*",
     nim: "301200004",
     prodi: "Teknik Informatika",
     foto: "/images/member/faisal.jpg",
     ig: "nmf23_",
   },
   {
-    nama: "Yasin Mujadi",
+    nama: "Yasin Mujadi*",
     nim: "302200013",
     prodi: "Sistem Informasi",
     foto: "/images/member/foto-default.jpg",
-    ig: "",
+    ig: "gak_punya_ig",
   }
 ]

@@ -128,7 +128,7 @@ export default function Table () {
   return (
     <form onSubmit={handleSubmit} ref={form}>
       <div className='w-full transition duration-500 ease-in-out'>
-        <table className='group hover:ring-2 hover:ring-blue-300 w-full table-fixed text-center transition duration-500'>
+        <table className='hover:ring-2 hover:ring-blue-500 transition duration-500 ease-in-out rounded-sm hover:shadow-lg hover:shadow-blue-500/25 w-full table-fixed text-center'>
           <tbody className='bg-white divide-y divide-gray-200'>
             {/* baris satu */}
             <tr className='divide-x divide-gray-200'>
