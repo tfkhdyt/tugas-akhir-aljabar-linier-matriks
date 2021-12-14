@@ -3,6 +3,7 @@ import { createContext } from 'react'
 
 export const MatrixContext = createContext()
 export const AritmatikaContext = createContext()
+export const CramerContext = createContext()
 
 export default {
   versi: Data.version,
