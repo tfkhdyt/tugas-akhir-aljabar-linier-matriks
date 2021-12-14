@@ -15,19 +15,19 @@ const InputForm = () => {
           className='text-center font-semibold outline-none w-10 lg:w-16 mr-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
           name={`_${i + 1}x`}
         />
-        x +
+        <span>x +</span>
         <input
           type='number'
           className='text-center font-semibold outline-none w-10 lg:w-16 mx-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
           name={`_${i + 1}y`}
         />
-        y +
+        <span>y +</span>
         <input
           type='number'
           className='text-center font-semibold outline-none w-10 lg:w-16 mx-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
           name={`_${i + 1}z`}
         />
-        z =
+        <span>z =</span>
         <input
           type='number'
           className='text-center font-semibold outline-none w-10 lg:w-16 ml-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
