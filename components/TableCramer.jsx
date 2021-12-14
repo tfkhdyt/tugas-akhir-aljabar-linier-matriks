@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from 'react'
-import { matrix, multiply, transpose, add, det, round } from 'mathjs'
+import { det, round } from 'mathjs'
 
 import Button from './Button'
 import { CramerContext } from '../config'

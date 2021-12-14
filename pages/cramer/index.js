@@ -7,24 +7,24 @@ import Form from '../../components/Form'
 import HasilCramer from '../../components/HasilCramer'
 import TableCramer from '../../components/TableCramer'
 
-export default function Cramer() {
+export default function Cramer () {
   const [persamaan1, setPersamaan1] = useState({
     x: 0,
     y: 0,
     z: 0,
-    hasil: 0,
+    hasil: 0
   })
   const [persamaan2, setPersamaan2] = useState({
     x: 0,
     y: 0,
     z: 0,
-    hasil: 0,
+    hasil: 0
   })
   const [persamaan3, setPersamaan3] = useState({
     x: 0,
     y: 0,
     z: 0,
-    hasil: 0,
+    hasil: 0
   })
   const [result, setResult] = useState()
 
@@ -49,7 +49,7 @@ export default function Cramer() {
         persamaan3,
         setPersamaan3,
         result,
-        setResult,
+        setResult
       }}
     >
       <Form content={form} />
