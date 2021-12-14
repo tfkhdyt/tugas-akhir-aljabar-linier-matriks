@@ -39,7 +39,7 @@ const InputForm = () => {
   return <div className='flex flex-col space-y-4'>{input}</div>
 }
 
-export default function TableAritmatika() {
+export default function TableAritmatika () {
   const {
     persamaan1,
     setPersamaan1,
@@ -47,7 +47,7 @@ export default function TableAritmatika() {
     setPersamaan2,
     persamaan3,
     setPersamaan3,
-    setResult,
+    setResult
   } = useContext(CramerContext)
   const form = useRef()
 
@@ -58,19 +58,19 @@ export default function TableAritmatika() {
       x: data._1x.value || 0,
       y: data._1y.value || 0,
       z: data._1z.value || 0,
-      hasil: data._1h.value || 0,
+      hasil: data._1h.value || 0
     })
     setPersamaan2({
       x: data._2x.value || 0,
       y: data._2y.value || 0,
       z: data._2z.value || 0,
-      hasil: data._2h.value || 0,
+      hasil: data._2h.value || 0
     })
     setPersamaan3({
       x: data._3x.value || 0,
       y: data._3y.value || 0,
       z: data._3z.value || 0,
-      hasil: data._3h.value || 0,
+      hasil: data._3h.value || 0
     })
   }
 
@@ -98,28 +98,28 @@ export default function TableAritmatika() {
         det([
           [persamaan1.x, persamaan1.y, persamaan1.z],
           [persamaan2.x, persamaan2.y, persamaan2.z],
-          [persamaan3.x, persamaan3.y, persamaan3.z],
+          [persamaan3.x, persamaan3.y, persamaan3.z]
         ])
       )
       const detMatrix1 = round(
         det([
           [persamaan1.hasil, persamaan1.y, persamaan1.z],
           [persamaan2.hasil, persamaan2.y, persamaan2.z],
-          [persamaan3.hasil, persamaan3.y, persamaan3.z],
+          [persamaan3.hasil, persamaan3.y, persamaan3.z]
         ])
       )
       const detMatrix2 = round(
         det([
           [persamaan1.x, persamaan1.hasil, persamaan1.z],
           [persamaan2.x, persamaan2.hasil, persamaan2.z],
-          [persamaan3.x, persamaan3.hasil, persamaan3.z],
+          [persamaan3.x, persamaan3.hasil, persamaan3.z]
         ])
       )
       const detMatrix3 = round(
         det([
           [persamaan1.x, persamaan1.y, persamaan1.hasil],
           [persamaan2.x, persamaan2.y, persamaan2.hasil],
-          [persamaan3.x, persamaan3.y, persamaan3.hasil],
+          [persamaan3.x, persamaan3.y, persamaan3.hasil]
         ])
       )
       console.log(`Determinan: ${detMatrix}`)
@@ -137,7 +137,7 @@ export default function TableAritmatika() {
         matrix1: null,
         matrix2: null,
         matrix3: null,
-        hasil: null,
+        hasil: null
       }
       tex.matrix = String.raw`\begin{align}
         Det A & = \begin{bmatrix}
