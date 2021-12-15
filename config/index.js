@@ -18,7 +18,7 @@ export default {
   link: 'https://aljabar-linier-matriks-kelompok-2.vercel.app',
   deskripsi:
     'Tugas akhir mata kuliah Aljabar Linier dan Matriks menggunakan framework Next.js, Tailwind CSS, Math.js, dan MathJax',
-  thumbnail: '/images/thumbnail.png',
+  thumbnail: '/images/thumbnail.jpg',
   keywords: [
     'matriks adalah',
     'matriks singular',
