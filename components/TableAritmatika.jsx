@@ -1,11 +1,17 @@
-import { useContext, useEffect, useRef, useState } from 'react'
+// import module
 import { matrix, multiply, transpose, add } from 'mathjs'
+import { useContext, useEffect, useRef, useState } from 'react'
 
-import Button from './Button'
+// import context
 import { AritmatikaContext } from '../config'
+
+// import components
+import Button from './Button'
 import ResetDialog from './ResetDialog'
 
+// export component TableAritmatika
 export default function TableAritmatika () {
+  // state matrix dan hasil
   const {
     matrixA,
     setMatrixA,
@@ -15,11 +21,14 @@ export default function TableAritmatika () {
     setMatrixC,
     setResult
   } = useContext(AritmatikaContext)
+  // reference untuk form
   const form = useRef()
 
+  // function untuk handle submit event
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = e.target
+    // input data matrix ke state
     setMatrixA([
       [data.A11.value, data.A12.value],
       [data.A21.value, data.A22.value]
@@ -35,31 +44,32 @@ export default function TableAritmatika () {
     ])
   }
 
+  // function untuk handle reset
   const handleReset = (e) => {
     e.preventDefault()
-    // form.blur()
     ResetDialog(setResult, form)
   }
 
+  // lifecycle
   const isInitialMount = useRef(true)
   useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false
     } else {
-      console.log(matrixA)
-      console.log(matrixB)
-      console.log(matrixC)
+      // variable untuk menyimpan hasil
       const tex = {
         a: null,
         b: null,
         c: null
       }
+      // hitung soal a
       const a = multiply(matrix(matrixC), matrix(matrixA)).valueOf()
-      console.log(a)
+      // hitung soal b
       const b = multiply(transpose(matrixA), add(matrixA, matrixB)).valueOf()
-      console.log(b)
+      // hitung soal c
       const c = transpose(multiply(matrixC, matrixB)).valueOf()
-      console.log(c)
+
+      // ubah hasil menjadi string yang dimengerti mathjax
       tex.a = String.raw`\begin{align}
         CA & = \begin{bmatrix}
           ${a[0][0]} && ${a[0][1]} \\
@@ -83,11 +93,13 @@ export default function TableAritmatika () {
       setResult(tex)
     }
   }, [matrixA, matrixB, matrixC])
-  
+
+  // state untuk ring table
   const [isActiveA, setIsActiveA] = useState(false)
   const [isActiveB, setIsActiveB] = useState(false)
   const [isActiveC, setIsActiveC] = useState(false)
-  
+
+  // function untuk handle focus dan blur pada matrix
   const handleFocusBlurMatrixA = () => {
     setIsActiveA(!isActiveA)
   }
@@ -97,7 +109,8 @@ export default function TableAritmatika () {
   const handleFocusBlurMatrixC = () => {
     setIsActiveC(!isActiveC)
   }
-  
+
+  // tampilan tabel aritmetika
   return (
     <form onSubmit={handleSubmit} ref={form}>
       <div className='group grid grid-cols-2 gap-6'>
@@ -107,7 +120,13 @@ export default function TableAritmatika () {
             Masukkan matriks A:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className={`w-full table-fixed text-center transition duration-500 ease-in-out ${isActiveA ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25' : null}`}>
+            <table
+              className={`w-full table-fixed text-center transition duration-500 ease-in-out ${
+                isActiveA
+                  ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25'
+                  : null
+              }`}
+            >
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -169,7 +188,13 @@ export default function TableAritmatika () {
             Masukkan matriks B:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className={`w-full table-fixed text-center transition duration-500 ease-in-out ${isActiveB ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25' : null}`}>
+            <table
+              className={`w-full table-fixed text-center transition duration-500 ease-in-out ${
+                isActiveB
+                  ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25'
+                  : null
+              }`}
+            >
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -231,7 +256,13 @@ export default function TableAritmatika () {
             Masukkan matriks C:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className={`w-full table-fixed text-center transition duration-500 ease-in-out ${isActiveC ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25' : null}`}>
+            <table
+              className={`w-full table-fixed text-center transition duration-500 ease-in-out ${
+                isActiveC
+                  ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25'
+                  : null
+              }`}
+            >
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -313,6 +344,7 @@ export default function TableAritmatika () {
           </div>
         </div>
       </div>
+      {/* panggil component Button */}
       <Button handleReset={handleReset} />
     </form>
   )

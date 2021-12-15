@@ -39,7 +39,7 @@ export default function Invers () {
       {matrix ? <Hasil /> : null}
     </MatrixContext.Provider>
   )
-  
+
   // tampilan halaman invers
   return (
     <div>

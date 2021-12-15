@@ -1,27 +1,33 @@
-import { useState, useContext, useRef, useEffect } from 'react'
+// import module
 import { inv, matrix, round, det, map } from 'mathjs'
+import { useState, useContext, useRef, useEffect } from 'react'
 import Fraction from 'fraction.js'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
+// import context
 import { MatrixContext } from '../config'
+
+// import components
 import Button from './Button'
 import ResetDialog from './ResetDialog'
 
+// variabel untuk menampilkan sweetalert2
 const MySwal = withReactContent(Swal)
 
+// export component Table
 export default function Table () {
+  // state matrix dan result
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
   const { setGlobalMatrix } = useContext(MatrixContext)
   const form = useRef()
 
+  // function untuk handle click event
   const handleSubmit = (e) => {
     e.preventDefault()
-    // console.log(form)
-    // form.blur()
     const data = e.target
-    // console.log(e.target._11.value)
+    // input data matrix ke state
     setMatrix([
       [data._11.value, data._12.value, data._13.value],
       [data._21.value, data._22.value, data._23.value],
@@ -29,16 +35,19 @@ export default function Table () {
     ])
   }
 
+  // function untuk handle reset
   const handleReset = (e) => {
     e.preventDefault()
-    // form.blur()
     ResetDialog(setResult, form)
   }
 
+  // lifecycle
   const isInitialMount = useRef(true)
   useEffect(() => {
     if (isInitialMount.current) isInitialMount.current = false
     else {
+      let invMat
+
       const original = String.raw`\begin{align}
         A & = \begin{bmatrix}
           ${_matrix[0][0]} & ${_matrix[0][1]} & ${_matrix[0][2]} \\
@@ -46,8 +55,7 @@ export default function Table () {
           ${_matrix[2][0]} & ${_matrix[2][1]} & ${_matrix[2][2]}
         \end{bmatrix} \\ \\
       `.trim()
-      let invMat
-      // console.log(det(_matrix))
+
       if (round(det(_matrix) === 0)) {
         return MySwal.fire({
           icon: 'error',
@@ -75,32 +83,33 @@ export default function Table () {
           Fraction(x).toFraction(true)
         )
       }
+
       const pecahan = map(invMat, (e) => {
-        // console.log(e)
         if (e == -0) return 0 // eslint-disable-line
         if (!e.toString().includes('/')) return e
         if (['/', ' ', '-'].every((el) => e.includes(el))) {
-          // e = e.slice(1).split('/')
           e = e.slice(1).split('/').join(' ').split(' ')
-          // console.log(e)
           return String.raw`
             -${e[0]}\frac{${e[1]}}{${e[2]}}
           `
         }
+
         if (['/', ' '].every((el) => e.includes(el))) {
-          // e = e.slice(1).split('/')
           e = e.split('/').join(' ').split(' ')
           return String.raw`
             ${e[0]}\frac{${e[1]}}{${e[2]}}
           `
         }
+
         if (['/', '-'].every((el) => e.includes(el))) {
           e = e.slice(1).split('/')
           return String.raw`-\frac{${e[0]}}{${e[1]}}`
         }
+
         e = e.split('/')
         return String.raw`\frac{${e[0]}}{${e[1]}}`
       })
+
       const inverse = String.raw`
           A^{-1} & = \begin{bmatrix}
             ${pecahan[0][0]} & ${pecahan[0][1]} & ${pecahan[0][2]} \\
@@ -109,7 +118,8 @@ export default function Table () {
           \end{bmatrix}
           \end{align}
         `.trim()
-      // console.log(invMat)
+
+      // simpan variabel original dan inverse ke state result
       setResult({
         original,
         inverse
@@ -117,14 +127,15 @@ export default function Table () {
     }
   }, [_matrix])
 
+  // lifecycle saat perubahan state _matrix
   useEffect(() => {
     if (isInitialMount.current) isInitialMount.current = false
     else {
-      // console.log(result)
       setGlobalMatrix(result)
     }
   }, [result])
 
+  // tampilan component tabel
   return (
     <form onSubmit={handleSubmit} ref={form}>
       <div className='w-full transition duration-500 ease-in-out'>
@@ -223,6 +234,7 @@ export default function Table () {
           </tbody>
         </table>
       </div>
+      {/* panggil component Button */}
       <Button handleReset={handleReset} />
     </form>
   )

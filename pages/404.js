@@ -12,7 +12,7 @@ export default function Custom404 (props) {
   const Msg = ({ closeToast, toastProps }) => {
     // state angka countdown
     const [countDown, setCountDown] = useState(5)
-    
+
     // lifecycle
     useEffect(() => {
       const timer = setInterval(() => {
@@ -61,7 +61,7 @@ export default function Custom404 (props) {
     // pergi ke halaman / (root)
     router.push('/')
   }
-  
+
   // tampilan dari halaman 404
   return (
     <div className='min-h-screen min-w-screen p-12 grid place-items-center'>

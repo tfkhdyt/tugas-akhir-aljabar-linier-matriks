@@ -28,9 +28,8 @@ const useMediaQuery = (width) => {
     const media = window.matchMedia(`(max-width: ${width}px)`)
     media.addListener(updateTarget)
 
-    if (media.matches) 
-      setTargetReached(true)
-    
+    if (media.matches) setTargetReached(true)
+
     // cleanup
     return () => media.removeListener(updateTarget)
   }, [])

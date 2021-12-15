@@ -38,7 +38,7 @@ export default function Aritmatika () {
       {result ? <HasilAritmatika /> : null}
     </AritmatikaContext.Provider>
   )
-  
+
   // tampilan halaman operasi aritmetika matriks
   return (
     <div>

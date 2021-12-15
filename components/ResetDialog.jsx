@@ -32,7 +32,7 @@ export default function ResetDialog (setResult, form) {
       setResult()
       // kosongkan form
       form.current.reset()
-      // tampilkan toast 
+      // tampilkan toast
       toast.success('Matriks telah berhasil di-reset!', {
         theme: 'colored',
         position: 'top-right',

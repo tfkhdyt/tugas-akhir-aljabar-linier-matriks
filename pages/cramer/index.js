@@ -68,7 +68,7 @@ export default function Cramer () {
       {result ? <HasilCramer /> : null}
     </CramerContext.Provider>
   )
-  
+
   // tampilan halaman cramer
   return (
     <div>

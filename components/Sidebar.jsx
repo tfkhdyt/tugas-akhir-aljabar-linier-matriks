@@ -14,7 +14,7 @@ export default function Sidebar ({ content }) {
   // state active
   const [active, setActive] = useState(false)
 
-  // function untuk handle click event 
+  // function untuk handle click event
   const handleClick = () => {
     setActive(!active)
   }
@@ -26,7 +26,7 @@ export default function Sidebar ({ content }) {
 
     return () => (document.body.style.overflow = 'hidden') // eslint-disable-line
   })
-  
+
   // tampilan Sidebar
   return (
     <div className='relative min-h-screen lg:flex'>
