@@ -45,6 +45,11 @@ export default {
     'aljabar linier dan matriks teknik informatika pdf',
     'aljabar linier dan matriks teknik informatika',
     'soal aljabar linear matriks',
-    'aljabar linier dan matriks kelompok 2 unibba'
+    'aljabar linier dan matriks kelompok 2 unibba',
+    'program operasi aritmetika matriks',
+    'program invers matriks 3x3',
+    'program sistem persamaan linier dengan aturan cramer',
+    'tugas akhir aljabar linier dan matriks unibba',
+    'tugas akhir aljabar linier dan matriks next js'
   ]
 }

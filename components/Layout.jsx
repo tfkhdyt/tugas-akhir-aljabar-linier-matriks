@@ -79,14 +79,14 @@ export default function Layout ({ children }) {
         <meta name='keywords' content={Data.keywords.join(', ')} />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:description' content={Data.deskripsi} />
-        <meta name='twitter:image' content={Data.thumbnail} />
+        <meta name='twitter:image' content={Data.link + Data.thumbnail} />
         <meta name='twitter:title' content={Data.judul} />
         <meta property='og:description' content={Data.deskripsi} />
-        <meta property='og:image' content={Data.thumbnail} />
+        <meta property='og:image' content={Data.link + Data.thumbnail} />
         <meta property='og:title' content={Data.judul} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={Data.link} />
-        <link rel='image_src' href={Data.thumbnail} />
+        <link rel='image_src' href={Data.link + Data.thumbnail} />
         {/* favicon */}
         <link rel='shortcut icon' href='/favicon.ico' />
       </Head>
