@@ -1,8 +1,13 @@
-import Link from 'next/link'
+// import module
 import Image from 'next/image'
+import Link from 'next/link'
+
+// import config
 import Data from '../config'
 
+// export component Navbar
 export default function Navbar () {
+  // tampilan Navbar
   return (
     <>
       <nav

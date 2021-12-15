@@ -1,21 +1,27 @@
+// import module
+import { Provider, Node } from '@nteract/mathjax'
 import { useContext } from 'react'
 
+// import config
 import { CramerContext } from '../config'
-import { Provider, Node } from '@nteract/mathjax'
 
+// export component Hasil
 export default function Hasil () {
+  // ambil variabel result dari context
   const { result } = useContext(CramerContext)
   return (
     <div className='w-auto h-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col transition duration-500'>
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
       <div className='overflow-x-auto'>
         <div className='text-gray-600 '>
+          {/* set konfigurasi untuk MathJax */}
           <Provider
             options={{
               showMathMenu: false,
               messageStyle: 'none'
             }}
           >
+            {/* tampilkan output */}
             <div className='text-xs'>
               <Node>
                 {result.matrix +

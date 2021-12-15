@@ -1,13 +1,19 @@
+// import module
 import { useRouter } from 'next/router'
 
+// export component Offline
 export default function Offline (props) {
+  // buat variable untuk router
   const router = useRouter()
 
+  // function untuk handle click event
   const handleClick = () => {
+    // refresh halaman
     router.reload()
   }
 
   return (
+    // tampilan dari offline
     <div className='min-h-screen min-w-screen p-12 grid place-items-center'>
       <div className='flex flex-col mb-24 lg:mb-0 max-w-md'>
         <div className='text-4xl text-gray-600 font-bold'>No Internet</div>

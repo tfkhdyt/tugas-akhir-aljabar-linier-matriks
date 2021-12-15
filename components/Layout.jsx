@@ -1,15 +1,20 @@
+// import module
+import { useCallback, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { useCallback, useState, useEffect } from 'react'
 
+// import components
+import Data from '../config'
+import Footer from './Footer'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
-import Footer from './Footer'
-import Data from '../config'
 
+// buat hooks useMediaQuery
 const useMediaQuery = (width) => {
+  // state targetReached
   const [targetReached, setTargetReached] = useState(false)
 
+  // callback updateTarget
   const updateTarget = useCallback((e) => {
     if (e.matches) {
       setTargetReached(true)
@@ -18,25 +23,29 @@ const useMediaQuery = (width) => {
     }
   }, [])
 
+  // lifecycle saat mounted
   useEffect(() => {
     const media = window.matchMedia(`(max-width: ${width}px)`)
     media.addListener(updateTarget)
 
-    // Check on mount (callback is not called until a change occurs)
-    if (media.matches) {
+    if (media.matches) 
       setTargetReached(true)
-    }
-
+    
+    // cleanup
     return () => media.removeListener(updateTarget)
   }, [])
 
   return targetReached
 }
 
+// export component Layout
 export default function Layout ({ children }) {
+  // variabel router
   const router = useRouter()
+  // variabel isBreakpoint
   const isBreakpoint = useMediaQuery(1024)
 
+  // component Mobile
   const Mobile = () => {
     if (!['/404', '/_offline'].includes(router.pathname)) {
       return <Sidebar content={children} />
@@ -44,6 +53,7 @@ export default function Layout ({ children }) {
     return children
   }
 
+  // component Desktop
   const Desktop = () => {
     if (!['/404', '/_offline'].includes(router.pathname)) {
       return (
@@ -60,11 +70,13 @@ export default function Layout ({ children }) {
   return (
     <>
       <Head>
-        <meta name='description' content={Data.deskripsi} />
+        {/* google site verification */}
         <meta
           name='google-site-verification'
           content='JCu7ig2hkiijnjnq8doWrgNg9HPCpWwo2WrTQWko8Cs'
         />
+        {/* metadata */}
+        <meta name='description' content={Data.deskripsi} />
         <meta name='keywords' content={Data.keywords.join(', ')} />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:description' content={Data.deskripsi} />
@@ -75,16 +87,12 @@ export default function Layout ({ children }) {
         <meta property='og:title' content={Data.judul} />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={Data.link} />
-        <link rel='shortcut icon' href='/favicon.ico' />
         <link rel='image_src' href={Data.thumbnail} />
+        {/* favicon */}
+        <link rel='shortcut icon' href='/favicon.ico' />
       </Head>
       <div>
-        {/* <div className='lg:hidden'>
-          <Mobile />
-        </div>
-        <div className='hidden lg:block'>
-          <Desktop />
-        </div> */}
+        {/* tampilkan component Mobile dan Desktop berdasarkan breakpoint */}
         {isBreakpoint ? <Mobile /> : <Desktop />}
       </div>
     </>

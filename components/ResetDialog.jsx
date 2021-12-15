@@ -1,10 +1,14 @@
+// import module
+import { toast } from 'react-toastify'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { toast } from 'react-toastify'
 
+// variabel untuk menampilkan sweetalert2
 const MySwal = withReactContent(Swal)
 
+// export component ResetDialog
 export default function ResetDialog (setResult, form) {
+  // tampilkan alert
   return MySwal.fire({
     title: 'Apakah kamu yakin ingin me-reset matriks?',
     icon: 'warning',
@@ -22,9 +26,13 @@ export default function ResetDialog (setResult, form) {
       </span>
     )
   }).then((result) => {
+    // lakukan hal ini saat user menekan tombol confirm
     if (result.isConfirmed) {
+      // kosongkan result
       setResult()
+      // kosongkan form
       form.current.reset()
+      // tampilkan toast 
       toast.success('Matriks telah berhasil di-reset!', {
         theme: 'colored',
         position: 'top-right',

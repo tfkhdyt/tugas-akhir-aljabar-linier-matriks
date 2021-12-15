@@ -1,7 +1,10 @@
+// import module
 import Link from 'next/link'
 
+// import config
 import Data from '../config'
 
+// export component Footer
 export default function Footer ({ config, versi }) {
   return (
     <footer

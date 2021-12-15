@@ -1,10 +1,15 @@
-import Data from '../package.json'
+// import module
 import { createContext } from 'react'
 
+// import file package.json
+import Data from '../package.json'
+
+// export context
 export const MatrixContext = createContext()
 export const AritmatikaContext = createContext()
 export const CramerContext = createContext()
 
+// export konfigurasi
 export default {
   versi: Data.version,
   judul: 'Tugas Akhir Aljabar Linier & Matriks',

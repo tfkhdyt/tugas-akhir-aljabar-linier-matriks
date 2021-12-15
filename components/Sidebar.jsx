@@ -1,23 +1,33 @@
+// import module
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
-import Footer from './Footer'
+// import config
 import Data from '../config'
 
+// import component
+import Footer from './Footer'
+
+// export component Sidebar
 export default function Sidebar ({ content }) {
+  // state active
   const [active, setActive] = useState(false)
 
+  // function untuk handle click event 
   const handleClick = () => {
     setActive(!active)
   }
 
+  // lifecycle
   useEffect(() => {
     if (active) return (document.body.style.overflow = 'hidden')
     else return (document.body.style.overflow = '') // eslint-disable-line
 
     return () => (document.body.style.overflow = 'hidden') // eslint-disable-line
   })
+  
+  // tampilan Sidebar
   return (
     <div className='relative min-h-screen lg:flex'>
       {/* header */}

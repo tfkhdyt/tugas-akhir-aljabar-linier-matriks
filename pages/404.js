@@ -1,13 +1,19 @@
+// import module
+import { toast } from 'react-toastify'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { toast } from 'react-toastify'
 
+// export component 404
 export default function Custom404 (props) {
+  // buat variabel untuk router
   const router = useRouter()
 
+  // component message toast
   const Msg = ({ closeToast, toastProps }) => {
+    // state angka countdown
     const [countDown, setCountDown] = useState(5)
-
+    
+    // lifecycle
     useEffect(() => {
       const timer = setInterval(() => {
         setCountDown((countDown) => countDown - 1)
@@ -18,12 +24,14 @@ export default function Custom404 (props) {
       }
     })
 
+    // lifecycle saat state countDown berubah
     useEffect(() => {
       if (countDown === 0) {
         router.push('/')
       }
     }, [countDown])
 
+    // tampilan yang akan tampil pada componen Msg
     return (
       <span>
         Anda akan kembali ke halaman utama dalam waktu <b>{countDown}</b>{' '}
@@ -32,6 +40,7 @@ export default function Custom404 (props) {
     )
   }
 
+  // lifecycle saat component mounted
   useEffect(() => {
     toast.info(<Msg />, {
       position: 'top-right',
@@ -45,11 +54,15 @@ export default function Custom404 (props) {
     })
   }, [])
 
+  // function untuk handle click event
   const handleClick = () => {
+    // singkirkan semua toast
     toast.dismiss()
+    // pergi ke halaman / (root)
     router.push('/')
   }
-
+  
+  // tampilan dari halaman 404
   return (
     <div className='min-h-screen min-w-screen p-12 grid place-items-center'>
       <div className='flex flex-col mb-24 lg:mb-0 max-w-md'>
