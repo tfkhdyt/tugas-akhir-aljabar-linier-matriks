@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { matrix, multiply, transpose, add } from 'mathjs'
 
 import Button from './Button'
@@ -83,7 +83,21 @@ export default function TableAritmatika () {
       setResult(tex)
     }
   }, [matrixA, matrixB, matrixC])
-
+  
+  const [isActiveA, setIsActiveA] = useState(false)
+  const [isActiveB, setIsActiveB] = useState(false)
+  const [isActiveC, setIsActiveC] = useState(false)
+  
+  const handleFocusBlurMatrixA = () => {
+    setIsActiveA(!isActiveA)
+  }
+  const handleFocusBlurMatrixB = () => {
+    setIsActiveB(!isActiveB)
+  }
+  const handleFocusBlurMatrixC = () => {
+    setIsActiveC(!isActiveC)
+  }
+  
   return (
     <form onSubmit={handleSubmit} ref={form}>
       <div className='group grid grid-cols-2 gap-6'>
@@ -93,7 +107,7 @@ export default function TableAritmatika () {
             Masukkan matriks A:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className='w-full table-fixed text-center transition duration-500 ease-in-out group-hover:ring-2 group-hover:ring-blue-500 group-hover:shadow-lg group-hover:shadow-blue-500/25'>
+            <table className={`w-full table-fixed text-center transition duration-500 ease-in-out ${isActiveA ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25' : null}`}>
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -104,6 +118,8 @@ export default function TableAritmatika () {
                       name='A11'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixA}
+                      onBlur={handleFocusBlurMatrixA}
                     />
                   </td>
                   <td className='p-2'>
@@ -113,6 +129,8 @@ export default function TableAritmatika () {
                       name='A12'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixA}
+                      onBlur={handleFocusBlurMatrixA}
                     />
                   </td>
                 </tr>
@@ -125,6 +143,8 @@ export default function TableAritmatika () {
                       name='A21'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixA}
+                      onBlur={handleFocusBlurMatrixA}
                     />
                   </td>
                   <td className='p-2'>
@@ -134,6 +154,8 @@ export default function TableAritmatika () {
                       name='A22'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixA}
+                      onBlur={handleFocusBlurMatrixA}
                     />
                   </td>
                 </tr>
@@ -147,7 +169,7 @@ export default function TableAritmatika () {
             Masukkan matriks B:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className='w-full table-fixed text-center transition duration-500 group-hover:ring-2 group-hover:ring-blue-500 group-hover:shadow-lg group-hover:shadow-blue-500/25'>
+            <table className={`w-full table-fixed text-center transition duration-500 ease-in-out ${isActiveB ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25' : null}`}>
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -158,6 +180,8 @@ export default function TableAritmatika () {
                       name='B11'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixB}
+                      onBlur={handleFocusBlurMatrixB}
                     />
                   </td>
                   <td className='p-2'>
@@ -167,6 +191,8 @@ export default function TableAritmatika () {
                       name='B12'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixB}
+                      onBlur={handleFocusBlurMatrixB}
                     />
                   </td>
                 </tr>
@@ -179,6 +205,8 @@ export default function TableAritmatika () {
                       name='B21'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixB}
+                      onBlur={handleFocusBlurMatrixB}
                     />
                   </td>
                   <td className='p-2'>
@@ -188,6 +216,8 @@ export default function TableAritmatika () {
                       name='B22'
                       className='w-full text-center font-semibold outline-none py-1 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixB}
+                      onBlur={handleFocusBlurMatrixB}
                     />
                   </td>
                 </tr>
@@ -201,7 +231,7 @@ export default function TableAritmatika () {
             Masukkan matriks C:
           </p>
           <div className='w-full transition duration-500 ease-in-out'>
-            <table className='w-full table-fixed text-center transition duration-500 group-hover:ring-2 group-hover:ring-blue-500 group-hover:shadow-lg group-hover:shadow-blue-500/25'>
+            <table className={`w-full table-fixed text-center transition duration-500 ease-in-out ${isActiveC ? 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25' : null}`}>
               <tbody className='bg-white divide-y divide-gray-200'>
                 {/* baris satu */}
                 <tr className='divide-x divide-gray-200'>
@@ -212,6 +242,8 @@ export default function TableAritmatika () {
                       name='C11'
                       className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixC}
+                      onBlur={handleFocusBlurMatrixC}
                     />
                   </td>
                   <td className='p-2'>
@@ -221,6 +253,8 @@ export default function TableAritmatika () {
                       name='C12'
                       className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixC}
+                      onBlur={handleFocusBlurMatrixC}
                     />
                   </td>
                 </tr>
@@ -233,6 +267,8 @@ export default function TableAritmatika () {
                       name='C21'
                       className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixC}
+                      onBlur={handleFocusBlurMatrixC}
                     />
                   </td>
                   <td className='p-2'>
@@ -242,6 +278,8 @@ export default function TableAritmatika () {
                       name='C22'
                       className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixC}
+                      onBlur={handleFocusBlurMatrixC}
                     />
                   </td>
                 </tr>
@@ -254,6 +292,8 @@ export default function TableAritmatika () {
                       name='C31'
                       className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixC}
+                      onBlur={handleFocusBlurMatrixC}
                     />
                   </td>
                   <td className='p-2'>
@@ -263,6 +303,8 @@ export default function TableAritmatika () {
                       name='C32'
                       className='w-full text-center font-semibold outline-none p-2 tracking-wide'
                       required
+                      onFocus={handleFocusBlurMatrixC}
+                      onBlur={handleFocusBlurMatrixC}
                     />
                   </td>
                 </tr>
