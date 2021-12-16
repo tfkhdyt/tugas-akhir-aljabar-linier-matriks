@@ -2,7 +2,6 @@
 import { useCallback, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Script from 'next/script'
 
 // import components
 import Data from '../config'
@@ -90,7 +89,7 @@ export default function Layout ({ children }) {
         <link rel='image_src' href={Data.link + Data.thumbnail} />
         {/* favicon */}
         <link rel='shortcut icon' href='/favicon.ico' />
-        <Script
+        <script
           async
           src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2055049446156187'
           crossorigin='anonymous'
