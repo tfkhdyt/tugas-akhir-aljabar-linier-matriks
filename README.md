@@ -33,7 +33,7 @@ Ini adalah sebuah aplikasi berbasis web yang berfungsi untuk menyelesaikan soal 
 - Invers Matriks 3x3
 - Sistem Persamaan Linier dengan Aturan Cramer
 
-Berkat PWA (Progressive Web Apps), aplikasi ini pun tersedia dalam bentuk [native android application](https://drive.google.com/file/d/1Cy2oHkH4Fux_aTxO2LmOYLKrJlcxM7B8/view?usp=drivesdk).
+Berkat PWA (Progressive Web Apps), aplikasi ini pun tersedia dalam bentuk [native android application](https://link.tfkhdyt.my.id/u9p).
 
 <p align="right">(<a href="#top">kembali ke atas</a>)</p>
 
