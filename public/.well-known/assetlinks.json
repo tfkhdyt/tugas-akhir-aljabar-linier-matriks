@@ -1,6 +1,6 @@
 [{
         "relation": ["delegate_permission/common.handle_all_urls"],
         "target" : { "namespace": "android_app", "package_name": "id.kelompok2.aljabar_linier_matriks.twa",
-                     "sha256_cert_fingerprints": ["96:01:F9:4C:CD:44:86:52:96:26:38:0D:93:78:0A:4F:8A:BC:C6:14:6D:EB:88:BE:B7:A8:12:6E:AC:F9:1F:B4"] }
+                     "sha256_cert_fingerprints": ["73:DE:31:EF:C4:91:87:18:70:60:E4:A9:1E:9E:02:66:2A:F8:BA:95:60:81:2A:98:C8:B0:D6:DA:80:95:72:89"] }
       }
 ]
