@@ -76,7 +76,7 @@ export default function Layout ({ children }) {
         />
         {/* metadata */}
         <meta name='description' content={Data.deskripsi} />
-        <meta name='keywords' content={Data.keywords.join(', ')} />
+        <meta name='keywords' content={Data.keywords} />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:description' content={Data.deskripsi} />
         <meta name='twitter:image' content={Data.link + Data.thumbnail} />

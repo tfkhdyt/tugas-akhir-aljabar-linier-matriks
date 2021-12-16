@@ -9,6 +9,7 @@ import Form from '../components/Form'
 import HasilAritmatika from '../components/HasilAritmatika'
 import TableAritmatika from '../components/TableAritmatika'
 
+
 // export component aritmatika
 export default function Aritmatika () {
   // state untuk menyimpan matrix dan hasil
