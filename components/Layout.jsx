@@ -89,6 +89,11 @@ export default function Layout ({ children }) {
         <link rel='image_src' href={Data.link + Data.thumbnail} />
         {/* favicon */}
         <link rel='shortcut icon' href='/favicon.ico' />
+        <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2055049446156187'
+          crossorigin='anonymous'
+        />
       </Head>
       <div>
         {/* tampilkan component Mobile dan Desktop berdasarkan breakpoint */}
