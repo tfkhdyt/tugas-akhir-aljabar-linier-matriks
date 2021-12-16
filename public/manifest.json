@@ -1,12 +1,12 @@
 {
     "theme_color": "#60A5FA",
-    "background_color": "#F9FAFB",
+    "background_color": "#0C335D",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "name": "Tugas Akhir Aljabar Linier dan Matriks",
-    "short_name": "Tugas Akhir Aljabar Linier dan Matriks",
-    "description": "Tugas Akhir Aljabar Linier dan Matriks dengan framework Next.js dan Tailwind CSS",
+    "short_name": "Aljabar Linier dan Matriks Kelompok 2",
+    "description": "Tugas akhir mata kuliah Aljabar Linier dan Matriks menggunakan framework Next.js, Tailwind CSS, Math.js, dan MathJax",
     "icons": [
         {
             "src": "/icon-192x192.png",
