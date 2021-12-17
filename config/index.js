@@ -15,7 +15,7 @@ export const CramerContext = createContext()
 // export konfigurasi
 export default {
   versi: Data.version,
-  judul: 'Tugas Akhir Aljabar Linier & Matriks',
+  judul: 'Tugas Akhir Aljabar Linier & Matriks Kelompok 2',
   logo: 'https://fti.unibba.ac.id/wp-content/uploads/2016/07/cropped-Logo-FTI-UNIBBA.png',
   menu: [
     'Operasi Aritmetika',
