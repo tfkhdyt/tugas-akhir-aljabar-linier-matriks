@@ -15,12 +15,18 @@ export default function Hasil() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ type: 'linear', delay: 1 }}
+      transition={{ type: 'linear', delay: 0.5 }}
       className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col transition duration-500'
     >
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
       <div className='overflow-x-auto'>
-        <p className='text-sm lg:text-base text-gray-600'>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ type: 'linear' }}
+          className='text-sm lg:text-base text-gray-600'
+        >
           {/* set konfigurasi untuk MathJax */}
           <Provider
             options={{
@@ -31,7 +37,7 @@ export default function Hasil() {
             {/* tampilkan output */}
             <Node>{matrix.original + matrix.inverse}</Node>
           </Provider>
-        </p>
+        </motion.p>
       </div>
     </motion.div>
   )
