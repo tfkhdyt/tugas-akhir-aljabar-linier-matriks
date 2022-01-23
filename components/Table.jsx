@@ -16,7 +16,7 @@ import ResetDialog from './ResetDialog'
 const MySwal = withReactContent(Swal)
 
 // export component Table
-export default function Table () {
+export default function Table() {
   // state matrix dan result
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
@@ -31,7 +31,7 @@ export default function Table () {
     setMatrix([
       [data._11.value, data._12.value, data._13.value],
       [data._21.value, data._22.value, data._23.value],
-      [data._31.value, data._32.value, data._33.value]
+      [data._31.value, data._32.value, data._33.value],
     ])
   }
 
@@ -74,7 +74,7 @@ export default function Table () {
               <span>Okesiap bang</span>
             </span>
           ),
-          confirmButtonColor: '#60A5FA'
+          confirmButtonColor: '#60A5FA',
         }).then(() => form.current.reset())
       } else if ([-1, 1].includes(round(det(_matrix)))) {
         invMat = round(inv(matrix(_matrix)).valueOf())
@@ -122,7 +122,7 @@ export default function Table () {
       // simpan variabel original dan inverse ke state result
       setResult({
         original,
-        inverse
+        inverse,
       })
     }
   }, [_matrix])

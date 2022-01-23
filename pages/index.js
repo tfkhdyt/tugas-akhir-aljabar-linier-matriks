@@ -1,6 +1,7 @@
 // import module
 import { useState } from 'react'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 
 // import components
 import Content from '../components/Content'
@@ -10,7 +11,7 @@ import HasilAritmatika from '../components/HasilAritmatika'
 import TableAritmatika from '../components/TableAritmatika'
 
 // export component aritmatika
-export default function Aritmatika () {
+export default function Aritmatika() {
   // state untuk menyimpan matrix dan hasil
   const [matrixA, setMatrixA] = useState()
   const [matrixB, setMatrixB] = useState()
@@ -29,7 +30,7 @@ export default function Aritmatika () {
         matrixC,
         setMatrixC,
         result,
-        setResult
+        setResult,
       }}
     >
       {/* Tampilkan component form dengan component TableAritmatika sebagai props */}
@@ -48,13 +49,19 @@ export default function Aritmatika () {
           {Data.menu[0]} | {Data.judul}
         </title>
       </Head>
-      <main className='container mx-auto p-6 lg:px-24'>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ type: 'linear' }}
+        className='container mx-auto p-6 lg:px-24'
+      >
         <span className='text-2xl font-semibold'>{Data.menu[0]}</span>
         <div className='mt-6'>
           {/* panggil component Content dengan variabel content sebagai props */}
           <Content content={content} />
         </div>
-      </main>
+      </motion.main>
     </div>
   )
 }

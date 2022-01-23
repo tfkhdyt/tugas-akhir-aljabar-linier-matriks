@@ -4,12 +4,12 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 
 // export component 404
-export default function Custom404 (props) {
+export default function Custom404() {
   // buat variabel untuk router
   const router = useRouter()
 
   // component message toast
-  const Msg = ({ closeToast, toastProps }) => {
+  const Msg = () => {
     // state angka countdown
     const [countDown, setCountDown] = useState(5)
 
@@ -50,7 +50,7 @@ export default function Custom404 (props) {
       pauseOnHover: false,
       draggable: false,
       progress: undefined,
-      toastId: 'bruh'
+      toastId: 'bruh',
     })
   }, [])
 

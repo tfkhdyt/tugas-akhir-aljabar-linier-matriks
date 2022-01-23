@@ -1,9 +1,11 @@
 // import module
 import { useState } from 'react'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 
 // import config
 import Data, { CramerContext } from '../../config'
+import variants from '../../config/variants'
 
 // import components
 import Content from '../../components/Content'
@@ -12,25 +14,25 @@ import HasilCramer from '../../components/HasilCramer'
 import TableCramer from '../../components/TableCramer'
 
 // export component Cramer
-export default function Cramer () {
+export default function Cramer() {
   // state untuk persamaan dan hasil
   const [persamaan1, setPersamaan1] = useState({
     x: 0,
     y: 0,
     z: 0,
-    hasil: 0
+    hasil: 0,
   })
   const [persamaan2, setPersamaan2] = useState({
     x: 0,
     y: 0,
     z: 0,
-    hasil: 0
+    hasil: 0,
   })
   const [persamaan3, setPersamaan3] = useState({
     x: 0,
     y: 0,
     z: 0,
-    hasil: 0
+    hasil: 0,
   })
   const [result, setResult] = useState()
 
@@ -59,7 +61,7 @@ export default function Cramer () {
         persamaan3,
         setPersamaan3,
         result,
-        setResult
+        setResult,
       }}
     >
       {/* panggil component Form dengan variabel form sebagai props */}
@@ -78,13 +80,20 @@ export default function Cramer () {
           {Data.menu[2]} | {Data.judul}
         </title>
       </Head>
-      <main className='container mx-auto p-6 lg:px-24'>
+      <motion.main
+        variants={variants}
+        initial='hidden'
+        animate='enter'
+        exit='exit'
+        transition={{ type: 'linear' }}
+        className='container mx-auto p-6 lg:px-24'
+      >
         <span className='text-2xl font-semibold'>{Data.menu[2]}</span>
         <div className='mt-6'>
           {/* panggil component Content dengan variabel content sebagai props */}
           <Content content={content} />
         </div>
-      </main>
+      </motion.main>
     </div>
   )
 }

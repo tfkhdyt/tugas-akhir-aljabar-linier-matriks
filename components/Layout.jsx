@@ -2,7 +2,6 @@
 import { useCallback, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { AnimatePresence } from 'framer-motion'
 
 // import components
 import Data from '../config'
@@ -39,7 +38,7 @@ const useMediaQuery = (width) => {
 }
 
 // export component Layout
-export default function Layout ({ children }) {
+export default function Layout({ children }) {
   // variabel router
   const router = useRouter()
   // variabel isBreakpoint
@@ -59,7 +58,6 @@ export default function Layout ({ children }) {
       return (
         <div className='hidden lg:block'>
           <Navbar />
-           
           {children}
           <Footer />
         </div>

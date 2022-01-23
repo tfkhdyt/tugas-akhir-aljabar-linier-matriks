@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Data from '../config'
 
 // export component Footer
-export default function Footer ({ config, versi }) {
+export default function Footer({ config, versi }) {
   return (
     <footer
       className={`bottom-0 inset-x-0 p-4 lg:mb-2 font-light flex flex-col justify-center items-center text-center text-gray-500 ${config}`}

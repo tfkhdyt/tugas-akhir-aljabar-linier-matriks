@@ -10,7 +10,7 @@ import Button from './Button'
 import ResetDialog from './ResetDialog'
 
 // export component TableAritmatika
-export default function TableAritmatika () {
+export default function TableAritmatika() {
   // state matrix dan hasil
   const {
     matrixA,
@@ -19,7 +19,7 @@ export default function TableAritmatika () {
     setMatrixB,
     matrixC,
     setMatrixC,
-    setResult
+    setResult,
   } = useContext(AritmatikaContext)
   // reference untuk form
   const form = useRef()
@@ -31,16 +31,16 @@ export default function TableAritmatika () {
     // input data matrix ke state
     setMatrixA([
       [data.A11.value, data.A12.value],
-      [data.A21.value, data.A22.value]
+      [data.A21.value, data.A22.value],
     ])
     setMatrixB([
       [data.B11.value, data.B12.value],
-      [data.B21.value, data.B22.value]
+      [data.B21.value, data.B22.value],
     ])
     setMatrixC([
       [data.C11.value, data.C12.value],
       [data.C21.value, data.C22.value],
-      [data.C31.value, data.C32.value]
+      [data.C31.value, data.C32.value],
     ])
   }
 
@@ -60,7 +60,7 @@ export default function TableAritmatika () {
       const tex = {
         a: null,
         b: null,
-        c: null
+        c: null,
       }
       // hitung soal a
       const a = multiply(matrix(matrixC), matrix(matrixA)).valueOf()

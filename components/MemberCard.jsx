@@ -1,12 +1,18 @@
 // import module
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 // export component MemberCard
-export default function MemberCard (props) {
+export default function MemberCard(props) {
   // tampilan MemberCard
   return (
-    <div className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-12 flex flex-col justify-center items-center transition duration-500 ease-in-out'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-12 flex flex-col justify-center items-center transition duration-500 ease-in-out'
+    >
       <div className='mb-4'>
         <Image
           className='rounded-full'
@@ -16,6 +22,7 @@ export default function MemberCard (props) {
           objectPosition='center'
           objectFit='cover'
           alt={`Foto ${props.nama}`}
+          priority
         />
       </div>
       <div className='text-center'>
@@ -44,6 +51,6 @@ export default function MemberCard (props) {
           </a>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }

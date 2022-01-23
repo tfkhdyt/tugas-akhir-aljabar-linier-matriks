@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Data from '../config'
 
 // export component Navbar
-export default function Navbar () {
+export default function Navbar() {
   // tampilan Navbar
   return (
     <>
@@ -15,9 +15,9 @@ export default function Navbar () {
           hidden lg:flex lg:items-center lg:flex-wrap lg:bg-gradient-to-br lg:from-blue-400 lg:to-blue-500
           lg:px-3 lg:py-2 lg:sticky lg:w-full lg:z-50 lg:top-0'
       >
-        <Link href='/'>
+        <Link href='/' scroll={false}>
           <a className='transition duration-500 inline-flex items-center p-2 mr-4 h-4'>
-            <Image src='/images/kbmfti.png' height={25} width={53} />
+            <Image src='/images/kbmfti.png' height={25} width={53} priority />
             <span className='text-xl text-white font-bold uppercase tracking-wide ml-2'>
               Kelompok 2
             </span>
@@ -25,7 +25,7 @@ export default function Navbar () {
         </Link>
         <div className='lg:inline-flex lg:flex-grow lg:w-auto'>
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto'>
-            <Link href='/'>
+            <Link href='/' scroll={false}>
               <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg
@@ -46,7 +46,7 @@ export default function Navbar () {
                 </span>
               </a>
             </Link>
-            <Link href='/invers'>
+            <Link href='/invers' scroll={false}>
               <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg
@@ -61,7 +61,7 @@ export default function Navbar () {
                 </span>
               </a>
             </Link>
-            <Link href='/cramer'>
+            <Link href='/cramer' scroll={false}>
               <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg
@@ -82,7 +82,7 @@ export default function Navbar () {
                 </span>
               </a>
             </Link>
-            <Link href='/about'>
+            <Link href='/about' scroll={false}>
               <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
                 <span className='flex flex-row items-center'>
                   <svg

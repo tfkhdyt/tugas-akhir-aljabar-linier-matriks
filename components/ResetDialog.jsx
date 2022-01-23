@@ -7,7 +7,7 @@ import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
 
 // export component ResetDialog
-export default function ResetDialog (setResult, form) {
+export default function ResetDialog(setResult, form) {
   // tampilkan alert
   return MySwal.fire({
     title: 'Apakah kamu yakin ingin me-reset matriks?',
@@ -24,7 +24,7 @@ export default function ResetDialog (setResult, form) {
       <span className='flex flex-row'>
         <span>Gak jadi deh</span>
       </span>
-    )
+    ),
   }).then((result) => {
     // lakukan hal ini saat user menekan tombol confirm
     if (result.isConfirmed) {
@@ -41,7 +41,7 @@ export default function ResetDialog (setResult, form) {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        progress: undefined
+        progress: undefined,
       })
     }
   })
