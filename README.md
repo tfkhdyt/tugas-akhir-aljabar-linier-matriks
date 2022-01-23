@@ -48,6 +48,7 @@ Berkat PWA (Progressive Web Apps), aplikasi ini pun tersedia dalam bentuk [nativ
 * [sweetalert2](https://sweetalert2.github.io/)
 * [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 * [Next PWA](https://github.com/shadowwalker/next-pwa)
+* [Framer Motion](https://framer.com/)
 
 <p align="right">(<a href="#top">kembali ke atas</a>)</p>
 
