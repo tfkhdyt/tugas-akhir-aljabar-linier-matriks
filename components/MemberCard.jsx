@@ -22,7 +22,7 @@ export default function MemberCard(props) {
           objectPosition='center'
           objectFit='cover'
           alt={`Foto ${props.nama}`}
-          priority
+          priority={true}
         />
       </div>
       <div className='text-center'>
