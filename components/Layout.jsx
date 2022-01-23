@@ -38,7 +38,7 @@ const useMediaQuery = (width) => {
 }
 
 // export component Layout
-export default function Layout ({ children }) {
+export default function Layout({ children }) {
   // variabel router
   const router = useRouter()
   // variabel isBreakpoint

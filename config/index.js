@@ -21,11 +21,11 @@ export default {
     'Operasi Aritmetika',
     'Invers Matriks',
     'SPL Aturan Cramer',
-    'About Us'
+    'About Us',
   ],
   link: 'https://aljabar-linier-matriks-kelompok-2.vercel.app',
   deskripsi:
     'Tugas akhir mata kuliah Aljabar Linier dan Matriks menggunakan framework Next.js, Tailwind CSS, Math.js, dan MathJax',
   thumbnail: '/images/thumbnail.jpg',
-  keywords
+  keywords,
 }

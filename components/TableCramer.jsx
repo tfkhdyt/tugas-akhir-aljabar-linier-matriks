@@ -46,7 +46,7 @@ const InputForm = () => {
 }
 
 // export component TableCramer
-export default function TableCramer () {
+export default function TableCramer() {
   // state persamaan dan hasil
   const {
     persamaan1,
@@ -55,7 +55,7 @@ export default function TableCramer () {
     setPersamaan2,
     persamaan3,
     setPersamaan3,
-    setResult
+    setResult,
   } = useContext(CramerContext)
   // reference untuk form
   const form = useRef()
@@ -69,19 +69,19 @@ export default function TableCramer () {
       x: data._1x.value || 0,
       y: data._1y.value || 0,
       z: data._1z.value || 0,
-      hasil: data._1h.value || 0
+      hasil: data._1h.value || 0,
     })
     setPersamaan2({
       x: data._2x.value || 0,
       y: data._2y.value || 0,
       z: data._2z.value || 0,
-      hasil: data._2h.value || 0
+      hasil: data._2h.value || 0,
     })
     setPersamaan3({
       x: data._3x.value || 0,
       y: data._3y.value || 0,
       z: data._3z.value || 0,
-      hasil: data._3h.value || 0
+      hasil: data._3h.value || 0,
     })
   }
 
@@ -102,28 +102,28 @@ export default function TableCramer () {
         det([
           [persamaan1.x, persamaan1.y, persamaan1.z],
           [persamaan2.x, persamaan2.y, persamaan2.z],
-          [persamaan3.x, persamaan3.y, persamaan3.z]
+          [persamaan3.x, persamaan3.y, persamaan3.z],
         ])
       )
       const detMatrix1 = round(
         det([
           [persamaan1.hasil, persamaan1.y, persamaan1.z],
           [persamaan2.hasil, persamaan2.y, persamaan2.z],
-          [persamaan3.hasil, persamaan3.y, persamaan3.z]
+          [persamaan3.hasil, persamaan3.y, persamaan3.z],
         ])
       )
       const detMatrix2 = round(
         det([
           [persamaan1.x, persamaan1.hasil, persamaan1.z],
           [persamaan2.x, persamaan2.hasil, persamaan2.z],
-          [persamaan3.x, persamaan3.hasil, persamaan3.z]
+          [persamaan3.x, persamaan3.hasil, persamaan3.z],
         ])
       )
       const detMatrix3 = round(
         det([
           [persamaan1.x, persamaan1.y, persamaan1.hasil],
           [persamaan2.x, persamaan2.y, persamaan2.hasil],
-          [persamaan3.x, persamaan3.y, persamaan3.hasil]
+          [persamaan3.x, persamaan3.y, persamaan3.hasil],
         ])
       )
 
@@ -138,7 +138,7 @@ export default function TableCramer () {
         matrix1: null,
         matrix2: null,
         matrix3: null,
-        hasil: null
+        hasil: null,
       }
 
       // ubah hasil menjadi string yang dimengerti mathjax

@@ -1,5 +1,5 @@
 // export component button
-export default function Button ({ handleReset }) {
+export default function Button({ handleReset }) {
   return (
     <div className='flex flex-row items-center mb-2'>
       <button

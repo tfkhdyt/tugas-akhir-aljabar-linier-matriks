@@ -1,23 +1,44 @@
 // import module
 import { ToastContainer, Slide } from 'react-toastify'
 import { useRouter } from 'next/router'
+import { AnimatePresence } from 'framer-motion'
 
 // import komponen
 import Layout from '../components/Layout'
 
 // import styling
 import 'tailwindcss/tailwind.css'
+import '../styles/globals.css'
 import 'react-toastify/dist/ReactToastify.min.css'
 
 // export component App
-export default function App ({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   // buat variabel untuk router
-  const router = useRouter()
+  const _router = useRouter()
   return (
     <div>
       {/* panggil komponen Layout */}
       <Layout>
-        <Component {...pageProps} />
+        {/*<motion.div
+          key={router.route}
+          initial='initial'
+          animate='animate'
+          variants={{
+            initial: {
+              opacity: 0,
+            },
+            animate: {
+              opacity: 1,
+            },
+          }}
+        >*/}
+        <AnimatePresence
+          exitBeforeEnter
+          onExitComplete={() => window.scrollTo(0, 0)}
+        >
+          <Component {...pageProps} />
+        </AnimatePresence>
+        {/*</motion.div>*/}
       </Layout>
       {/* panggil komponen ToastContainer */}
       <ToastContainer
@@ -26,11 +47,12 @@ export default function App ({ Component, pageProps }) {
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
-        closeOnClick={router.pathname !== '/404'}
+        closeOnClick={_router.pathname !== '/404'}
         rtl={false}
-        pauseOnFocusLoss={router.pathname !== '/404'}
-        draggable={router.pathname !== '/404'}
-        pauseOnHover={router.pathname !== '/404'}
+        pauseOnFocusLoss={_router.pathname !== '/404'}
+        draggable={_router.pathname !== '/404'}
+        pauseOnHover={_router.pathname !== '/404'}
+        bodyClassName='font-semibold'
       />
     </div>
   )

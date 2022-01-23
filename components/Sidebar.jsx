@@ -10,7 +10,7 @@ import Data from '../config'
 import Footer from './Footer'
 
 // export component Sidebar
-export default function Sidebar ({ content }) {
+export default function Sidebar({ content }) {
   // state active
   const [active, setActive] = useState(false)
 
@@ -36,9 +36,9 @@ export default function Sidebar ({ content }) {
           active ? 'blur-sm grayscale ' : null
         }`}
       >
-        <Link href='/'>
+        <Link href='/' scroll={false}>
           <a className='transition duration-500 inline-flex items-center p-2 mr-4 h-4'>
-            <Image src='/images/kbmfti.png' height={25} width={53} />
+            <Image src='/images/kbmfti.png' height={25} width={53} priority />
             <span className='text-xl text-white font-bold uppercase tracking-wide ml-2'>
               Kelompok 2
             </span>
@@ -77,7 +77,7 @@ export default function Sidebar ({ content }) {
             </span>
           </p>
           <nav>
-            <Link href='/'>
+            <Link href='/' scroll={false}>
               <a
                 className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
                 onClick={handleClick}
@@ -101,7 +101,7 @@ export default function Sidebar ({ content }) {
                 </span>
               </a>
             </Link>
-            <Link href='/invers'>
+            <Link href='/invers' scroll={false}>
               <a
                 className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
                 onClick={handleClick}
@@ -119,7 +119,7 @@ export default function Sidebar ({ content }) {
                 </span>
               </a>
             </Link>
-            <Link href='/cramer'>
+            <Link href='/cramer' scroll={false}>
               <a
                 className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
                 onClick={handleClick}
@@ -143,7 +143,7 @@ export default function Sidebar ({ content }) {
                 </span>
               </a>
             </Link>
-            <Link href='/about'>
+            <Link href='/about' scroll={false}>
               <a
                 className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
                 onClick={handleClick}

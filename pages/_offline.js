@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router'
 
 // export component Offline
-export default function Offline (props) {
+export default function Offline() {
   // buat variable untuk router
   const router = useRouter()
 
