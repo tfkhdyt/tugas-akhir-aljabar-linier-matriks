@@ -2,6 +2,7 @@
 import { useCallback, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { AnimatePresence } from 'framer-motion'
 
 // import components
 import Data from '../config'
@@ -58,6 +59,7 @@ export default function Layout ({ children }) {
       return (
         <div className='hidden lg:block'>
           <Navbar />
+           
           {children}
           <Footer />
         </div>
