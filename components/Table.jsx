@@ -20,6 +20,7 @@ export default function Table() {
   // state matrix dan result
   const [_matrix, setMatrix] = useState()
   const [result, setResult] = useState()
+  const [active, setActive] = useState()
   const { setGlobalMatrix } = useContext(MatrixContext)
   const form = useRef()
 
@@ -135,11 +136,19 @@ export default function Table() {
     }
   }, [result])
 
+  const handleFormFocus = () => {
+    setActive(!active)
+  }
+
   // tampilan component tabel
   return (
     <form onSubmit={handleSubmit} ref={form}>
       <div className='w-full transition duration-500 ease-in-out'>
-        <table className='hover:ring-2 hover:ring-blue-500 transition duration-500 ease-in-out rounded-sm hover:shadow-lg hover:shadow-blue-500/25 w-full table-fixed text-center'>
+        <table
+          className={`${
+            active && 'ring-2 ring-blue-500'
+          } transition duration-500 ease-in-out hover:shadow-lg hover:shadow-blue-500/25 w-full table-fixed text-center`}
+        >
           <tbody className='bg-white divide-y divide-gray-200'>
             {/* baris satu */}
             <tr className='divide-x divide-gray-200'>
@@ -150,6 +159,8 @@ export default function Table() {
                   name='_11'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
               <td className='p-2'>
@@ -159,6 +170,8 @@ export default function Table() {
                   name='_12'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
               <td className='p-2'>
@@ -168,6 +181,8 @@ export default function Table() {
                   name='_13'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
             </tr>
@@ -180,6 +195,8 @@ export default function Table() {
                   name='_21'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
               <td className='p-2'>
@@ -189,6 +206,8 @@ export default function Table() {
                   name='_22'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
               <td className='p-2'>
@@ -198,6 +217,8 @@ export default function Table() {
                   name='_23'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
             </tr>
@@ -210,6 +231,8 @@ export default function Table() {
                   name='_31'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
               <td className='p-2'>
@@ -219,6 +242,8 @@ export default function Table() {
                   name='_32'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
               <td className='p-2'>
@@ -228,6 +253,8 @@ export default function Table() {
                   name='_33'
                   className='w-full text-center font-semibold outline-none py-2 tracking-wide'
                   required
+                  onFocus={handleFormFocus}
+                  onBlur={handleFormFocus}
                 />
               </td>
             </tr>
