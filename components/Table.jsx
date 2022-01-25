@@ -146,8 +146,8 @@ export default function Table() {
       <div className='w-full transition duration-500 ease-in-out'>
         <table
           className={`${
-            active && 'ring-2 ring-blue-500'
-          } transition duration-500 ease-in-out hover:shadow-lg hover:shadow-blue-500/25 w-full table-fixed text-center`}
+            active && 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25'
+          } transition duration-500 ease-in-out w-full table-fixed text-center`}
         >
           <tbody className='bg-white divide-y divide-gray-200'>
             {/* baris satu */}
