@@ -1,1 +1,5 @@
 .Toastify__toast-body { font-family: 'Poppins'; }
+
+img {
+  pointer-events: none;
+}
