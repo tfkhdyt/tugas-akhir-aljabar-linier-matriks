@@ -36,7 +36,7 @@
     "standard": "^16.0.4",
     "tailwindcss": "^3.0.0"
   },
-  "version": "3.9.0",
+  "version": "3.9.1",
   "prettier": {
     "singleQuote": true,
     "jsxSingleQuote": true,
