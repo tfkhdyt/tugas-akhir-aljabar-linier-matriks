@@ -22,7 +22,7 @@ export default function Invers() {
   const form = (
     <>
       <div>
-        <p className='font-semibold text-gray-600 text-left mb-3'>
+        <p className='mb-3 text-left font-semibold text-gray-600'>
           Masukkan matriks 3x3:
         </p>
       </div>

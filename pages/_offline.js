@@ -14,17 +14,17 @@ export default function Offline() {
 
   return (
     // tampilan dari offline
-    <div className='min-h-screen min-w-screen p-12 grid place-items-center'>
-      <div className='flex flex-col mb-24 lg:mb-0 max-w-md'>
-        <div className='text-4xl text-gray-600 font-bold'>No Internet</div>
-        <p className='text-lg md:text-2xl text-gray-600 font-light leading-normal mb-3'>
+    <div className='min-w-screen grid min-h-screen place-items-center p-12'>
+      <div className='mb-24 flex max-w-md flex-col lg:mb-0'>
+        <div className='text-4xl font-bold text-gray-600'>No Internet</div>
+        <p className='mb-3 text-lg font-light leading-normal text-gray-600 md:text-2xl'>
           Untuk melanjutkan, hubungkan perangkat Anda ke Internet terlebih
           dahulu.
         </p>
         <div className='w-auto'>
           <button
             onClick={handleClick}
-            className='space-x-2 text-sm transition duration-500 transform-gpu active:scale-95 bg-blue-400 px-3 py-2 text-white rounded-md hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/25 font-semibold flex items-center w-auto'
+            className='flex w-auto transform-gpu items-center space-x-2 rounded-md bg-blue-400 px-3 py-2 text-sm font-semibold text-white transition duration-500 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/25 active:scale-95'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

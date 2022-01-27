@@ -1,10 +1,10 @@
 // export component button
 export default function Button({ handleReset }) {
   return (
-    <div className='flex flex-row items-center mb-2'>
+    <div className='mb-2 flex flex-row items-center'>
       <button
         type='submit'
-        className='transition duration-500 transform-gpu active:scale-95 bg-blue-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/25 font-semibold mr-2 flex flex-row items-center justify-between'
+        className='mt-5 mr-2 flex transform-gpu flex-row items-center justify-between rounded-md bg-blue-400 px-2 py-2 font-semibold text-white transition duration-500 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/25 active:scale-95'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -21,7 +21,7 @@ export default function Button({ handleReset }) {
         <span className='mx-0.5'>Hitung</span>
       </button>
       <button
-        className='transition duration-500 transform-gpu active:scale-95 bg-red-400 px-2 py-2 text-white mt-5 rounded-md hover:bg-red-500 hover:shadow-lg hover:shadow-red-600/25 font-semibold flex flex-row items-center justify-between'
+        className='mt-5 flex transform-gpu flex-row items-center justify-between rounded-md bg-red-400 px-2 py-2 font-semibold text-white transition duration-500 hover:bg-red-500 hover:shadow-lg hover:shadow-red-600/25 active:scale-95'
         onClick={handleReset}
       >
         <svg

@@ -40,7 +40,7 @@ export default function Cramer() {
   const form = (
     <div>
       <div>
-        <p className='font-semibold text-gray-600 text-left mb-3'>
+        <p className='mb-3 text-left font-semibold text-gray-600'>
           Masukkan 3 persamaan:
         </p>
       </div>

@@ -12,25 +12,25 @@ export default function Navbar() {
     <>
       <nav
         className='
-          hidden lg:flex lg:items-center lg:flex-wrap lg:bg-gradient-to-br lg:from-blue-400 lg:to-blue-500
-          lg:px-3 lg:py-2 lg:sticky lg:w-full lg:z-50 lg:top-0'
+          hidden lg:sticky lg:top-0 lg:z-50 lg:flex lg:w-full lg:flex-wrap
+          lg:items-center lg:bg-gradient-to-br lg:from-blue-400 lg:to-blue-500 lg:px-3 lg:py-2'
       >
         <Link href='/' scroll={false}>
-          <a className='transition duration-500 inline-flex items-center p-2 mr-4 h-4'>
+          <a className='mr-4 inline-flex h-4 items-center p-2 transition duration-500'>
             <Image src='/images/kbmfti.png' height={25} width={53} priority />
-            <span className='text-xl text-white font-bold uppercase tracking-wide ml-2'>
+            <span className='ml-2 text-xl font-bold uppercase tracking-wide text-white'>
               Kelompok 2
             </span>
           </a>
         </Link>
-        <div className='lg:inline-flex lg:flex-grow lg:w-auto'>
-          <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto'>
+        <div className='lg:inline-flex lg:w-auto lg:flex-grow'>
+          <div className='lg:ml-auto lg:inline-flex lg:h-auto lg:w-auto lg:flex-row lg:items-center'>
             <Link href='/' scroll={false}>
-              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='items-center justify-center rounded p-2 font-bold text-white transition duration-500 hover:bg-blue-500 hover:text-white lg:inline-flex lg:w-auto'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='mr-1 h-5 w-5'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
@@ -47,11 +47,11 @@ export default function Navbar() {
               </a>
             </Link>
             <Link href='/invers' scroll={false}>
-              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='items-center justify-center rounded p-2 font-bold text-white transition duration-500 hover:bg-blue-500 hover:text-white lg:inline-flex lg:w-auto'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='mr-1 h-5 w-5'
                     viewBox='0 0 20 20'
                     fill='currentColor'
                   >
@@ -62,11 +62,11 @@ export default function Navbar() {
               </a>
             </Link>
             <Link href='/cramer' scroll={false}>
-              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='items-center justify-center rounded p-2 font-bold text-white transition duration-500 hover:bg-blue-500 hover:text-white lg:inline-flex lg:w-auto'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='mr-1 h-5 w-5'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
@@ -83,11 +83,11 @@ export default function Navbar() {
               </a>
             </Link>
             <Link href='/about' scroll={false}>
-              <a className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'>
+              <a className='items-center justify-center rounded p-2 font-bold text-white transition duration-500 hover:bg-blue-500 hover:text-white lg:inline-flex lg:w-auto'>
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1 mb-0.5'
+                    className='mr-1 mb-0.5 h-5 w-5'
                     viewBox='0 0 20 20'
                     fill='currentColor'
                   >
@@ -99,13 +99,13 @@ export default function Navbar() {
             </Link>
             <Link href='https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks'>
               <a
-                className='lg:inline-flex lg:w-auto p-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white transition duration-500'
+                className='items-center justify-center rounded p-2 font-bold text-white transition duration-500 hover:bg-blue-500 hover:text-white lg:inline-flex lg:w-auto'
                 target='_blank'
               >
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='mr-1 h-5 w-5'
                     viewBox='0 0 24 24'
                   >
                     <path

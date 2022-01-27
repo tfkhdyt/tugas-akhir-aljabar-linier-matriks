@@ -11,7 +11,7 @@ export default function MemberCard(props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className='w-auto bg-blue-50 hover:bg-blue-100 rounded-lg shadow-md hover:shadow-lg py-12 flex flex-col justify-center items-center transition duration-500 ease-in-out'
+      className='flex w-auto flex-col items-center justify-center rounded-lg bg-blue-50 py-12 shadow-md transition duration-500 ease-in-out hover:bg-blue-100 hover:shadow-lg'
     >
       <div className='mb-4'>
         <Image
@@ -26,16 +26,16 @@ export default function MemberCard(props) {
         />
       </div>
       <div className='text-center'>
-        <p className='text-lg text-blue-400 font-semibold mb-1 whitespace-nowrap'>
+        <p className='mb-1 whitespace-nowrap text-lg font-semibold text-blue-400'>
           {props.nama}
         </p>
-        <p className='text-sm text-gray-500 font-light mb-1'>{props.nim}</p>
-        <p className='text-sm text-gray-500 font-light mb-4'>{props.prodi}</p>
+        <p className='mb-1 text-sm font-light text-gray-500'>{props.nim}</p>
+        <p className='mb-4 text-sm font-light text-gray-500'>{props.prodi}</p>
         <Link href={`https://instagram.com/${props.ig}`}>
           <a target='_blank'>
-            <button className='px-4 py-2 rounded bg-blue-300 hover:bg-blue-400 active:bg-blue-500 text-white font-medium transition duration-500 transform-gpu active:scale-95 hover:shadow-lg hover:shadow-blue-600/25'>
+            <button className='transform-gpu rounded bg-blue-300 px-4 py-2 font-medium text-white transition duration-500 hover:bg-blue-400 hover:shadow-lg hover:shadow-blue-600/25 active:scale-95 active:bg-blue-500'>
               <svg
-                className='inline mr-1'
+                className='mr-1 inline'
                 xmlns='http://www.w3.org/2000/svg'
                 width='18'
                 height='18'

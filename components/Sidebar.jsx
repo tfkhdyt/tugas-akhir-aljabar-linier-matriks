@@ -32,24 +32,24 @@ export default function Sidebar({ content }) {
     <div className='relative min-h-screen lg:flex'>
       {/* header */}
       <div
-        className={`bg-gradient-to-br from-blue-400 to-blue-500 flex justify-between items-center lg:hidden px-3 py-2 sticky w-screen z-40 top-0 ${
+        className={`sticky top-0 z-40 flex w-screen items-center justify-between bg-gradient-to-br from-blue-400 to-blue-500 px-3 py-2 lg:hidden ${
           active ? 'blur-sm grayscale ' : null
         }`}
       >
         <Link href='/' scroll={false}>
-          <a className='transition duration-500 inline-flex items-center p-2 mr-4 h-4'>
+          <a className='mr-4 inline-flex h-4 items-center p-2 transition duration-500'>
             <Image src='/images/kbmfti.png' height={25} width={53} priority />
-            <span className='text-xl text-white font-bold uppercase tracking-wide ml-2'>
+            <span className='ml-2 text-xl font-bold uppercase tracking-wide text-white'>
               Kelompok 2
             </span>
           </a>
         </Link>
         <button
-          className='transition duration-500 transform-gpu active:scale-75 inline-flex p-3 hover:bg-blue-500 rounded lg:hidden text-white ml-auto hover:text-white outline-none rounded-lg'
+          className='ml-auto inline-flex transform-gpu rounded rounded-lg p-3 text-white outline-none transition duration-500 hover:bg-blue-500 hover:text-white active:scale-75 lg:hidden'
           onClick={handleClick}
         >
           <svg
-            className='w-6 h-6'
+            className='h-6 w-6'
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'
@@ -68,10 +68,10 @@ export default function Sidebar({ content }) {
       <div
         className={`${
           active ? '' : '-translate-x-full'
-        } flex transition duration-200 ease-in-out sidebar bg-gradient-to-b from-blue-400 to-blue-600 text-gray-100 w-64 pt-7 px-2 inset-y-0 left-0 transform-gpu lg:hidden z-50 fixed flex flex-col justify-between`}
+        } sidebar fixed inset-y-0 left-0 z-50 flex flex w-64 transform-gpu flex-col justify-between bg-gradient-to-b from-blue-400 to-blue-600 px-2 pt-7 text-gray-100 transition duration-200 ease-in-out lg:hidden`}
       >
         <div className='space-y-6 '>
-          <p className='text-white flex items-center space-x-2 px-4'>
+          <p className='flex items-center space-x-2 px-4 text-white'>
             <span className='text-2xl font-extrabold'>
               Aljabar Linier dan Matriks
             </span>
@@ -79,13 +79,13 @@ export default function Sidebar({ content }) {
           <nav>
             <Link href='/' scroll={false}>
               <a
-                className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
+                className='mx-2 block rounded py-2.5 px-2 font-semibold transition duration-500 hover:bg-blue-600 hover:text-white'
                 onClick={handleClick}
               >
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='mr-1 h-5 w-5'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
@@ -103,13 +103,13 @@ export default function Sidebar({ content }) {
             </Link>
             <Link href='/invers' scroll={false}>
               <a
-                className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
+                className='mx-2 block rounded py-2.5 px-2 font-semibold transition duration-500 hover:bg-blue-600 hover:text-white'
                 onClick={handleClick}
               >
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='mr-1 h-5 w-5'
                     viewBox='0 0 20 20'
                     fill='currentColor'
                   >
@@ -121,13 +121,13 @@ export default function Sidebar({ content }) {
             </Link>
             <Link href='/cramer' scroll={false}>
               <a
-                className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
+                className='mx-2 block rounded py-2.5 px-2 font-semibold transition duration-500 hover:bg-blue-600 hover:text-white'
                 onClick={handleClick}
               >
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 mr-1'
+                    className='mr-1 h-5 w-5'
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
@@ -145,13 +145,13 @@ export default function Sidebar({ content }) {
             </Link>
             <Link href='/about' scroll={false}>
               <a
-                className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
+                className='mx-2 block rounded py-2.5 px-2 font-semibold transition duration-500 hover:bg-blue-600 hover:text-white'
                 onClick={handleClick}
               >
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-4 w-4 ml-0.5 mr-1.5 mb-0.5'
+                    className='ml-0.5 mr-1.5 mb-0.5 h-4 w-4'
                     viewBox='0 0 20 20'
                     fill='currentColor'
                   >
@@ -163,14 +163,14 @@ export default function Sidebar({ content }) {
             </Link>
             <Link href='https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks'>
               <a
-                className='block py-2.5 px-2 rounded transition duration-500 hover:bg-blue-600 mx-2 hover:text-white font-semibold'
+                className='mx-2 block rounded py-2.5 px-2 font-semibold transition duration-500 hover:bg-blue-600 hover:text-white'
                 onClick={handleClick}
                 target='_blank'
               >
                 <span className='flex flex-row items-center'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-4 w-4 ml-0.5 mr-1.5'
+                    className='ml-0.5 mr-1.5 h-4 w-4'
                     viewBox='0 0 24 24'
                   >
                     <path
@@ -195,7 +195,7 @@ export default function Sidebar({ content }) {
         {content}
       </div>
       <div
-        className={`bg-black/50 min-h-screen min-w-screen inset-0 z-40 absolute ${
+        className={`min-w-screen absolute inset-0 z-40 min-h-screen bg-black/50 ${
           active ? '' : 'hidden'
         }`}
         onClick={handleClick}

@@ -8,7 +8,7 @@ import Data from '../config'
 export default function Footer({ config, versi }) {
   return (
     <footer
-      className={`bottom-0 inset-x-0 p-4 lg:mb-2 font-light flex flex-col justify-center items-center text-center text-gray-500 ${config}`}
+      className={`inset-x-0 bottom-0 flex flex-col items-center justify-center p-4 text-center font-light text-gray-500 lg:mb-2 ${config}`}
     >
       <p>
         Built with ♥️ by <span className='font-medium'>Kelompok 2</span>

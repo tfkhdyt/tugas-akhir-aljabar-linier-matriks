@@ -38,10 +38,10 @@ export default function About({ member }) {
         animate='enter'
         exit='exit'
         transition={{ type: 'linear' }}
-        className='container mx-auto p-6 lg:px-24 relative'
+        className='container relative mx-auto p-6 lg:px-24'
       >
         <span className='text-2xl font-semibold'>{Data.menu[3]}</span>
-        <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 justify-items-stretch'>
+        <div className='mt-6 grid grid-cols-1 justify-items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3'>
           {/* tampilkan semua data member */}
           {member.map((e, i) => {
             return (
@@ -58,7 +58,7 @@ export default function About({ member }) {
             )
           })}
         </div>
-        <div className='flex justify-center w-full font-light text-gray-500 mt-6'>
+        <div className='mt-6 flex w-full justify-center font-light text-gray-500'>
           * Tidak ikut kerja kelompok
         </div>
       </motion.main>

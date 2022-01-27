@@ -66,7 +66,7 @@ export default function Table() {
             <span className='flex flex-row'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='h-5 w-5 mr-1'
+                className='mr-1 h-5 w-5'
                 viewBox='0 0 20 20'
                 fill='currentColor'
               >
@@ -146,10 +146,10 @@ export default function Table() {
       <div className='w-full transition duration-500 ease-in-out'>
         <table
           className={`${
-            active && 'ring-2 ring-blue-500 shadow-lg shadow-blue-500/25'
-          } transition duration-500 ease-in-out w-full table-fixed text-center`}
+            active && 'shadow-lg shadow-blue-500/25 ring-2 ring-blue-500'
+          } w-full table-fixed text-center transition duration-500 ease-in-out`}
         >
-          <tbody className='bg-white divide-y divide-gray-200'>
+          <tbody className='divide-y divide-gray-200 bg-white'>
             {/* baris satu */}
             <tr className='divide-x divide-gray-200'>
               <td className='p-2'>
@@ -157,7 +157,7 @@ export default function Table() {
                   type='number'
                   placeholder='[1,1]'
                   name='_11'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -168,7 +168,7 @@ export default function Table() {
                   type='number'
                   placeholder='[1,2]'
                   name='_12'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -179,7 +179,7 @@ export default function Table() {
                   type='number'
                   placeholder='[1,3]'
                   name='_13'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -193,7 +193,7 @@ export default function Table() {
                   type='number'
                   placeholder='[2,1]'
                   name='_21'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -204,7 +204,7 @@ export default function Table() {
                   type='number'
                   placeholder='[2,2]'
                   name='_22'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -215,7 +215,7 @@ export default function Table() {
                   type='number'
                   placeholder='[2,3]'
                   name='_23'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -229,7 +229,7 @@ export default function Table() {
                   type='number'
                   placeholder='[3,1]'
                   name='_31'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -240,7 +240,7 @@ export default function Table() {
                   type='number'
                   placeholder='[3,2]'
                   name='_32'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}
@@ -251,7 +251,7 @@ export default function Table() {
                   type='number'
                   placeholder='[3,3]'
                   name='_33'
-                  className='w-full text-center font-semibold outline-none py-2 tracking-wide'
+                  className='w-full py-2 text-center font-semibold tracking-wide outline-none'
                   required
                   onFocus={handleFormFocus}
                   onBlur={handleFormFocus}

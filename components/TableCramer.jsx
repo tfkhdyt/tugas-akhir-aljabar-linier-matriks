@@ -14,28 +14,28 @@ const InputForm = () => {
   const input = []
   for (let i = 0; i < 3; i++) {
     input.push(
-      <div className='text-gray-600 font-semibold text-xs lg:text-base w-full flex justify-arounx items-center'>
+      <div className='justify-arounx flex w-full items-center text-xs font-semibold text-gray-600 lg:text-base'>
         <input
           type='number'
-          className='text-center font-semibold outline-none w-10 lg:w-16 mr-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
+          className='mr-2 w-10 rounded-sm px-2 py-2 text-center font-semibold outline-none transition duration-500 ease-in-out focus:shadow-lg focus:shadow-blue-500/25 focus:ring-2 focus:ring-blue-500 lg:w-16 lg:px-2'
           name={`_${i + 1}x`}
         />
         <span>x +</span>
         <input
           type='number'
-          className='text-center font-semibold outline-none w-10 lg:w-16 mx-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
+          className='mx-2 w-10 rounded-sm px-2 py-2 text-center font-semibold outline-none transition duration-500 ease-in-out focus:shadow-lg focus:shadow-blue-500/25 focus:ring-2 focus:ring-blue-500 lg:w-16 lg:px-2'
           name={`_${i + 1}y`}
         />
         <span>y +</span>
         <input
           type='number'
-          className='text-center font-semibold outline-none w-10 lg:w-16 mx-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
+          className='mx-2 w-10 rounded-sm px-2 py-2 text-center font-semibold outline-none transition duration-500 ease-in-out focus:shadow-lg focus:shadow-blue-500/25 focus:ring-2 focus:ring-blue-500 lg:w-16 lg:px-2'
           name={`_${i + 1}z`}
         />
         <span>z =</span>
         <input
           type='number'
-          className='text-center font-semibold outline-none w-10 lg:w-16 ml-2 px-2 lg:px-2 py-2 focus:ring-2 focus:ring-blue-500 transition duration-500 ease-in-out rounded-sm focus:shadow-lg focus:shadow-blue-500/25'
+          className='ml-2 w-10 rounded-sm px-2 py-2 text-center font-semibold outline-none transition duration-500 ease-in-out focus:shadow-lg focus:shadow-blue-500/25 focus:ring-2 focus:ring-blue-500 lg:w-16 lg:px-2'
           name={`_${i + 1}h`}
           required
         />
