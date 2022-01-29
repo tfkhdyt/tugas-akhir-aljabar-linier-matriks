@@ -1,4 +1,14 @@
-.Toastify__toast-body { font-family: 'Poppins'; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-body;
+}
+
+.Toastify__toast-body {
+  font-family: 'Fira Sans', sans-serif;
+}
 
 img {
   pointer-events: none;
