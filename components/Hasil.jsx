@@ -16,7 +16,7 @@ export default function Hasil() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ type: 'linear', delay: 0.5 }}
-      className='flex w-auto flex-col rounded-lg bg-blue-50 p-6 shadow-md transition duration-500 hover:bg-blue-100 hover:shadow-lg'
+      className='flex h-fit w-auto flex-col rounded-lg bg-blue-50 p-6 shadow-md transition duration-500 hover:bg-blue-100 hover:shadow-lg'
     >
       <p className='text-xl font-semibold text-gray-800'>Hasil</p>
       <div className='overflow-x-auto'>
