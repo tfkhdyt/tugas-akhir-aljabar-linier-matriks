@@ -1,11 +1,10 @@
 // import module
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 // import config
 import Data from '../config';
-
 // import component
 import Footer from './Footer';
 

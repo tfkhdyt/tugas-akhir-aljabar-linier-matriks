@@ -1,7 +1,7 @@
 // import module
-import { useCallback, useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useCallback, useEffect,useState } from 'react';
 
 // import components
 import Data from '../config';

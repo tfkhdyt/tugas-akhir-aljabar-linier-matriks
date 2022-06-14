@@ -1,10 +1,9 @@
 // import module
-import { matrix, multiply, transpose, add } from 'mathjs';
+import { add,matrix, multiply, transpose } from 'mathjs';
 import { useContext, useEffect, useRef, useState } from 'react';
 
 // import context
 import { AritmatikaContext } from '../config';
-
 // import components
 import Button from './Button';
 import ResetDialog from './ResetDialog';

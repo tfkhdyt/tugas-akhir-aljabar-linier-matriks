@@ -42,6 +42,4 @@ yarn-error.log*
 **/public/worker-*.js.map
 **/public/fallback-*.js
 
-# lock file
-*lock*
 

@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier -cw ./src",
-    "lint": "eslint --fix ./src "
+    "lint": "eslint --fix ./src/**/*.{js,jsx}"
   },
   "dependencies": {
     "@nteract/mathjax": "^4.0.16",

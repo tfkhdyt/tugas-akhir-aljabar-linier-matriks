@@ -1,7 +1,7 @@
 // import module
-import { Provider, Node } from '@nteract/mathjax';
-import { useContext } from 'react';
+import { Node,Provider } from '@nteract/mathjax';
 import { motion } from 'framer-motion';
+import { useContext } from 'react';
 
 // import config
 import { AritmatikaContext } from '../config';

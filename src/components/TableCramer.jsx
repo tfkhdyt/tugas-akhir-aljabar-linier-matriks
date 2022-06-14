@@ -4,7 +4,6 @@ import { useContext, useEffect, useRef } from 'react';
 
 // import context
 import { CramerContext } from '../config';
-
 // import components
 import Button from './Button';
 import ResetDialog from './ResetDialog';
