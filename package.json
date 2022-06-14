@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier -w ./{pages,components,config}/**/*.{js,jsx} && eslint --fix ./{pages,components,config}/**/*.{js,jsx}"
+    "format": "prettier -cw ./src",
+    "lint": "eslint --fix ./src "
   },
   "dependencies": {
     "@nteract/mathjax": "^4.0.16",
@@ -21,15 +22,10 @@
     "sweetalert2-react-content": "^4.2.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^12.0.7",
     "autoprefixer": "^10.4.0",
-    "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "postcss": "^8.4.4",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.4",
@@ -37,9 +33,12 @@
     "tailwindcss": "^3.0.0"
   },
   "version": "3.9.2",
-  "prettier": {
-    "singleQuote": true,
-    "jsxSingleQuote": true,
-    "semi": false
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/core",
+        "webpack"
+      ]
+    }
   }
 }
